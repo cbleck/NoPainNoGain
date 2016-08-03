@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class NumberExpand : MonoBehaviour {
     private Animator anim;
     private BeatObserver beatObserver;
+	private int currentNumber;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         beatObserver = GetComponent<BeatObserver>();
+
+		currentNumber = 1;
     }
 
     void Update()
@@ -22,9 +25,15 @@ public class NumberExpand : MonoBehaviour {
     }
 
     IEnumerator ExpandTextNGoNormal() {
+
+		currentNumber = (currentNumber % 4);
+		GetComponent<Text> ().text = currentNumber.ToString();
         GetComponent<Text>().fontSize = 50;
-        yield return new  WaitForSeconds(0.1f);
+        yield return new  WaitForSeconds(0.2f);
 
         GetComponent<Text>().fontSize = 30;
+
+		currentNumber++;
+
     }
 }
