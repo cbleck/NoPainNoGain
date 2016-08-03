@@ -7,6 +7,7 @@ public class NumberExpand : MonoBehaviour {
     private Animator anim;
     private BeatObserver beatObserver;
 	private int currentNumber;
+	private int currentCycle;
 
     void Start()
     {
@@ -14,6 +15,7 @@ public class NumberExpand : MonoBehaviour {
         beatObserver = GetComponent<BeatObserver>();
 
 		currentNumber = 1;
+		currentCycle = 1;
     }
 
     void Update()
@@ -27,7 +29,15 @@ public class NumberExpand : MonoBehaviour {
     IEnumerator ExpandTextNGoNormal() {
 
 		currentNumber = (currentNumber % 4);
-		GetComponent<Text> ().text = currentNumber.ToString();
+
+		if (currentNumber == 0) {
+			GetComponent<Text> ().text = currentCycle.ToString ();
+			GetComponent<Text> ().color = Color.green;
+			currentCycle++;
+		} else {
+			GetComponent<Text> ().text = currentNumber.ToString ();
+			GetComponent<Text> ().color = Color.white;
+		}
         GetComponent<Text>().fontSize = 50;
         yield return new  WaitForSeconds(0.2f);
 

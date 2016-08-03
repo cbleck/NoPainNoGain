@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using SynchronizerData;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
+	public Text accuracyText;
+
     private ACCURACY_STATE current_state;
     private BeatObserver beatObserver;
+
+	private bool blockCurrentHit;
+	private string[] accuracyArray = { "Great", "Good", "Ok", "Miss" };
 
     enum ACCURACY_STATE {
         GREAT,
@@ -22,6 +28,7 @@ public class GameController : MonoBehaviour {
     void Start() {
         beatObserver = GetComponent<BeatObserver>();
         current_state = ACCURACY_STATE.MISS;
+		blockCurrentHit = false;
     }
     // Update is called once per frame
     void Update () {
@@ -31,8 +38,9 @@ public class GameController : MonoBehaviour {
         }
         #if UNITY_STANDALONE
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log(current_state);
+		if (Input.GetKeyDown(KeyCode.Space) && !blockCurrentHit) {
+			blockCurrentHit = true;
+			StartCoroutine("ShowAccuracyText");
         }
 
 #endif
@@ -48,6 +56,7 @@ public class GameController : MonoBehaviour {
 
     IEnumerator RunCurrentAccuracy()
     {
+		blockCurrentHit = false;
         current_state = ACCURACY_STATE.GREAT;
         yield return new WaitForSeconds(0.3f);
         current_state = ACCURACY_STATE.GOOD;
@@ -56,4 +65,17 @@ public class GameController : MonoBehaviour {
         yield return new WaitForSeconds(0.3f);
         current_state = ACCURACY_STATE.MISS;
     }
+
+	IEnumerator ShowAccuracyText(){
+
+		accuracyText.text = accuracyArray[(int)current_state];
+		accuracyText.enabled = true;
+		yield return new WaitForSeconds (0.1f);
+		accuracyText.fontSize = 50;
+		yield return new WaitForSeconds (0.1f);
+		accuracyText.fontSize = 30;
+		yield return new WaitForSeconds (0.1f);
+		accuracyText.enabled = false;
+
+	}
 }
