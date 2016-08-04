@@ -6,12 +6,21 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
 	public Text accuracyText;
+	public GameObject quarter_beat, off_beat, on_beat;
+
+	public delegate void PauseBeatSynchronizer();
+	public delegate void RestartBeatSynchronizer();
+
+	public static event PauseBeatSynchronizer PauseBeatSync;
+	public static event RestartBeatSynchronizer RestartBeatSync;
 
     private AccuracyState current_tempstate, current_hit;
+	private PlayerPosition player_position;
     private BeatObserver beatObserver;
 
 	private bool blockCurrentHit;
 	private string[] accuracyArray = { "Awesome","Great", "Good", "Not Bad", "Ok", "Miss", "NA" };
+	private float treshold_sit, treshold_liedown; 
 
 	enum AccuracyState {
         AWESOME,
@@ -23,6 +32,11 @@ public class GameController : MonoBehaviour {
 		NOTASSIGNED
     }
 
+	enum PlayerPosition{
+		SIT,
+		LIEDOWN
+	}
+
 #if UNITY_IOS || UNITY_ANDROID
     private Vector3 accel;
     private Touch finger1, finger2;
@@ -33,6 +47,9 @@ public class GameController : MonoBehaviour {
 		current_tempstate = AccuracyState.AWESOME;
 		current_hit = AccuracyState.NOTASSIGNED;
 		blockCurrentHit = false;
+
+		treshold_liedown = 0.4f;
+		treshold_sit = 0.8f;
     }
     // Update is called once per frame
     void Update () {
@@ -63,10 +80,14 @@ public class GameController : MonoBehaviour {
 #if UNITY_IOS || UNITY_ANDROID
 
         accel = Input.acceleration;
+		//Debug.Log ("Accel: "+accel.y);
 
-        if (Input.touchCount > 1){
-            Debug.Log(accel);
-        }
+		if (Input.touchCount > 1 && !blockCurrentHit &&
+			accel.y > treshold_sit && player_position == PlayerPosition.LIEDOWN) {
+			blockCurrentHit = true;
+			current_hit = current_tempstate;
+			StartCoroutine("ShowAccuracyText");
+		}
 #endif
     }
 
@@ -74,15 +95,15 @@ public class GameController : MonoBehaviour {
     {
 		current_hit = AccuracyState.NOTASSIGNED;
 		current_tempstate = AccuracyState.GOOD;
-		yield return new WaitForSeconds(0.05f);
+		yield return new WaitForSeconds(0.2f);
 		current_tempstate = AccuracyState.GREAT;
-		yield return new WaitForSeconds(0.05f);
+		yield return new WaitForSeconds(0.15f);
 		current_tempstate = AccuracyState.AWESOME;
-		yield return new WaitForSeconds(0.04f);
+		yield return new WaitForSeconds(0.15f);
 		current_tempstate = AccuracyState.GREAT;
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.1f);
 		current_tempstate = AccuracyState.GOOD;
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.07f);
 		current_tempstate = AccuracyState.NOTBAD;
 		yield return new WaitForSeconds(0.07f);
 		current_tempstate = AccuracyState.OK;
