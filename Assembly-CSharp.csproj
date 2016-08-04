@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\BeatSynchronizer\PatternCounter.cs" />
      <Compile Include="Assets\Scripts\BeatSynchronizer\SynchronizerData.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\MenuChanger.cs" />
      <Compile Include="Assets\Scripts\NumberExpand.cs" />
      <Compile Include="Assets\Scripts\SyncAbsHud.cs" />
      <Compile Include="Assets\UITween\Prefabs\Click Effect Pref\ClickedWaveAnimation.cs" />
