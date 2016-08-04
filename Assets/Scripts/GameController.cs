@@ -48,8 +48,8 @@ public class GameController : MonoBehaviour {
 		current_hit = AccuracyState.NOTASSIGNED;
 		blockCurrentHit = false;
 
-		treshold_liedown = 0.4f;
-		treshold_sit = 0.8f;
+		treshold_liedown = -0.8f;
+		treshold_sit = -0.5f;
     }
     // Update is called once per frame
     void Update () {
@@ -80,13 +80,18 @@ public class GameController : MonoBehaviour {
 #if UNITY_IOS || UNITY_ANDROID
 
         accel = Input.acceleration;
-		//Debug.Log ("Accel: "+accel.y);
+		Debug.Log ("Accel: "+accel.y);
 
 		if (Input.touchCount > 1 && !blockCurrentHit &&
 			accel.y > treshold_sit && player_position == PlayerPosition.LIEDOWN) {
+			player_position = PlayerPosition.SIT;
 			blockCurrentHit = true;
 			current_hit = current_tempstate;
 			StartCoroutine("ShowAccuracyText");
+		}
+
+		if(accel.y < treshold_liedown){
+			player_position = PlayerPosition.LIEDOWN;
 		}
 #endif
     }
