@@ -3,15 +3,16 @@ using System.Collections;
 using SynchronizerData;
 using UnityEngine.UI;
 
-public class CycleManager : MonoBehaviour {
-    private Animator anim;
+public class CicleManager : MonoBehaviour {
+
+	public Text currentCycleText, currentNumberText;
+
     private BeatObserver beatObserver;
 	private int currentNumber;
 	private int currentCycle;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         beatObserver = GetComponent<BeatObserver>();
 
 		currentNumber = 1;
@@ -31,17 +32,18 @@ public class CycleManager : MonoBehaviour {
 		currentNumber = (currentNumber % 4);
 
 		if (currentNumber == 0) {
-			GetComponent<Text> ().text = currentCycle.ToString ();
-			GetComponent<Text> ().color = Color.green;
+			currentNumberText.text = currentCycle.ToString ();
+			currentNumberText.color = Color.green;
 			currentCycle++;
+			currentCycleText.text = "Ciclo: " + currentCycle.ToString() + "/ 30";
 		} else {
-			GetComponent<Text> ().text = currentNumber.ToString ();
-			GetComponent<Text> ().color = Color.white;
+			currentNumberText.text = currentNumber.ToString ();
+			currentNumberText.color = Color.white;
 		}
-        GetComponent<Text>().fontSize = 50;
+		currentNumberText.fontSize = 50;
         yield return new  WaitForSeconds(0.2f);
 
-        GetComponent<Text>().fontSize = 30;
+		currentNumberText.fontSize = 30;
 
 		currentNumber++;
 

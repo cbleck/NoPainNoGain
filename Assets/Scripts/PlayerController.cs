@@ -12,4 +12,8 @@ public class PlayerController : MonoBehaviour {
 		GetComponent<Animator>().SetBool("playexercise", false);
 	}
 
+	public void StartWinningAnimation(){
+		GetComponent<Animator>().SetTrigger("win");
+	}
+
 }

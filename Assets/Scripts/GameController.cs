@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	public Text accuracyText;
+	private static int MAX_CICLE_LOOPS=5;
+
+	public Text accuracyText, scoreText, caloriesText, numberText;
 
 	public AudioSource musicBackground;
 	public GameObject playerCharacter;
@@ -19,7 +21,9 @@ public class GameController : MonoBehaviour {
 	private bool blockCurrentHit;
 	private string[] accuracyArray = { "Awesome","Great", "Good", "Not Bad", "Ok", "Miss", "NA" };
 	private float treshold_sit, treshold_liedown;
-	private bool isStartedLevelSequence ,firstDismiss;
+	private bool isStartedLevelSequence ,firstDismiss, isFinished;
+
+	private int points, score, cicle;
 
 	enum AccuracyState {
         AWESOME,
@@ -52,10 +56,16 @@ public class GameController : MonoBehaviour {
 
 		isStartedLevelSequence = false;
 		firstDismiss = true;
+		isFinished = false;
+
+		cicle = 1;
 
 		Debug.Log("USER: "+DataManager.instance.user);
 		Debug.Log("Score: "+DataManager.instance.score);
 		Debug.Log("Points: "+DataManager.instance.points);
+
+		points = 0;
+		score = 0;
 
 		DataManager.instance.score = 22;
 		DataManager.instance.points = 3;
@@ -78,6 +88,12 @@ public class GameController : MonoBehaviour {
 				blockCurrentHit = true;
 			}
 			Debug.Log ("TERMINA_B");
+			cicle++;
+
+			if (cicle == MAX_CICLE_LOOPS) {
+				isFinished = true;
+				EnableWinningState ();
+			}
 		}
 #if UNITY_STANDALONE
 
@@ -112,7 +128,7 @@ public class GameController : MonoBehaviour {
 
 		if(Input.touchCount > 1)
 			DisableTouchHUD();
-		else
+		else if(!isFinished)
 			EnableTouchHUD();
 			
 #endif
@@ -129,6 +145,15 @@ public class GameController : MonoBehaviour {
 		fingerCanvas.enabled = false;
 		leftCircle.GetComponent<CirclesController> ().SendMessage ("StartCircleAnimation");
 		rightCircle.GetComponent<CirclesController> ().SendMessage ("StartCircleAnimation");
+	}
+
+	private void EnableWinningState(){
+		//musicBackground.Stop ();
+		numberText.enabled = false;
+		leftCircle.enabled = false;
+		rightCircle.enabled = false;
+		Camera.main.GetComponent<Animator> ().SetTrigger ("win");
+		playerCharacter.GetComponent<PlayerController> ().SendMessage ("StartWinningAnimation");
 	}
 
     IEnumerator RunCurrentAccuracy()
@@ -153,14 +178,34 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator ShowAccuracyText(){
 
+		points++;
+
+		if (current_tempstate == AccuracyState.AWESOME)
+			score += 100;
+		else if (current_tempstate == AccuracyState.GREAT)
+			score += 60;
+		else if (current_tempstate == AccuracyState.GOOD)
+			score += 40;
+		else if (current_tempstate == AccuracyState.NOTBAD)
+			score += 20;
+		else if (current_tempstate == AccuracyState.OK)
+			score += 10;
+
+		caloriesText.text = "Calorias: " + points.ToString ();
+		scoreText.text = "Score: " + score.ToString ();
 		accuracyText.text = accuracyArray[(int)current_tempstate];
 		accuracyText.enabled = true;
 		yield return new WaitForSeconds (0.1f);
 		accuracyText.fontSize = 50;
+		caloriesText.fontSize = 50;
+		scoreText.fontSize = 50;
 		yield return new WaitForSeconds (0.1f);
 		accuracyText.fontSize = 30;
+		caloriesText.fontSize = 30;
+		scoreText.fontSize = 30;
 		yield return new WaitForSeconds (0.1f);
 		accuracyText.enabled = false;
+
 	}
 
 	IEnumerator ShowMissText(){
