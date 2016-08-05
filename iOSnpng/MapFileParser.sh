@@ -1,21 +1,3 @@
-#!/bin/sh
-if [ "$UNITY_SCRIPTING_BACKEND" = "il2cpp" ]
-then
-    if [ -f "$PROJECT_DIR/MapFileParser" ]
-    then
-        if [[ $ARCHS == *"armv7"* ]]
-        then
-            "$PROJECT_DIR/MapFileParser" -format=Clang "$TARGET_TEMP_DIR/$PRODUCT_NAME-LinkMap-$CURRENT_VARIANT-armv7.txt" "$CONFIGURATION_BUILD_DIR/$PRODUCT_NAME.app/Data/Managed/SymbolMap-32"
-        fi
-        if [[ $ARCHS == *"arm64"* ]]
-        then
-            "$PROJECT_DIR/MapFileParser" -format=Clang "$TARGET_TEMP_DIR/$PRODUCT_NAME-LinkMap-$CURRENT_VARIANT-arm64.txt" "$CONFIGURATION_BUILD_DIR/$PRODUCT_NAME.app/Data/Managed/SymbolMap-64"
-        fi
-        if [[ $ARCHS == *"x86_64"* ]]
-        then
-            "$PROJECT_DIR/MapFileParser" -format=Clang "$TARGET_TEMP_DIR/$PRODUCT_NAME-LinkMap-$CURRENT_VARIANT-x86_64.txt" "$CONFIGURATION_BUILD_DIR/$PRODUCT_NAME.app/Data/Managed/SymbolMap-64"
-        fi
-    else
-        echo "The MapFileParser utility was not found in the directory '$PROJECT_DIR'. Managed stack traces may not be reported correctly. This usually happens when the Unity project is built with a Windows editor, then the Xcode project is copied to OSX to build for the target device. You can work around this issue by manually copying the MapFileParser executable from an OSX installation of the Unity editor into the '$PROJECT_DIR' directory."
-    fi
-fi
+version https://git-lfs.github.com/spec/v1
+oid sha256:0dcd84715129ad1b56164865cdf3f4e9da61cf517b8703be5c3c9b6419d0a9d2
+size 1345
