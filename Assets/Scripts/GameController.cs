@@ -6,13 +6,11 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
 	public Text accuracyText;
-	public GameObject quarter_beat, off_beat, on_beat;
 
-	public delegate void PauseBeatSynchronizer();
-	public delegate void RestartBeatSynchronizer();
-
-	public static event PauseBeatSynchronizer PauseBeatSync;
-	public static event RestartBeatSynchronizer RestartBeatSync;
+	public AudioSource musicBackground;
+	public GameObject playerCharacter;
+	public Image leftCircle, rightCircle;
+	public Canvas fingerCanvas;
 
     private AccuracyState current_tempstate, current_hit;
 	private PlayerPosition player_position;
@@ -21,7 +19,7 @@ public class GameController : MonoBehaviour {
 	private bool blockCurrentHit;
 	private string[] accuracyArray = { "Awesome","Great", "Good", "Not Bad", "Ok", "Miss", "NA" };
 	private float treshold_sit, treshold_liedown;
-	private bool firstDismiss;
+	private bool isStartedLevelSequence ,firstDismiss;
 
 	enum AccuracyState {
         AWESOME,
@@ -52,6 +50,7 @@ public class GameController : MonoBehaviour {
 		treshold_liedown = -0.8f;
 		treshold_sit = -0.5f;
 
+		isStartedLevelSequence = false;
 		firstDismiss = true;
 
 		Debug.Log("USER: "+DataManager.instance.user);
@@ -92,7 +91,7 @@ public class GameController : MonoBehaviour {
 #if UNITY_IOS || UNITY_ANDROID
 
         accel = Input.acceleration;
-		Debug.Log ("Accel: "+accel.y);
+		//Debug.Log ("Accel: "+accel.y);
 
 		if (Input.touchCount > 1 && !blockCurrentHit &&
 			accel.y > treshold_sit && player_position == PlayerPosition.LIEDOWN) {
@@ -105,8 +104,32 @@ public class GameController : MonoBehaviour {
 		if(accel.y < treshold_liedown){
 			player_position = PlayerPosition.LIEDOWN;
 		}
+
+		if(!isStartedLevelSequence && Input.touchCount > 1){
+			isStartedLevelSequence = true;
+			StartCoroutine("StartLevelSequence");
+		}
+
+		if(Input.touchCount > 1)
+			DisableTouchHUD();
+		else
+			EnableTouchHUD();
+			
 #endif
     }
+
+	private void EnableTouchHUD(){
+
+		fingerCanvas.enabled = true;
+		leftCircle.GetComponent<CirclesController> ().SendMessage ("StopCircleAnimation");
+		rightCircle.GetComponent<CirclesController> ().SendMessage ("StopCircleAnimation");
+	}
+
+	private void DisableTouchHUD(){
+		fingerCanvas.enabled = false;
+		leftCircle.GetComponent<CirclesController> ().SendMessage ("StartCircleAnimation");
+		rightCircle.GetComponent<CirclesController> ().SendMessage ("StartCircleAnimation");
+	}
 
     IEnumerator RunCurrentAccuracy()
     {
@@ -154,6 +177,13 @@ public class GameController : MonoBehaviour {
 			accuracyText.enabled = false;
 		}
 		firstDismiss = false;
+	}
+
+	IEnumerator StartLevelSequence(){
+
+		yield return new WaitForSeconds (1f);
+
+		musicBackground.GetComponent<BeatSynchronizer> ().enabled = true;
 
 	}
 }
