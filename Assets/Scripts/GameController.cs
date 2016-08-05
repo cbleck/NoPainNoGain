@@ -53,6 +53,15 @@ public class GameController : MonoBehaviour {
 		treshold_sit = -0.5f;
 
 		firstDismiss = true;
+
+		Debug.Log("USER: "+DataManager.instance.user);
+		Debug.Log("Score: "+DataManager.instance.score);
+		Debug.Log("Points: "+DataManager.instance.points);
+
+		DataManager.instance.score = 22;
+		DataManager.instance.points = 3;
+		DataManager.instance.SaveDataForUser(DataManager.instance.user);
+
     }
     // Update is called once per frame
     void Update () {
