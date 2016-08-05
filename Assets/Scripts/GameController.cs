@@ -2,12 +2,15 @@
 using System.Collections;
 using SynchronizerData;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
 	private static int MAX_CICLE_LOOPS=5;
 
 	public Text accuracyText, scoreText, caloriesText, numberText;
+	public Text congratulationTitleText, congratulationDescText;
+	public Button menuButton;
 
 	public AudioSource musicBackground;
 	public GameObject playerCharacter;
@@ -152,6 +155,10 @@ public class GameController : MonoBehaviour {
 		numberText.enabled = false;
 		leftCircle.enabled = false;
 		rightCircle.enabled = false;
+		fingerCanvas.enabled = false;
+		congratulationTitleText.enabled = true;
+		congratulationDescText.enabled = true;
+		menuButton.enabled = true;
 		Camera.main.GetComponent<Animator> ().SetTrigger ("win");
 		playerCharacter.GetComponent<PlayerController> ().SendMessage ("StartWinningAnimation");
 	}
@@ -230,5 +237,14 @@ public class GameController : MonoBehaviour {
 
 		musicBackground.GetComponent<BeatSynchronizer> ().enabled = true;
 
+	}
+
+
+	public void RestartScene(){
+		SceneManager.LoadScene (1);
+	}
+
+	public void GoToMainMenu(){
+		SceneManager.LoadScene (0);
 	}
 }
