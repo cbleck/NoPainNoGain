@@ -20,7 +20,8 @@ public class GameController : MonoBehaviour {
 
 	private bool blockCurrentHit;
 	private string[] accuracyArray = { "Awesome","Great", "Good", "Not Bad", "Ok", "Miss", "NA" };
-	private float treshold_sit, treshold_liedown; 
+	private float treshold_sit, treshold_liedown;
+	private bool firstDismiss;
 
 	enum AccuracyState {
         AWESOME,
@@ -50,6 +51,8 @@ public class GameController : MonoBehaviour {
 
 		treshold_liedown = -0.8f;
 		treshold_sit = -0.5f;
+
+		firstDismiss = true;
     }
     // Update is called once per frame
     void Update () {
@@ -130,14 +133,18 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator ShowMissText(){
 
-		accuracyText.text = accuracyArray[(int)AccuracyState.MISS];
-		accuracyText.enabled = true;
-		yield return new WaitForSeconds (0.1f);
-		accuracyText.fontSize = 50;
-		yield return new WaitForSeconds (0.1f);
-		accuracyText.fontSize = 30;
-		yield return new WaitForSeconds (0.1f);
-		accuracyText.enabled = false;
+		if (!firstDismiss) {
+
+			accuracyText.text = accuracyArray [(int)AccuracyState.MISS];
+			accuracyText.enabled = true;
+			yield return new WaitForSeconds (0.1f);
+			accuracyText.fontSize = 50;
+			yield return new WaitForSeconds (0.1f);
+			accuracyText.fontSize = 30;
+			yield return new WaitForSeconds (0.1f);
+			accuracyText.enabled = false;
+		}
+		firstDismiss = false;
 
 	}
 }
