@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d93a2a1cd2af130eed01a4d4a3b59cd2c76d195dc3f91d1eae2ac58d9012da2c
-size 1109
+﻿#pragma once
+
+#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+#include <stdint.h>
+#include <assert.h>
+#include <exception>
+
+// PlayerController
+struct PlayerController_t2866526589;
+
+#include "codegen/il2cpp-codegen.h"
+
+// System.Void PlayerController::.ctor()
+extern "C"  void PlayerController__ctor_m2658519486 (PlayerController_t2866526589 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PlayerController::StartExercisePlayerAnimation()
+extern "C"  void PlayerController_StartExercisePlayerAnimation_m4017585263 (PlayerController_t2866526589 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PlayerController::StopExercisePlayerAnimation()
+extern "C"  void PlayerController_StopExercisePlayerAnimation_m7741605 (PlayerController_t2866526589 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PlayerController::StartWinningAnimation()
+extern "C"  void PlayerController_StartWinningAnimation_m124921522 (PlayerController_t2866526589 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

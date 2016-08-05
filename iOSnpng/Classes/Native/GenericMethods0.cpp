@@ -233,6 +233,10 @@ struct List_1_t1355284823;
 struct Getter_2_t2712548107;
 // System.Reflection.MonoProperty/StaticGetter`1<System.Object>
 struct StaticGetter_1_t3245381133;
+// HitBuilder`1<System.Object>
+struct HitBuilder_1_t538047241;
+// GAIHandler
+struct GAIHandler_t2440579483;
 // System.Action`1<System.Object>
 struct Action_1_t271665211;
 // Mono.Globalization.Unicode.CodePointIndexer/TableRange[]
@@ -735,6 +739,16 @@ struct Converter_2_t3715610867;
 #include "mscorlib_System_Reflection_MonoProperty_Getter_2_g2712548107MethodDeclarations.h"
 #include "mscorlib_System_Reflection_MonoProperty_StaticGett3245381133.h"
 #include "mscorlib_System_Reflection_MonoProperty_StaticGett3245381133MethodDeclarations.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_GAIHandler2440579483.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_HitBuilder_1_gen538047241.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_GAIHandler2440579483MethodDeclarations.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_HitBuilder_1_gen538047241MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_Dictionary_2_gen4494796MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_Dictionary_2_E1321818188MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_KeyValuePair_24198242798MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_KeyValuePair_24198242798.h"
+#include "mscorlib_System_Collections_Generic_Dictionary_2_E1321818188.h"
+#include "mscorlib_System_Collections_Generic_Dictionary_2_gen4494796.h"
 #include "mscorlib_System_Action_1_gen271665211.h"
 #include "mscorlib_System_Action_1_gen271665211MethodDeclarations.h"
 #include "Mono.Security_ArrayTypes.h"
@@ -2025,6 +2039,15 @@ extern "C"  Il2CppObject * MonoProperty_GetterAdapterFrame_TisIl2CppObject_TisIl
 // System.Object System.Reflection.MonoProperty::StaticGetterAdapterFrame<System.Object>(System.Reflection.MonoProperty/StaticGetter`1<R>,System.Object)
 extern "C"  Il2CppObject * MonoProperty_StaticGetterAdapterFrame_TisIl2CppObject_m3228278087_gshared (Il2CppObject * __this /* static, unused */, StaticGetter_1_t3245381133 * ___getter0, Il2CppObject * ___obj1, const MethodInfo* method);
 #define MonoProperty_StaticGetterAdapterFrame_TisIl2CppObject_m3228278087(__this /* static, unused */, ___getter0, ___obj1, method) ((  Il2CppObject * (*) (Il2CppObject * /* static, unused */, StaticGetter_1_t3245381133 *, Il2CppObject *, const MethodInfo*))MonoProperty_StaticGetterAdapterFrame_TisIl2CppObject_m3228278087_gshared)(__this /* static, unused */, ___getter0, ___obj1, method)
+// System.Void GAIHandler::_buildCampaignParametersDictionary<System.Object>(HitBuilder`1<T>)
+extern "C"  void GAIHandler__buildCampaignParametersDictionary_TisIl2CppObject_m3469309170_gshared (GAIHandler_t2440579483 * __this, HitBuilder_1_t538047241 * ___builder0, const MethodInfo* method);
+#define GAIHandler__buildCampaignParametersDictionary_TisIl2CppObject_m3469309170(__this, ___builder0, method) ((  void (*) (GAIHandler_t2440579483 *, HitBuilder_1_t538047241 *, const MethodInfo*))GAIHandler__buildCampaignParametersDictionary_TisIl2CppObject_m3469309170_gshared)(__this, ___builder0, method)
+// System.Void GAIHandler::_buildCustomDimensionsDictionary<System.Object>(HitBuilder`1<T>)
+extern "C"  void GAIHandler__buildCustomDimensionsDictionary_TisIl2CppObject_m2715390326_gshared (GAIHandler_t2440579483 * __this, HitBuilder_1_t538047241 * ___builder0, const MethodInfo* method);
+#define GAIHandler__buildCustomDimensionsDictionary_TisIl2CppObject_m2715390326(__this, ___builder0, method) ((  void (*) (GAIHandler_t2440579483 *, HitBuilder_1_t538047241 *, const MethodInfo*))GAIHandler__buildCustomDimensionsDictionary_TisIl2CppObject_m2715390326_gshared)(__this, ___builder0, method)
+// System.Void GAIHandler::_buildCustomMetricsDictionary<System.Object>(HitBuilder`1<T>)
+extern "C"  void GAIHandler__buildCustomMetricsDictionary_TisIl2CppObject_m1315287022_gshared (GAIHandler_t2440579483 * __this, HitBuilder_1_t538047241 * ___builder0, const MethodInfo* method);
+#define GAIHandler__buildCustomMetricsDictionary_TisIl2CppObject_m1315287022(__this, ___builder0, method) ((  void (*) (GAIHandler_t2440579483 *, HitBuilder_1_t538047241 *, const MethodInfo*))GAIHandler__buildCustomMetricsDictionary_TisIl2CppObject_m1315287022_gshared)(__this, ___builder0, method)
 // System.Void System.Array::ForEach<System.Object>(T[],System.Action`1<T>)
 extern "C"  void Array_ForEach_TisIl2CppObject_m1927038056_gshared (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t1108656482* ___array0, Action_1_t271665211 * ___action1, const MethodInfo* method);
 #define Array_ForEach_TisIl2CppObject_m1927038056(__this /* static, unused */, ___array0, ___action1, method) ((  void (*) (Il2CppObject * /* static, unused */, ObjectU5BU5D_t1108656482*, Action_1_t271665211 *, const MethodInfo*))Array_ForEach_TisIl2CppObject_m1927038056_gshared)(__this /* static, unused */, ___array0, ___action1, method)
@@ -3699,8 +3722,8 @@ extern "C"  Il2CppObject * ExecuteEvents_ValidateEventData_TisIl2CppObject_m1498
 extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m337943659_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
 #define GameObject_AddComponent_TisIl2CppObject_m337943659(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m337943659_gshared)(__this, method)
 // T UnityEngine.GameObject::GetComponent<System.Object>()
-extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
-#define GameObject_GetComponent_TisIl2CppObject_m2447772384(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared)(__this, method)
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m3652735468_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
+#define GameObject_GetComponent_TisIl2CppObject_m3652735468(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m3652735468_gshared)(__this, method)
 // T UnityEngine.GameObject::GetComponentInChildren<System.Object>()
 extern "C"  Il2CppObject * GameObject_GetComponentInChildren_TisIl2CppObject_m782999868_gshared (GameObject_t3674682005 * __this, const MethodInfo* method);
 #define GameObject_GetComponentInChildren_TisIl2CppObject_m782999868(__this, method) ((  Il2CppObject * (*) (GameObject_t3674682005 *, const MethodInfo*))GameObject_GetComponentInChildren_TisIl2CppObject_m782999868_gshared)(__this, method)
@@ -24081,6 +24104,464 @@ extern "C"  Il2CppObject * MonoProperty_StaticGetterAdapterFrame_TisIl2CppObject
 		NullCheck((StaticGetter_1_t3245381133 *)L_0);
 		Il2CppObject * L_1 = ((  Il2CppObject * (*) (StaticGetter_1_t3245381133 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)((StaticGetter_1_t3245381133 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		return L_1;
+	}
+}
+// System.Void GAIHandler::_buildCampaignParametersDictionary<System.Object>(HitBuilder`1<T>)
+extern Il2CppClass* String_t_il2cpp_TypeInfo_var;
+extern Il2CppClass* Debug_t4195163081_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral4218335012;
+extern const uint32_t GAIHandler__buildCampaignParametersDictionary_TisIl2CppObject_m3469309170_MetadataUsageId;
+extern "C"  void GAIHandler__buildCampaignParametersDictionary_TisIl2CppObject_m3469309170_gshared (GAIHandler_t2440579483 * __this, HitBuilder_1_t538047241 * ___builder0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GAIHandler__buildCampaignParametersDictionary_TisIl2CppObject_m3469309170_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	String_t* G_B3_0 = NULL;
+	String_t* G_B2_0 = NULL;
+	String_t* G_B4_0 = NULL;
+	String_t* G_B4_1 = NULL;
+	String_t* G_B6_0 = NULL;
+	String_t* G_B6_1 = NULL;
+	String_t* G_B5_0 = NULL;
+	String_t* G_B5_1 = NULL;
+	String_t* G_B7_0 = NULL;
+	String_t* G_B7_1 = NULL;
+	String_t* G_B7_2 = NULL;
+	String_t* G_B9_0 = NULL;
+	String_t* G_B9_1 = NULL;
+	String_t* G_B9_2 = NULL;
+	String_t* G_B8_0 = NULL;
+	String_t* G_B8_1 = NULL;
+	String_t* G_B8_2 = NULL;
+	String_t* G_B10_0 = NULL;
+	String_t* G_B10_1 = NULL;
+	String_t* G_B10_2 = NULL;
+	String_t* G_B10_3 = NULL;
+	String_t* G_B12_0 = NULL;
+	String_t* G_B12_1 = NULL;
+	String_t* G_B12_2 = NULL;
+	String_t* G_B12_3 = NULL;
+	String_t* G_B11_0 = NULL;
+	String_t* G_B11_1 = NULL;
+	String_t* G_B11_2 = NULL;
+	String_t* G_B11_3 = NULL;
+	String_t* G_B13_0 = NULL;
+	String_t* G_B13_1 = NULL;
+	String_t* G_B13_2 = NULL;
+	String_t* G_B13_3 = NULL;
+	String_t* G_B13_4 = NULL;
+	{
+		HitBuilder_1_t538047241 * L_0 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_0);
+		String_t* L_1 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)((HitBuilder_1_t538047241 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_2 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, (String_t*)L_1, /*hidden argument*/NULL);
+		if (L_2)
+		{
+			goto IL_008c;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_3 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_3);
+		String_t* L_4 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)((HitBuilder_1_t538047241 *)L_3, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
+		HitBuilder_1_t538047241 * L_5 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_5);
+		String_t* L_6 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)((HitBuilder_1_t538047241 *)L_5, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		G_B2_0 = L_4;
+		if (!L_6)
+		{
+			G_B3_0 = L_4;
+			goto IL_002c;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_7 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_7);
+		String_t* L_8 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)((HitBuilder_1_t538047241 *)L_7, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		G_B4_0 = L_8;
+		G_B4_1 = G_B2_0;
+		goto IL_0031;
+	}
+
+IL_002c:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_9 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		G_B4_0 = L_9;
+		G_B4_1 = G_B3_0;
+	}
+
+IL_0031:
+	{
+		HitBuilder_1_t538047241 * L_10 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_10);
+		String_t* L_11 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2)->methodPointer)((HitBuilder_1_t538047241 *)L_10, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
+		G_B5_0 = G_B4_0;
+		G_B5_1 = G_B4_1;
+		if (!L_11)
+		{
+			G_B6_0 = G_B4_0;
+			G_B6_1 = G_B4_1;
+			goto IL_0047;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_12 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_12);
+		String_t* L_13 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2)->methodPointer)((HitBuilder_1_t538047241 *)L_12, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
+		G_B7_0 = L_13;
+		G_B7_1 = G_B5_0;
+		G_B7_2 = G_B5_1;
+		goto IL_004c;
+	}
+
+IL_0047:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_14 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		G_B7_0 = L_14;
+		G_B7_1 = G_B6_0;
+		G_B7_2 = G_B6_1;
+	}
+
+IL_004c:
+	{
+		HitBuilder_1_t538047241 * L_15 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_15);
+		String_t* L_16 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 3)->methodPointer)((HitBuilder_1_t538047241 *)L_15, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 3));
+		G_B8_0 = G_B7_0;
+		G_B8_1 = G_B7_1;
+		G_B8_2 = G_B7_2;
+		if (!L_16)
+		{
+			G_B9_0 = G_B7_0;
+			G_B9_1 = G_B7_1;
+			G_B9_2 = G_B7_2;
+			goto IL_0062;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_17 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_17);
+		String_t* L_18 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 3)->methodPointer)((HitBuilder_1_t538047241 *)L_17, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 3));
+		G_B10_0 = L_18;
+		G_B10_1 = G_B8_0;
+		G_B10_2 = G_B8_1;
+		G_B10_3 = G_B8_2;
+		goto IL_0067;
+	}
+
+IL_0062:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_19 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		G_B10_0 = L_19;
+		G_B10_1 = G_B9_0;
+		G_B10_2 = G_B9_1;
+		G_B10_3 = G_B9_2;
+	}
+
+IL_0067:
+	{
+		HitBuilder_1_t538047241 * L_20 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_20);
+		String_t* L_21 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4)->methodPointer)((HitBuilder_1_t538047241 *)L_20, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4));
+		G_B11_0 = G_B10_0;
+		G_B11_1 = G_B10_1;
+		G_B11_2 = G_B10_2;
+		G_B11_3 = G_B10_3;
+		if (!L_21)
+		{
+			G_B12_0 = G_B10_0;
+			G_B12_1 = G_B10_1;
+			G_B12_2 = G_B10_2;
+			G_B12_3 = G_B10_3;
+			goto IL_007d;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_22 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_22);
+		String_t* L_23 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4)->methodPointer)((HitBuilder_1_t538047241 *)L_22, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4));
+		G_B13_0 = L_23;
+		G_B13_1 = G_B11_0;
+		G_B13_2 = G_B11_1;
+		G_B13_3 = G_B11_2;
+		G_B13_4 = G_B11_3;
+		goto IL_0082;
+	}
+
+IL_007d:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_24 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		G_B13_0 = L_24;
+		G_B13_1 = G_B12_0;
+		G_B13_2 = G_B12_1;
+		G_B13_3 = G_B12_2;
+		G_B13_4 = G_B12_3;
+	}
+
+IL_0082:
+	{
+		GAIHandler_buildCampaignParametersDictionary_m2862549954(NULL /*static, unused*/, (String_t*)G_B13_4, (String_t*)G_B13_3, (String_t*)G_B13_2, (String_t*)G_B13_1, (String_t*)G_B13_0, /*hidden argument*/NULL);
+		goto IL_00e6;
+	}
+
+IL_008c:
+	{
+		HitBuilder_1_t538047241 * L_25 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_25);
+		String_t* L_26 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)((HitBuilder_1_t538047241 *)L_25, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_27 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, (String_t*)L_26, /*hidden argument*/NULL);
+		if (!L_27)
+		{
+			goto IL_00dc;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_28 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_28);
+		String_t* L_29 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2)->methodPointer)((HitBuilder_1_t538047241 *)L_28, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 2));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_30 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, (String_t*)L_29, /*hidden argument*/NULL);
+		if (!L_30)
+		{
+			goto IL_00dc;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_31 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_31);
+		String_t* L_32 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)((HitBuilder_1_t538047241 *)L_31, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_33 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, (String_t*)L_32, /*hidden argument*/NULL);
+		if (!L_33)
+		{
+			goto IL_00dc;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_34 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_34);
+		String_t* L_35 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 3)->methodPointer)((HitBuilder_1_t538047241 *)L_34, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 3));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_36 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, (String_t*)L_35, /*hidden argument*/NULL);
+		if (!L_36)
+		{
+			goto IL_00dc;
+		}
+	}
+	{
+		HitBuilder_1_t538047241 * L_37 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_37);
+		String_t* L_38 = ((  String_t* (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4)->methodPointer)((HitBuilder_1_t538047241 *)L_37, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 4));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_39 = String_IsNullOrEmpty_m1256468773(NULL /*static, unused*/, (String_t*)L_38, /*hidden argument*/NULL);
+		if (L_39)
+		{
+			goto IL_00e6;
+		}
+	}
+
+IL_00dc:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t4195163081_il2cpp_TypeInfo_var);
+		Debug_Log_m1731103628(NULL /*static, unused*/, (Il2CppObject *)_stringLiteral4218335012, /*hidden argument*/NULL);
+	}
+
+IL_00e6:
+	{
+		return;
+	}
+}
+// System.Void GAIHandler::_buildCustomDimensionsDictionary<System.Object>(HitBuilder`1<T>)
+extern Il2CppClass* Enumerator_t1321818188_il2cpp_TypeInfo_var;
+extern Il2CppClass* IDisposable_t1423340799_il2cpp_TypeInfo_var;
+extern const MethodInfo* Dictionary_2_GetEnumerator_m3995842105_MethodInfo_var;
+extern const MethodInfo* Enumerator_get_Current_m497354073_MethodInfo_var;
+extern const MethodInfo* KeyValuePair_2_get_Key_m3884902092_MethodInfo_var;
+extern const MethodInfo* KeyValuePair_2_get_Value_m4194635276_MethodInfo_var;
+extern const MethodInfo* Enumerator_MoveNext_m3238543491_MethodInfo_var;
+extern const uint32_t GAIHandler__buildCustomDimensionsDictionary_TisIl2CppObject_m2715390326_MetadataUsageId;
+extern "C"  void GAIHandler__buildCustomDimensionsDictionary_TisIl2CppObject_m2715390326_gshared (GAIHandler_t2440579483 * __this, HitBuilder_1_t538047241 * ___builder0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GAIHandler__buildCustomDimensionsDictionary_TisIl2CppObject_m2715390326_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	KeyValuePair_2_t4198242798  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Enumerator_t1321818188  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	Exception_t3991598821 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t3991598821 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		HitBuilder_1_t538047241 * L_0 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_0);
+		Dictionary_2_t4494796 * L_1 = ((  Dictionary_2_t4494796 * (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)((HitBuilder_1_t538047241 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
+		NullCheck((Dictionary_2_t4494796 *)L_1);
+		Enumerator_t1321818188  L_2 = Dictionary_2_GetEnumerator_m3995842105((Dictionary_2_t4494796 *)L_1, /*hidden argument*/Dictionary_2_GetEnumerator_m3995842105_MethodInfo_var);
+		V_1 = (Enumerator_t1321818188 )L_2;
+	}
+
+IL_000c:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_002c;
+		}
+
+IL_0011:
+		{
+			KeyValuePair_2_t4198242798  L_3 = Enumerator_get_Current_m497354073((Enumerator_t1321818188 *)(&V_1), /*hidden argument*/Enumerator_get_Current_m497354073_MethodInfo_var);
+			V_0 = (KeyValuePair_2_t4198242798 )L_3;
+			int32_t L_4 = KeyValuePair_2_get_Key_m3884902092((KeyValuePair_2_t4198242798 *)(&V_0), /*hidden argument*/KeyValuePair_2_get_Key_m3884902092_MethodInfo_var);
+			String_t* L_5 = KeyValuePair_2_get_Value_m4194635276((KeyValuePair_2_t4198242798 *)(&V_0), /*hidden argument*/KeyValuePair_2_get_Value_m4194635276_MethodInfo_var);
+			GAIHandler_addCustomDimensionToDictionary_m3190213314(NULL /*static, unused*/, (int32_t)L_4, (String_t*)L_5, /*hidden argument*/NULL);
+		}
+
+IL_002c:
+		{
+			bool L_6 = Enumerator_MoveNext_m3238543491((Enumerator_t1321818188 *)(&V_1), /*hidden argument*/Enumerator_MoveNext_m3238543491_MethodInfo_var);
+			if (L_6)
+			{
+				goto IL_0011;
+			}
+		}
+
+IL_0038:
+		{
+			IL2CPP_LEAVE(0x49, FINALLY_003d);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t3991598821 *)e.ex;
+		goto FINALLY_003d;
+	}
+
+FINALLY_003d:
+	{ // begin finally (depth: 1)
+		Enumerator_t1321818188  L_7 = V_1;
+		Enumerator_t1321818188  L_8 = L_7;
+		Il2CppObject * L_9 = Box(Enumerator_t1321818188_il2cpp_TypeInfo_var, &L_8);
+		NullCheck((Il2CppObject *)L_9);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1423340799_il2cpp_TypeInfo_var, (Il2CppObject *)L_9);
+		IL2CPP_END_FINALLY(61)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(61)
+	{
+		IL2CPP_JUMP_TBL(0x49, IL_0049)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t3991598821 *)
+	}
+
+IL_0049:
+	{
+		return;
+	}
+}
+// System.Void GAIHandler::_buildCustomMetricsDictionary<System.Object>(HitBuilder`1<T>)
+extern Il2CppClass* Enumerator_t1321818188_il2cpp_TypeInfo_var;
+extern Il2CppClass* IDisposable_t1423340799_il2cpp_TypeInfo_var;
+extern const MethodInfo* Dictionary_2_GetEnumerator_m3995842105_MethodInfo_var;
+extern const MethodInfo* Enumerator_get_Current_m497354073_MethodInfo_var;
+extern const MethodInfo* KeyValuePair_2_get_Key_m3884902092_MethodInfo_var;
+extern const MethodInfo* KeyValuePair_2_get_Value_m4194635276_MethodInfo_var;
+extern const MethodInfo* Enumerator_MoveNext_m3238543491_MethodInfo_var;
+extern const uint32_t GAIHandler__buildCustomMetricsDictionary_TisIl2CppObject_m1315287022_MetadataUsageId;
+extern "C"  void GAIHandler__buildCustomMetricsDictionary_TisIl2CppObject_m1315287022_gshared (GAIHandler_t2440579483 * __this, HitBuilder_1_t538047241 * ___builder0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GAIHandler__buildCustomMetricsDictionary_TisIl2CppObject_m1315287022_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	KeyValuePair_2_t4198242798  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Enumerator_t1321818188  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	Exception_t3991598821 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t3991598821 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		HitBuilder_1_t538047241 * L_0 = ___builder0;
+		NullCheck((HitBuilder_1_t538047241 *)L_0);
+		Dictionary_2_t4494796 * L_1 = ((  Dictionary_2_t4494796 * (*) (HitBuilder_1_t538047241 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0)->methodPointer)((HitBuilder_1_t538047241 *)L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
+		NullCheck((Dictionary_2_t4494796 *)L_1);
+		Enumerator_t1321818188  L_2 = Dictionary_2_GetEnumerator_m3995842105((Dictionary_2_t4494796 *)L_1, /*hidden argument*/Dictionary_2_GetEnumerator_m3995842105_MethodInfo_var);
+		V_1 = (Enumerator_t1321818188 )L_2;
+	}
+
+IL_000c:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_002c;
+		}
+
+IL_0011:
+		{
+			KeyValuePair_2_t4198242798  L_3 = Enumerator_get_Current_m497354073((Enumerator_t1321818188 *)(&V_1), /*hidden argument*/Enumerator_get_Current_m497354073_MethodInfo_var);
+			V_0 = (KeyValuePair_2_t4198242798 )L_3;
+			int32_t L_4 = KeyValuePair_2_get_Key_m3884902092((KeyValuePair_2_t4198242798 *)(&V_0), /*hidden argument*/KeyValuePair_2_get_Key_m3884902092_MethodInfo_var);
+			String_t* L_5 = KeyValuePair_2_get_Value_m4194635276((KeyValuePair_2_t4198242798 *)(&V_0), /*hidden argument*/KeyValuePair_2_get_Value_m4194635276_MethodInfo_var);
+			GAIHandler_addCustomMetricToDictionary_m1308838578(NULL /*static, unused*/, (int32_t)L_4, (String_t*)L_5, /*hidden argument*/NULL);
+		}
+
+IL_002c:
+		{
+			bool L_6 = Enumerator_MoveNext_m3238543491((Enumerator_t1321818188 *)(&V_1), /*hidden argument*/Enumerator_MoveNext_m3238543491_MethodInfo_var);
+			if (L_6)
+			{
+				goto IL_0011;
+			}
+		}
+
+IL_0038:
+		{
+			IL2CPP_LEAVE(0x49, FINALLY_003d);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t3991598821 *)e.ex;
+		goto FINALLY_003d;
+	}
+
+FINALLY_003d:
+	{ // begin finally (depth: 1)
+		Enumerator_t1321818188  L_7 = V_1;
+		Enumerator_t1321818188  L_8 = L_7;
+		Il2CppObject * L_9 = Box(Enumerator_t1321818188_il2cpp_TypeInfo_var, &L_8);
+		NullCheck((Il2CppObject *)L_9);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1423340799_il2cpp_TypeInfo_var, (Il2CppObject *)L_9);
+		IL2CPP_END_FINALLY(61)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(61)
+	{
+		IL2CPP_JUMP_TBL(0x49, IL_0049)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t3991598821 *)
+	}
+
+IL_0049:
+	{
+		return;
 	}
 }
 // System.Void System.Array::ForEach<System.Object>(T[],System.Action`1<T>)
@@ -56509,13 +56990,13 @@ extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m337943659_gs
 // T UnityEngine.GameObject::GetComponent<System.Object>()
 extern Il2CppClass* CastHelper_1_t1152456458_il2cpp_TypeInfo_var;
 extern Il2CppClass* Type_t_il2cpp_TypeInfo_var;
-extern const uint32_t GameObject_GetComponent_TisIl2CppObject_m2447772384_MetadataUsageId;
-extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2447772384_gshared (GameObject_t3674682005 * __this, const MethodInfo* method)
+extern const uint32_t GameObject_GetComponent_TisIl2CppObject_m3652735468_MetadataUsageId;
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m3652735468_gshared (GameObject_t3674682005 * __this, const MethodInfo* method)
 {
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		il2cpp_codegen_initialize_method (GameObject_GetComponent_TisIl2CppObject_m2447772384_MetadataUsageId);
+		il2cpp_codegen_initialize_method (GameObject_GetComponent_TisIl2CppObject_m3652735468_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	CastHelper_1_t1152456458  V_0;

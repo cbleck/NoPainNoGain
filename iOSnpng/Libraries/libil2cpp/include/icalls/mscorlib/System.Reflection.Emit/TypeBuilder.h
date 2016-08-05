@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cd90f13a76b40d46ab10ae35b1d88807897311f44dff2fb3c9d9061d790e424b
-size 1085
+#pragma once
+
+#include "il2cpp-config.h"
+struct Il2CppReflectionEvent;
+struct Il2CppReflectionEventBuilder;
+struct Il2CppReflectionType;
+struct Il2CppReflectionTypeBuilder;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Reflection
+{
+namespace Emit
+{
+
+class LIBIL2CPP_CODEGEN_API TypeBuilder
+{
+public:
+	static void create_generic_class (Il2CppReflectionTypeBuilder*);
+	static void create_internal_class (Il2CppReflectionTypeBuilder*);
+	static Il2CppReflectionType* create_runtime_class (Il2CppReflectionTypeBuilder*, Il2CppReflectionTypeBuilder*);
+	static bool get_IsGenericParameter(Il2CppReflectionTypeBuilder*);
+	static Il2CppReflectionEvent* get_event_info (Il2CppReflectionTypeBuilder*, Il2CppReflectionEventBuilder*);
+	static void setup_generic_class (Il2CppReflectionTypeBuilder*);
+	static void setup_internal_class (Il2CppReflectionTypeBuilder*, Il2CppReflectionTypeBuilder*);
+};
+	
+} /* namespace Emit */
+} /* namespace Reflection */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

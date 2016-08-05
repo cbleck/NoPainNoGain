@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cae56f9e45060f8b2076e796f9002f27fd0cfcc3db00fa24b0a397eed1829e41
-size 416
+#pragma once
+
+#include "il2cpp-config.h"
+#include <stdint.h>
+
+struct Il2CppString;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Text
+{
+
+class LIBIL2CPP_CODEGEN_API Encoding
+{
+public:
+	static Il2CppString* InternalCodePage (int32_t *codePage);
+};
+
+} /* namespace Text */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

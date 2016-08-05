@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d0a0478f1a8e42a24bf8f2576e3bdb3d03ea8d4011c51fc35ff90eee17739e90
-size 484
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+
+struct Il2CppArray;
+struct Il2CppException;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Diagnostics
+{
+
+class LIBIL2CPP_CODEGEN_API StackTrace
+{
+public:
+	static Il2CppArray* get_trace(Il2CppException *exc, int32_t skip, bool need_file_info);
+};
+
+} /* namespace Diagnostics */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

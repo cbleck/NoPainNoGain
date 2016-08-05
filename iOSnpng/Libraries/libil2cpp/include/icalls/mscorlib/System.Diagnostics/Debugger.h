@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09b3ddd8577f386a4bf131b1eff6f053c31c6c83c50ea16034c17fa846aa7f88
-size 698
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+#include "object-internals.h"
+
+struct Il2CppObject;
+struct Il2CppDelegate;
+struct Il2CppReflectionType;
+struct Il2CppReflectionMethod;
+struct Il2CppReflectionField;
+struct Il2CppArray;
+struct Il2CppException;
+struct Il2CppReflectionModule;
+struct Il2CppAssembly;
+struct Il2CppAssemblyName;
+struct Il2CppAppDomain;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Diagnostics
+{
+
+class LIBIL2CPP_CODEGEN_API Debugger
+{
+public:
+	static bool IsAttached_internal();
+};
+
+} /* namespace Diagnostics */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

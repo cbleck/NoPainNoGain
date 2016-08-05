@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e7bb0e4c688aa31fe3f68aa795778cfdeba4be7ae47cfc99618b62f7918966f6
-size 439
+#pragma once
+
+#include "object-internals.h"
+#include "utils/StringView.h"
+
+namespace il2cpp
+{
+namespace os
+{
+
+class LIBIL2CPP_CODEGEN_API WindowsRuntime
+{
+public:
+	static il2cpp_hresult_t GetActivationFactory(Il2CppHString className, Il2CppIActivationFactory** activationFactory);
+
+	static il2cpp_hresult_t CreateHStringReference(const utils::StringView<Il2CppNativeChar>& str, Il2CppHStringHeader* header, Il2CppHString* hstring);
+};
+
+}
+}

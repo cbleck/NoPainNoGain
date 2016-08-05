@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:77e69ca9635479a3fba4e794aa5d04b5028d81aafd5ec560d8d0b7180cd35349
-size 570
+#pragma once
+
+#if !IL2CPP_HAS_UNORDERED_CONTAINER // no c++11
+#include <map>
+#define unordered_map std::map
+#elif defined(__clang__)
+# if __has_include(<tr1/unordered_map>)
+#  include <tr1/unordered_map>
+using std::tr1::unordered_map;
+# else
+#  include <unordered_map>
+using std::unordered_map;
+# endif
+#elif defined(__ARMCC_VERSION) // no c++11
+#include <map>
+#define unordered_map std::map
+#define NO_UNORDERED_MAP 1
+#elif defined(__GNUC__)
+#  include <tr1/unordered_map>
+using std::tr1::unordered_map;
+#else
+# include <unordered_map>
+using std::unordered_map;
+#endif

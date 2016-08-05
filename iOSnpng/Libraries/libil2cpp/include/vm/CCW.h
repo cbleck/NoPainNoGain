@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff551b028274579e90e1ab1bbe57f3d6b9f54c002890ca759e085d2f4b4c4efc
-size 260
+#pragma once
+
+struct Il2CppIUnknown;
+struct Il2CppObject;
+
+namespace il2cpp
+{
+namespace vm
+{
+
+class LIBIL2CPP_CODEGEN_API CCW
+{
+public:
+	static Il2CppIUnknown* Create(Il2CppObject* obj, const Il2CppGuid& iid);
+};
+
+} /* namespace vm */
+} /* namespace il2cpp */

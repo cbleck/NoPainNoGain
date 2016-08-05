@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dc935cd69b9e34f29d009b181fe9e6e1f1556816679bb6a929614689b04010a
-size 567
+#pragma once
+
+#include <object-internals.h>
+#include "StringView.h"
+#include "os/WindowsRuntime.h"
+#include "vm/Exception.h"
+
+namespace il2cpp
+{
+
+namespace utils
+{
+
+class Il2CppHStringReference
+{
+private:
+	Il2CppHString m_String;
+	Il2CppHStringHeader m_Header;
+
+public:
+	inline Il2CppHStringReference(const StringView<Il2CppNativeChar>& str)
+	{
+		il2cpp_hresult_t hr = il2cpp::os::WindowsRuntime::CreateHStringReference(str, &m_Header, &m_String);
+		il2cpp::vm::Exception::RaiseIfFailed(hr);
+	}
+
+	inline operator Il2CppHString() const
+	{
+		return m_String;
+	}
+};
+
+}
+}

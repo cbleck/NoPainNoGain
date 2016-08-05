@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c355fb32b70def151e3a1e33f4da96c59bf406f6ee044a525617d1c4d6cfc7db
-size 662
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+#include "object-internals.h"
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Reflection
+{
+
+class LIBIL2CPP_CODEGEN_API MonoMethodInfo
+{
+public:
+	static void get_method_info (Il2CppIntPtr methodPtr, Il2CppMethodInfo* info);
+	static void* /* System.Reflection.Emit.UnmanagedMarshal */ get_retval_marshal (Il2CppIntPtr handle);
+	static Il2CppArray* get_parameter_info (Il2CppIntPtr methodPtr, Il2CppReflectionMethod* member);
+};
+	
+} /* namespace Reflection */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

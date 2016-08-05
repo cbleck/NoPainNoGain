@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:78754bffed897cae147bbed91cf4c5311c69471a0c1ddc8e5c5ddb5be511d4cb
-size 639
+﻿#pragma once
+
+#include "utils/NonCopyable.h"
+
+namespace il2cpp
+{
+
+namespace utils
+{
+
+namespace functional
+{
+	struct TrueFilter
+	{
+		template <typename T>
+		inline bool operator()(const T& item) const
+		{
+			return true;
+		}
+	};
+
+	template <typename ItemType, typename Comparer>
+	struct Filter : NonCopyable
+	{
+	private:
+		ItemType m_Item;
+		Comparer m_Comparer;
+
+	public:
+		Filter(ItemType item, Comparer comparer = Comparer()) :
+			m_Item(item), m_Comparer(comparer)
+		{
+		}
+
+		template <typename T>
+		inline bool operator()(const T& item) const
+		{
+			return m_Comparer(m_Item, item);
+		}
+	};
+
+}	// functional
+
+}	// utils
+
+}	// il2cpp

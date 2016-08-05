@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cfe6a4120c5a2cc4b9210f806e3e9fd6a6d9d87356cc1a159b2a8d6f570292f6
-size 627
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+
+struct Il2CppArray;
+struct Il2CppString;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+
+class LIBIL2CPP_CODEGEN_API Convert
+{
+public:
+	static Il2CppArray* InternalFromBase64CharArray (Il2CppArray* arr, int32_t offset, int32_t length);
+	static Il2CppArray* InternalFromBase64String (Il2CppString* str, bool allowWhitespaceOnly);
+	static Il2CppArray* Base64ToByteArray (Il2CppChar* start, int length, bool allowWhitespaceOnly);
+};
+
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

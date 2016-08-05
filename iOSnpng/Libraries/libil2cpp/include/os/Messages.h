@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a5d3e7aea128574496b07f8e1ca0c388e731e97854392d72dba328c6d31cbbc3
-size 398
+#pragma once
+
+#include "il2cpp-config.h"
+
+#include <stdint.h>
+#include <string>
+
+#include "os/ErrorCodes.h"
+
+namespace il2cpp
+{
+namespace os
+{
+
+struct ErrorDesc
+{
+	ErrorCode code;
+	const char *message;
+};
+
+extern ErrorDesc common_messages [];
+
+#ifndef IL2CPP_DISABLE_FULL_MESSAGES
+extern ErrorDesc messages [];
+#endif
+
+class Messages
+{
+public:
+	static std::string FromCode(ErrorCode code);
+};
+
+}
+}

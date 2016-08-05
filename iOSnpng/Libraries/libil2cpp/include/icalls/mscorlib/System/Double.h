@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8910d54dff0dd9e8be96dd852718f15f15370dc453461eb5e3baca40a7687a5
-size 334
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+
+class LIBIL2CPP_CODEGEN_API Double
+{
+public:
+	static bool ParseImpl (char *,double *);
+};
+
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

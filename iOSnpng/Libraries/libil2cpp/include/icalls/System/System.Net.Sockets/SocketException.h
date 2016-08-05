@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f52b1635955dca8a4ca4cb4ff3c114770c22461b92070f7394dae74e90aa5fec
-size 459
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+
+struct Il2CppArray;
+struct Il2CppString;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace System
+{
+namespace System
+{
+namespace Net
+{
+namespace Sockets
+{
+
+class LIBIL2CPP_CODEGEN_API SocketException
+{
+public:
+	static int32_t WSAGetLastError ();
+};
+
+} /* namespace Sockets */
+} /* namespace Net */
+} /* namespace System */
+} /* namespace System */
+} /* namespace icalls */
+} /* namespace il2cpp */

@@ -5,37 +5,47 @@ using System.IO;
 
 public class DataManager : MonoBehaviour {
 
-	public String fileName;
+	private String fileName = Application.persistentDataPath +"/npngprefs.txt";
 	public static DataManager instance;
 	string[] tmpString;
 	char[] delimeterCharacteres = {'|', ','};
 	public int score;
 	public int points;
+	[HideInInspector]
 	public string user;
+	public string[] recordLines;
 
 	// Use this for initialization
 	void Awake () {
 		instance = this;
+		GetAllRecords();
 	}
 
 	public string[] GetAllRecords(){
 
-		if (File.Exists (Application.dataPath + fileName)) {
-			string[] lines = new string[1000];
-			lines = System.IO.File.ReadAllLines (Application.dataPath + fileName);
-			return lines;
+		if (File.Exists (fileName)) {
+			recordLines = new string[100];
+			StreamReader sr = new StreamReader(fileName);
+			string stringLine, tmpuser;
+			int i = 0;
+			while ((stringLine = sr.ReadLine()) != null) {
+				recordLines [i] = stringLine;
+				i++;
+			}
+			sr.Close();
+			return recordLines;
 		}
 		else {
-			string[] lines = new string[1];
-			lines[0] =	"No hay records";
-			return lines;
+			recordLines = new string[1];
+			recordLines[0] = "No hay records";
+			return recordLines;
 		}
 	}
 
 	public void LoadData(string usr) {
 		
-		if (File.Exists(Application.dataPath + fileName)){
-			StreamReader sr = new StreamReader(Application.dataPath + fileName);
+		if (File.Exists(fileName)){
+			StreamReader sr = new StreamReader(fileName);
 			//StreamReader sr = new StreamReader(fileName);
 			string stringLine, tmpuser;
 
@@ -61,8 +71,8 @@ public class DataManager : MonoBehaviour {
 
 		int find_user_index=-1, i=0;
 
-		if (File.Exists (Application.dataPath + fileName)) {
-			StreamReader sr = new StreamReader (Application.dataPath + fileName);
+		if (File.Exists (fileName)) {
+			StreamReader sr = new StreamReader (fileName);
 			//StreamReader sr = new StreamReader(fileName);
 			string stringLine, tmpuser;
 
@@ -78,18 +88,18 @@ public class DataManager : MonoBehaviour {
 
 			if (find_user_index != -1) {
 
-				string[] lines = System.IO.File.ReadAllLines (Application.dataPath + fileName);
+				string[] lines = System.IO.File.ReadAllLines (fileName);
 				lines [find_user_index] = user + "|" + score + "|" + points;
-				System.IO.File.WriteAllLines (Application.dataPath + fileName, lines);
+				System.IO.File.WriteAllLines (fileName, lines);
 
 			} else {
-				StreamWriter sw = new StreamWriter (Application.dataPath + fileName);
+				StreamWriter sw = new StreamWriter (fileName);
 				string tmpData = user + "|" + score + "|" + points;
 				sw.WriteLine (tmpData);
 				sw.Close ();
 			}
 		} else {
-			StreamWriter sw = new StreamWriter (Application.dataPath + fileName);
+			StreamWriter sw = new StreamWriter (fileName);
 			string tmpData = user + "|" + score + "|" + points;
 			sw.WriteLine (tmpData);
 			sw.Close ();

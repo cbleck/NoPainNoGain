@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:666130d3680e2979ae48b9bc74497329cd085a9b96f454d38e08d949f3d5cfc4
-size 464
+#pragma once
+
+#include "il2cpp-config.h"
+struct Il2CppReflectionType;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Reflection
+{
+namespace Emit
+{
+
+class LIBIL2CPP_CODEGEN_API DerivedType
+{
+public:
+	static void create_unmanaged_type (Il2CppReflectionType* type);
+};
+	
+} /* namespace Emit */
+} /* namespace Reflection */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

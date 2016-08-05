@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:918db4b9be40425b21706eb6525e955da43401f627e1fd0400085cd2759e2042
-size 344
+#pragma once
+
+struct Il2CppGenericMethod;
+
+namespace il2cpp
+{
+namespace metadata
+{
+
+struct Il2CppGenericMethodLess
+{
+	bool operator() (const Il2CppGenericMethod* m1, const Il2CppGenericMethod* m2) const;
+	static bool Compare (const Il2CppGenericMethod* m1,const Il2CppGenericMethod* m2);
+};
+
+} /* namespace metadata */
+} /* namespace il2cpp */

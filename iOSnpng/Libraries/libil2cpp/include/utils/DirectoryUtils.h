@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:62e9136eda4f20bf0f16c5aec70162db942353aa0eba0b2747a4b1e6c89c2df6
-size 314
+#pragma once
+
+#include <string>
+
+namespace il2cpp
+{
+namespace utils
+{
+
+bool Match (const std::string name, size_t nameIndex, const std::string& pattern, const size_t patternIndex);
+bool Match (const std::string name, const std::string& pattern);
+std::string CollapseAdjacentStars(const std::string& pattern);
+
+}
+}

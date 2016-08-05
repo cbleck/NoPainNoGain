@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:35aff8f705ca30ef326af1fda6903cd20c4f200bfc2520d677de6619a33c673f
-size 1059
+﻿#pragma once
+
+#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+#include <stdint.h>
+#include <assert.h>
+#include <exception>
+
+// CicleManager
+struct CicleManager_t2875820023;
+// System.Collections.IEnumerator
+struct IEnumerator_t3464575207;
+
+#include "codegen/il2cpp-codegen.h"
+
+// System.Void CicleManager::.ctor()
+extern "C"  void CicleManager__ctor_m268595332 (CicleManager_t2875820023 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void CicleManager::Start()
+extern "C"  void CicleManager_Start_m3510700420 (CicleManager_t2875820023 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void CicleManager::Update()
+extern "C"  void CicleManager_Update_m1463382793 (CicleManager_t2875820023 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.IEnumerator CicleManager::ExpandTextNGoNormal()
+extern "C"  Il2CppObject * CicleManager_ExpandTextNGoNormal_m2854813296 (CicleManager_t2875820023 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

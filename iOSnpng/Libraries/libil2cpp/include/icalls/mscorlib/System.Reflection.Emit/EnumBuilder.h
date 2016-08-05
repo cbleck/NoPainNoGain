@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:972c388aea37759164e5841af0d62782d7912c4e6920df0c20acc2db38c2d6ca
-size 486
+#pragma once
+
+#include "il2cpp-config.h"
+struct Il2CppReflectionType;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Reflection
+{
+namespace Emit
+{
+
+class LIBIL2CPP_CODEGEN_API EnumBuilder
+{
+public:
+	static void setup_enum_type (Il2CppReflectionType *enumtype, Il2CppReflectionType* t);
+};
+
+} /* namespace Emit */
+} /* namespace Reflection */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

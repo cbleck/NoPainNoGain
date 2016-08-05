@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc86f05f0b50875bcb4c85304b70fb066f081924221ea392513ff6d759e77990
-size 335
+#pragma once
+
+struct Il2CppGenericInst;
+
+namespace il2cpp
+{
+namespace metadata
+{
+
+class Il2CppGenericInstCompare
+{
+public:
+	bool operator() (const Il2CppGenericInst* t1,const Il2CppGenericInst* t2) const;
+	static bool Compare (const Il2CppGenericInst* t1,const Il2CppGenericInst* t2);
+};
+
+} /* namespace vm */
+} /* namespace il2cpp */

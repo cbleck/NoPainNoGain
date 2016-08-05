@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4073a48660fb9f476b3dc9d33bba581a474e22771d20da22b134b8b9038a2bf2
-size 593
+#pragma once
+
+#include "il2cpp-config.h"
+struct Il2CppArray;
+struct Il2CppMethodMessage;
+struct Il2CppReflectionMethod;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+namespace Runtime
+{
+namespace Remoting
+{
+namespace Messaging
+{
+
+class LIBIL2CPP_CODEGEN_API MonoMethodMessage
+{
+public:
+	static void InitMessage (Il2CppMethodMessage*, Il2CppReflectionMethod*, Il2CppArray*);
+};
+
+} /* namespace Messaging */
+} /* namespace Remoting */
+} /* namespace Runtime */
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0543bb7adc64c8a7e35aaeee4475b99e86b4275b112b7e9021f8626371126d41
-size 875
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+#include "object-internals.h"
+
+struct mscorlib_System_ArgIterator;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+
+class LIBIL2CPP_CODEGEN_API ArgIterator
+{
+public:
+	static void* /* System.TypedReference */ IntGetNextArg (ArgIterator self);
+	static Il2CppTypedRef IntGetNextArg_mscorlib_System_TypedReference (mscorlib_System_ArgIterator * __this);
+	static Il2CppTypedRef IntGetNextArg_mscorlib_System_TypedReference_mscorlib_System_IntPtr (mscorlib_System_ArgIterator * __this, Il2CppIntPtr rth);
+	static void Setup (mscorlib_System_ArgIterator * __this, Il2CppIntPtr argsp, Il2CppIntPtr start);
+	static Il2CppIntPtr IntGetNextArgType (mscorlib_System_ArgIterator * __this);
+};
+
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

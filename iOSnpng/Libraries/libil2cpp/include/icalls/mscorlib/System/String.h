@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:617da4191901edba4f1ac13a02623a28fc67b47c6db250f3e2c81e2230741930
-size 622
+#pragma once
+
+#include <stdint.h>
+#include "il2cpp-config.h"
+
+struct Il2CppString;
+struct Il2CppArray;
+
+namespace il2cpp
+{
+namespace icalls
+{
+namespace mscorlib
+{
+namespace System
+{
+
+class LIBIL2CPP_CODEGEN_API String
+{
+public:
+	static void RedirectToCreateString();
+	static Il2CppString* InternalAllocateStr (int length);
+	static Il2CppString* InternalIntern (Il2CppString* str);
+	static Il2CppArray* InternalSplit (Il2CppString *,Il2CppArray*,int,int);
+	static Il2CppString* InternalIsInterned(Il2CppString* str);
+};
+
+} /* namespace System */
+} /* namespace mscorlib */
+} /* namespace icalls */
+} /* namespace il2cpp */

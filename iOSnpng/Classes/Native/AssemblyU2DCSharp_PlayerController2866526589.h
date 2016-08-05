@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:958a32ba6dfa891246e028b42c0bb7ac1166bcf5c5aa332a43828484584e784a
-size 531
+﻿#pragma once
+
+#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+#include <stdint.h>
+
+
+#include "UnityEngine_UnityEngine_MonoBehaviour667441552.h"
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController
+struct  PlayerController_t2866526589  : public MonoBehaviour_t667441552
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif

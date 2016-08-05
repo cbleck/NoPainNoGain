@@ -8,6 +8,7 @@ public class SceneManager : MonoBehaviour {
 	public Text recordText;
 	public Text inputNameText;
 	public Text errorText;
+	public GameObject dataMng;
 	char[] delimeterCharacteres = {'|', ','};
 
 	void Start(){

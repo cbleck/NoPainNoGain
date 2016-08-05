@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:64895559c477833c09e619354aabab5525bee5816ad4ee771495bcce94647e8e
-size 290
+#pragma once
+#include "utils/StringView.h"
+
+struct Il2CppIActivationFactory;
+
+namespace il2cpp
+{
+namespace vm
+{
+
+class LIBIL2CPP_CODEGEN_API WindowsRuntime
+{
+public:
+	static Il2CppIActivationFactory* GetActivationFactory(const utils::StringView<Il2CppNativeChar>& runtimeClassName);
+};
+
+}
+}

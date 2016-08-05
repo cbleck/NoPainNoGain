@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cb6d40ca1335374e8010e3fbaab0e34d64e25aed7bdeb72390ba89b54059e2fd
-size 752
+#pragma once
+
+#include <stdint.h>
+#include "os/Mutex.h"
+struct Il2CppClass;
+
+namespace il2cpp
+{
+namespace metadata
+{
+
+class ArrayMetadata
+{
+public:
+	static Il2CppClass* GetBoundedArrayClass (Il2CppClass* elementClass, uint32_t rank, bool bounded);
+
+	typedef void(*ArrayTypeWalkCallback)(Il2CppClass* type, void* context);
+	static void WalkSZArrays(ArrayTypeWalkCallback callback, void* context);
+	static void WalkArrays(ArrayTypeWalkCallback callback, void* context);
+
+	// called as part of Class::Init with lock held
+	static void SetupArrayInterfaces (Il2CppClass* klass, const il2cpp::os::FastAutoLock& lock);
+	static void SetupArrayVTable (Il2CppClass* klass, const il2cpp::os::FastAutoLock& lock);
+};
+
+} /* namespace vm */
+} /* namespace il2cpp */

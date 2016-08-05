@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ae538c42c8270b8e15fcdaae41f513622a27eee293534c6cda016395eee6104
-size 468
+#pragma once
+
+#include <string>
+#include <vector>
+
+namespace il2cpp
+{
+namespace os
+{
+
+typedef bool(*WalkStackCallback)(Il2CppMethodPointer frame, void* context);
+
+class StackTrace
+{
+public:
+	enum WalkOrder
+	{
+		kFirstCalledToLastCalled,
+		kLastCalledToFirstCalled
+	};
+
+	// Walks the stack calling callback for each frame in the stack
+	// Stops when callback returns false
+	static void WalkStack(WalkStackCallback callback, void* context, WalkOrder walkOrder);
+};
+
+}
+}

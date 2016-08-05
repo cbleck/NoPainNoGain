@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour {
 	public Text congratulationTitleText, congratulationDescText, menuButtonText;
 	public Button menuButton;
 
+	public ParticleSystem particleSystem;
+
 	public AudioSource musicBackground, fxSound;
 	public AudioClip winMusic, greatFxClip, badFxClip;
 	public GameObject playerCharacter;
@@ -156,6 +158,9 @@ public class GameController : MonoBehaviour {
 
 		musicBackground.Stop ();
 		musicBackground.clip = winMusic;
+		musicBackground.GetComponent<BeatSynchronizer> ().enabled = false;
+		accuracyText.enabled = false;
+		fxSound.enabled = false;
 		musicBackground.PlayScheduled (0.9f);
 
 		numberText.enabled = false;
@@ -168,6 +173,8 @@ public class GameController : MonoBehaviour {
 		menuButtonText.enabled = true;
 		Camera.main.GetComponent<Animator> ().SetTrigger ("win");
 		playerCharacter.GetComponent<PlayerController> ().SendMessage ("StartWinningAnimation");
+
+		particleSystem.Play ();
 	}
 
     IEnumerator RunCurrentAccuracy()
@@ -228,7 +235,7 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator ShowMissText(){
 
-		if (!firstDismiss) {
+		if (!firstDismiss && !isFinished) {
 
 			fxSound.Stop ();
 			fxSound.clip = badFxClip;
