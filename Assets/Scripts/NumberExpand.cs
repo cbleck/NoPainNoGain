@@ -20,7 +20,7 @@ public class NumberExpand : MonoBehaviour {
 
     void Update()
     {
-        if ((beatObserver.beatMask & BeatType.UpBeat) == BeatType.UpBeat)
+		if ((beatObserver.beatMask & BeatType.DownBeat) == BeatType.DownBeat)
         {
             StartCoroutine("ExpandTextNGoNormal");
         }
