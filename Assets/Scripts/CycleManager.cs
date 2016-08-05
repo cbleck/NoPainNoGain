@@ -3,7 +3,7 @@ using System.Collections;
 using SynchronizerData;
 using UnityEngine.UI;
 
-public class NumberExpand : MonoBehaviour {
+public class CycleManager : MonoBehaviour {
     private Animator anim;
     private BeatObserver beatObserver;
 	private int currentNumber;
