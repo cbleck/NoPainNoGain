@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	private static int MAX_CICLE_LOOPS=30;
+	private static int MAX_CICLE_LOOPS=15;
 
 	public Text accuracyText, scoreText, caloriesText, numberText;
 	public Text congratulationTitleText, congratulationDescText, menuButtonText;
@@ -90,9 +90,9 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("TERMINA_B");
 			cicle++;
 
-			if (cicle == MAX_CICLE_LOOPS) {
-				isFinished = true;
-				EnableWinningState ();
+			if (cicle >= MAX_CICLE_LOOPS) {
+				if(!isFinished)
+					EnableWinningState ();
 			}
 		}
 #if UNITY_STANDALONE
@@ -149,6 +149,7 @@ public class GameController : MonoBehaviour {
 
 	private void EnableWinningState(){
 
+		isFinished = true;
 		DataManager.instance.score = score;
 		DataManager.instance.points = points;
 		DataManager.instance.SaveData();
@@ -214,12 +215,12 @@ public class GameController : MonoBehaviour {
 		accuracyText.enabled = true;
 		yield return new WaitForSeconds (0.1f);
 		accuracyText.fontSize = 80;
-		caloriesText.fontSize = 80;
-		scoreText.fontSize = 80;
-		yield return new WaitForSeconds (0.1f);
-		accuracyText.fontSize = 50;
 		caloriesText.fontSize = 50;
 		scoreText.fontSize = 50;
+		yield return new WaitForSeconds (0.1f);
+		accuracyText.fontSize = 50;
+		caloriesText.fontSize = 30;
+		scoreText.fontSize = 30;
 		yield return new WaitForSeconds (0.1f);
 		accuracyText.enabled = false;
 

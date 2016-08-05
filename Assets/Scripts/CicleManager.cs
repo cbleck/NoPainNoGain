@@ -35,7 +35,7 @@ public class CicleManager : MonoBehaviour {
 			currentNumberText.text = currentCycle.ToString ();
 			currentNumberText.color = Color.green;
 			currentCycle++;
-			currentCycleText.text = "Ciclo: " + currentCycle.ToString() + "/ 30";
+			currentCycleText.text = "Ciclo: " + currentCycle.ToString() + "/ 15";
 		} else {
 			currentNumberText.text = currentNumber.ToString ();
 			currentNumberText.color = Color.white;
