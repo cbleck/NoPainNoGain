@@ -1,29 +1,3 @@
-#pragma once
-
-#include <string>
-#include "File.h"
-
-namespace il2cpp
-{
-namespace os
-{
-
-class MemoryMappedFile
-{
-public:
-	static void* Map(FileHandle* file)
-	{
-		return Map(file, 0, 0);
-	}
-
-	static void Unmap(void* address)
-	{
-		Unmap(address, 0);
-	}
-
-	static void* Map(FileHandle* file, size_t length, size_t offset);
-	static void Unmap(void* address, size_t length);
-};
-
-}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3adc78589c435a3ac8fada9180536652ea3a212f445566eb195ca04b5e767243
+size 374

@@ -1,35 +1,3 @@
-#pragma once
-
-#include "il2cpp-config.h"
-struct Il2CppObject;
-struct Il2CppReflectionType;
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-namespace Runtime
-{
-namespace Remoting
-{
-namespace Activation
-{
-
-class LIBIL2CPP_CODEGEN_API ActivationServices
-{
-public:
-	static void EnableProxyActivation (Il2CppReflectionType*, bool);
-	static Il2CppObject * AllocateUninitializedClassInstance(Il2CppReflectionType*);
-};
-
-} /* namespace Activation */
-} /* namespace Remoting */
-} /* namespace Runtime */
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:c506f3185187199d0bf98fbac88e5436aa023cecef25f933ab04e6fd6cdd34bd
+size 628

@@ -1,30 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include "il2cpp-config.h"
-#include "object-internals.h"
-
-struct Il2CppReflectionType;
-struct mscorlib_System___ComObject;
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-
-class LIBIL2CPP_CODEGEN_API __ComObject
-{
-public:
-	static mscorlib_System___ComObject * CreateRCW (Il2CppReflectionType * t);
-	static void ReleaseInterfaces (mscorlib_System___ComObject * __this);
-	static Il2CppIntPtr GetInterfaceInternal (mscorlib_System___ComObject * __this, Il2CppReflectionType * t, bool throwException);
-};
-
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a695fdd9f24c11ff1ef448641fafd7f51169e2a615f7bd334b0df8cf7d95ca0
+size 669

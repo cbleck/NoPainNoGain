@@ -1,24 +1,3 @@
-#pragma once
-
-#include "il2cpp-config.h"
-#include "utils/StringView.h"
-#include <string>
-
-struct PInvokeArguments;
-
-namespace il2cpp
-{
-namespace os
-{
-
-class LibraryLoader
-{
-public:
-	static void* LoadDynamicLibrary(const utils::StringView<Il2CppNativeChar>& nativeDynamicLibrary);
-	static Il2CppMethodPointer GetFunctionPointer(void* dynamicLibrary, const PInvokeArguments& pinvokeArgs);
-	static Il2CppMethodPointer GetFunctionPointer(void* dynamicLibrary, const char* functionName);
-	static void CleanupLoadedLibraries();
-};
-
-} /* namespace os */
-} /* namespace il2cpp*/
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ed165f835ec788061b4a62381d8bfe26c59d1981f7353dc47b1a29cde8ef2c0
+size 571

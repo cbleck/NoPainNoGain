@@ -1,20 +1,3 @@
-#pragma once
-
-#include "utils/NonCopyable.h"
-
-namespace il2cpp
-{
-namespace os
-{
-	
-class Handle : public il2cpp::utils::NonCopyable
-{
-public:
-	virtual ~Handle () { };
-	virtual bool Wait () = 0;
-	virtual bool Wait (uint32_t ms) = 0;
-	virtual void Signal () = 0;
-};
-
-}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cf416f058f50507fb549d0a9e5874b34f8155815a5e8306d475d292b2cc2c78
+size 268

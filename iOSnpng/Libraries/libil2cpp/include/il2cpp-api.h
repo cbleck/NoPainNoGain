@@ -1,20 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-
-#include "il2cpp-config.h"
-
-#if IL2CPP_API_DYNAMIC_NO_DLSYM
-extern "C"
-{
-	IL2CPP_EXPORT void il2cpp_api_register_symbols(void);
-	IL2CPP_EXPORT void* il2cpp_api_lookup_symbol(const char* name);
-}
-#endif
-
-extern "C"
-{
-#define DO_API(r,n,p)	IL2CPP_EXPORT r n p;
-#include "il2cpp-api-functions.h"
-#undef DO_API
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac0c8a15c973eda27de5a945157e7e130828d8650f5da70e8f54ee58c61799d6
+size 344

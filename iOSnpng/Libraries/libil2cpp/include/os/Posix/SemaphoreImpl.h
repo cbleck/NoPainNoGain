@@ -1,30 +1,3 @@
-#pragma once
-
-#if IL2CPP_THREADS_PTHREAD
-
-#include "PosixWaitObject.h"
-#include "os/ErrorCodes.h"
-#include "os/WaitStatus.h"
-
-#include <semaphore.h>
-
-namespace il2cpp
-{
-namespace os
-{
-
-class SemaphoreImpl : public posix::PosixWaitObject
-{
-public:
-	SemaphoreImpl (int32_t initialValue, int32_t maximumValue);
-
-	bool Post (int32_t releaseCount, int32_t* previousCount);
-
-protected:
-	uint32_t m_MaximumValue;
-};
-
-}
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:68b3f70dd7a92a6fd2dbce19180475509a0c66ec181758c823a4200bbb54b4ef
+size 422

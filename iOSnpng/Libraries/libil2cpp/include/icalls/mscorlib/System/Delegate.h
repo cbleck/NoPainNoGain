@@ -1,31 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include "il2cpp-config.h"
-
-struct Il2CppObject;
-struct Il2CppReflectionType;
-struct Il2CppReflectionMethod;
-
-struct Il2CppDelegate;
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-
-class LIBIL2CPP_CODEGEN_API Delegate
-{
-public:
-	static Il2CppDelegate * CreateDelegate_internal (Il2CppReflectionType *,Il2CppObject *, Il2CppReflectionMethod *,bool);
-	static void SetMulticastInvoke (Il2CppDelegate *);
-};
-
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc6a6689e7a8eb772bed5ecbf18e1e63f9a71488ee6dfdb653087fcd4fb7686c
+size 573

@@ -1,31 +1,3 @@
-#pragma once
-
-#if IL2CPP_THREADS_WIN32
-
-#include "os/ErrorCodes.h"
-#include "os/WaitStatus.h"
-#include "utils/NonCopyable.h"
-
-#include "WindowsHeaders.h"
-
-namespace il2cpp
-{
-namespace os
-{
-
-class SemaphoreImpl : public il2cpp::utils::NonCopyable
-{
-public:
-	SemaphoreImpl (int32_t initialValue, int32_t maximumValue);
-	~SemaphoreImpl ();
-	bool Post (int32_t releaseCount, int32_t* previousCount = NULL);
-	WaitStatus Wait(bool interruptible);
-	WaitStatus Wait(uint32_t ms, bool interruptible);
-private:
-	HANDLE m_Handle;
-};
-
-}
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:15c1585da0399a01cc641190800d7659f4e77381f2d49f172c6edd2e89fb7130
+size 535

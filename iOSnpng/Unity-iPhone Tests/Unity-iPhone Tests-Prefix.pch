@@ -1,10 +1,3 @@
-//
-//  Prefix header
-//
-//  The contents of this file are implicitly included at the beginning of every source file.
-//
-
-#ifdef __OBJC__
-	#import <UIKit/UIKit.h>
-	#import <Foundation/Foundation.h>
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:09366a92b09af4cc1bd8159067e9a05575c467f82725051db72e214990e2f4f3
+size 204

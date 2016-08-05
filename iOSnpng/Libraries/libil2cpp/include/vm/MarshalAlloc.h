@@ -1,32 +1,3 @@
-#pragma once
-#include "il2cpp-config.h"
-
-#if _DEBUG
-#include <map>
-#include "os/Mutex.h"
-#endif
-
-namespace il2cpp
-{
-namespace vm
-{
-
-class LIBIL2CPP_CODEGEN_API MarshalAlloc
-{
-public:
-	static void* Allocate(size_t size);
-	static void* ReAlloc(void* ptr, size_t size);
-	static void Free(void* ptr);
-
-	static void* AllocateHGlobal(size_t size);
-	static void* ReAllocHGlobal(void* ptr, size_t size);
-	static void FreeHGlobal(void* ptr);
-
-#if _DEBUG
-	static bool HasUnfreedAllocations();
-	static void ClearAllTrackedAllocations();
-#endif
-};
-
-} /* namespace vm */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:4842955eb0bccf8348ff85806e35f11c8e0d88ff782fad568c8eaf9f665186e2
+size 583

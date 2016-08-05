@@ -1,18 +1,3 @@
-#pragma once
-
-struct Il2CppGenericContext;
-
-namespace il2cpp
-{
-namespace metadata
-{
-
-class Il2CppGenericContextLess
-{
-public:
-	bool operator() (const Il2CppGenericContext* t1,const Il2CppGenericContext* t2) const;
-	static bool Compare (const Il2CppGenericContext* t1,const Il2CppGenericContext* t2);
-};
-
-} /* namespace vm */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:164c9a02274db08228617610674c11aa7c46397eb10ddc9df3259bd030925df3
+size 350

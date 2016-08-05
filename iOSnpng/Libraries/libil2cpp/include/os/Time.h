@@ -1,24 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-
-namespace il2cpp
-{
-namespace os
-{
-
-class Time
-{
-public:
-	/* Returns the number of milliseconds from boot time: this should be monotonic */
-	static uint32_t GetTicksMillisecondsMonotonic ();
-
-	/* Returns the number of 100ns ticks from unspecified time: this should be monotonic */
-	static int64_t GetTicks100NanosecondsMonotonic ();
-
-	/* Returns the number of 100ns ticks since 1/1/1, UTC timezone */
-	static int64_t GetTicks100NanosecondsDateTime ();
-};
-
-}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a8f379346629ad98dd257bc40779e9140fc775d9c055d7981a4497a9e3bd42a9
+size 493

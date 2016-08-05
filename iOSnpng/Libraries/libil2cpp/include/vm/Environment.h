@@ -1,25 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include "il2cpp-config.h"
-struct Il2CppDomain;
-
-namespace il2cpp
-{
-namespace vm
-{
-
-class LIBIL2CPP_CODEGEN_API Environment
-{
-public:
-	static char** GetMainArgs();
-	static int GetNumMainArgs();
-	static void SetMainArgs(char** args, int num_args);
-
-private:
-	static char **main_args;
-	static int num_main_args;
-};
-
-} /* namespace vm */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:2224caeb63cd51a4833652793ae0d09e1f7c8e2afc71ad88838fc82c36943afb
+size 394

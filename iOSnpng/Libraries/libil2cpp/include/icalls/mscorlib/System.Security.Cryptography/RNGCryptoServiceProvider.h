@@ -1,33 +1,3 @@
-#pragma once
-
-#include "il2cpp-config.h"
-#include "object-internals.h"
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-namespace Security
-{
-namespace Cryptography
-{
-
-class LIBIL2CPP_CODEGEN_API RNGCryptoServiceProvider
-{
-public:
-	static void RngClose (Il2CppIntPtr handle);
-	static Il2CppIntPtr RngGetBytes (Il2CppIntPtr,Il2CppArray *);
-	static Il2CppIntPtr RngInitialize (Il2CppArray *);
-	static bool RngOpen ();
-};
-
-} /* namespace Cryptography */
-} /* namespace Security */
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f3e30c35cf1419de8e594e9b1cdb1f7080bd73b38883fb9d887dc88c99ffed8
+size 609

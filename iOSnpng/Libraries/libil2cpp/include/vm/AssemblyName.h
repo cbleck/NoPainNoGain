@@ -1,27 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include <vector>
-#include <string>
-#include "il2cpp-config.h"
-struct Il2CppAssemblyName;
-struct Il2CppReflectionAssemblyName;
-
-namespace il2cpp
-{
-namespace vm
-{
-
-class LIBIL2CPP_CODEGEN_API AssemblyName
-{
-// exported
-public:
-	static std::string AssemblyNameToString (const Il2CppAssemblyName& aname);
-	static bool ParseName (Il2CppReflectionAssemblyName* aname, std::string assemblyName);
-public:
-
-private:
-};
-
-} /* namespace vm */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:343c08558e4e4506381d36ce6efee362b00dd03b9cf62a6e959ac81b71b2caec
+size 492

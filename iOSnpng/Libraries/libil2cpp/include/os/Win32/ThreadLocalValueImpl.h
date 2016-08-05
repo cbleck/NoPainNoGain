@@ -1,29 +1,3 @@
-#pragma once
-
-#if IL2CPP_THREADS_WIN32
-
-#include "os/ErrorCodes.h"
-#include "utils/NonCopyable.h"
-
-#include "WindowsHelpers.h"
-
-namespace il2cpp
-{
-namespace os
-{
-
-class ThreadLocalValueImpl : public il2cpp::utils::NonCopyable
-{
-public:
-	ThreadLocalValueImpl ();
-	~ThreadLocalValueImpl ();
-	ErrorCode SetValue (void* value);
-	ErrorCode GetValue (void** value);
-private:
-	DWORD m_Index;
-};
-
-}
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:6477a80263cc6159916739745cdd6ec30cc79f09c20bfd6afe294f84367317f7
+size 401

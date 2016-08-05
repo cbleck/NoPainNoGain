@@ -1,20 +1,3 @@
-#pragma once
-
-#if !IL2CPP_HAS_UNORDERED_CONTAINER // no c++11
-#include <set>
-#define unordered_set std::set
-#elif defined(__clang__)
-# if __has_include(<tr1/unordered_set>)
-#  include <tr1/unordered_set>
-using std::tr1::unordered_set;
-# else
-#  include <unordered_set>
-using std::unordered_set;
-# endif
-#elif defined(__GNUC__)
-#  include <tr1/unordered_set>
-using std::tr1::unordered_set;
-#else
-# include <unordered_set>
-using std::unordered_set;
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:4bb3e9deb2222251e17974485752f4935083d86c138abb84526fb84f56f5c865
+size 454

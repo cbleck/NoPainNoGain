@@ -1,16 +1,3 @@
-#pragma once
-
-#if IL2CPP_PLATFORM_WIN32
-
-#define WIN32_LEAN_AND_MEAN 1
-#define INC_OLE2 1
-#include <Windows.h>
-
-#if IL2CPP_TARGET_WINRT || IL2CPP_TARGET_XBOX
-#include <roapi.h>
-#include <winstring.h>
-#endif
-
-#define LINK_TO_WINDOWSRUNTIME_LIBS (IL2CPP_TARGET_WINRT || IL2CPP_TARGET_XBOX)
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:2eda22ddccb874b18b7720edfd615c3941555dd1003bb1824710c6609926faea
+size 296

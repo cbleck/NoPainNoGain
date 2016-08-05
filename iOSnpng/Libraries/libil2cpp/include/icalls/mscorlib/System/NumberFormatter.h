@@ -1,29 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include "il2cpp-config.h"
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-
-class LIBIL2CPP_CODEGEN_API NumberFormatter
-{
-public:
-	static void GetFormatterTables(uint64_t * * mantissas,
-		int32_t * * exponents,
-		int16_t * * digitLowerTable,
-		int16_t * * digitUpperTable,
-		int64_t * * tenPowersList,
-		int32_t * * decHexDigits);
-};
-
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:62d9ea0e328ca54d95183fcb3acde31345d58d5530531c0af55da91ecc319805
+size 502

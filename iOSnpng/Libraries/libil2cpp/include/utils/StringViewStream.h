@@ -1,15 +1,3 @@
-#pragma once
-
-#include <ostream>
-#include "StringView.h"
-
-// This function is in a separate header file because we include StringView into generated code
-// and we definitely don't want to include ostream into generated code
-
-template <typename StreamCharType, typename CharType, typename Traits> inline
-std::basic_ostream<StreamCharType, Traits>& operator<<(std::basic_ostream<StreamCharType, Traits>& ostream, const il2cpp::utils::StringView<CharType>& stringView)
-{
-	StringViewAsNullTerminatedStringOf(CharType, stringView, str);
-	ostream << str;
-	return ostream;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d101dcacf78e622b9d027462c3620beb4750afff73a5d4578d2061eeb445839b
+size 568

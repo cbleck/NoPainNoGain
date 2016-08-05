@@ -1,30 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include "il2cpp-config.h"
-#include "object-internals.h"
-
-struct Il2CppArray;
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-
-class LIBIL2CPP_CODEGEN_API Buffer
-{
-public:
-	static bool BlockCopyInternal (Il2CppArray * src, int src_offset, Il2CppArray * dest, int dest_offset, int count);
-	static int32_t ByteLengthInternal (Il2CppArray* arr);
-	static uint8_t GetByteInternal (Il2CppArray* arr, int idx);
-	static void SetByteInternal (Il2CppArray* arr, int idx, int value);
-};
-
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c571c59d44707558223edcdd1ef35cecf9110d7dd94b14472ff6f9af09e7051
+size 644

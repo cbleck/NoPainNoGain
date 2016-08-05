@@ -1,27 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include "il2cpp-config.h"
-struct Il2CppDomain;
-struct Il2CppAppContext;
-
-namespace il2cpp
-{
-namespace vm
-{
-
-class LIBIL2CPP_CODEGEN_API Domain
-{
-public:
-	static Il2CppDomain* GetCurrent ();
-	static Il2CppDomain* GetRoot ();
-	static void ContextInit (Il2CppDomain *domain);
-	static void ContextSet(Il2CppAppContext* context);
-	static Il2CppAppContext* ContextGet();
-
-private:
-	static Il2CppDomain* S_domain;
-};
-
-} /* namespace vm */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:f37703aaf07ab341490da15e90af1e3f406789afcd16745d6a4191ae5a08e98c
+size 492

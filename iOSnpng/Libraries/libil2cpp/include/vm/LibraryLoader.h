@@ -1,22 +1,3 @@
-#pragma once
-
-#include "il2cpp-config.h"
-#include "utils/StringView.h"
-
-struct PInvokeArguments;
-
-namespace il2cpp
-{
-namespace vm
-{
-
-class LIBIL2CPP_CODEGEN_API LibraryLoader
-{
-public:
-	static void* LoadLibrary(il2cpp::utils::StringView<Il2CppNativeChar> nativeDynamicLibrary);
-	static void SetFindPluginCallback(Il2CppSetFindPlugInCallback method);
-};
-
-} /* namespace vm */
-} /* namespace il2cpp*/
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6231014509b66e4c7018dc7473b66620d757654c3147286a9383d558a1261b4f
+size 400

@@ -1,28 +1,3 @@
-#pragma once
-
-#if IL2CPP_THREADS_PTHREAD
-
-#include "os/ErrorCodes.h"
-#include "os/WaitStatus.h"
-#include "PosixWaitObject.h"
-
-#include <pthread.h>
-
-namespace il2cpp
-{
-namespace os
-{
-
-class EventImpl : public posix::PosixWaitObject
-{
-public:
-	EventImpl (bool manualReset = false, bool signaled = false);
-
-	ErrorCode Set ();
-	ErrorCode Reset ();
-};
-
-}
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:92571004cafc07e8cd6aa3db7defb1dc25bc48615ed858cace992f9067c7e0c1
+size 360

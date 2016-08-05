@@ -1,25 +1,3 @@
-#pragma once
-
-#include <stdint.h>
-#include "il2cpp-config.h"
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-
-class LIBIL2CPP_CODEGEN_API DateTime
-{
-public:
-	static int64_t GetNow(void);
-	static int64_t GetTimeMonotonic ();
-};
-
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a3caa855ce8e2b49094381820f2942f7e9477f511369e3d75f5b265ef9b6786
+size 361

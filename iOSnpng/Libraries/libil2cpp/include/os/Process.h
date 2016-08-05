@@ -1,22 +1,3 @@
-#pragma once
-
-#include <string>
-
-namespace il2cpp
-{
-namespace os
-{
-
-struct ProcessHandle;
-
-class Process
-{
-public:
-	static int GetCurrentProcessId();
-	static ProcessHandle* GetProcess(int processId);
-	static void FreeProcess(ProcessHandle* handle);
-	static std::string GetProcessName(ProcessHandle* handle);
-};
-
-}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7d197528007e1c92a02a585e9ce375b7ec359b4aaba7c8c04463a99746af3ee
+size 316

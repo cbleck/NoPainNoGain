@@ -1,29 +1,3 @@
-#pragma once
-
-#if IL2CPP_PLATFORM_WIN32
-
-#include "WindowsHeaders.h"
-#include "os/WaitStatus.h"
-
-#if IL2CPP_TARGET_WINRT
-#include "os/WinRT/WinRTImpl.h"
-#endif
-#if IL2CPP_TARGET_XBOXONE
-#include "os/XboxOne/Win32ApiEmulator.h"
-#endif
-
-namespace il2cpp
-{
-namespace os
-{
-namespace win
-{
-
-// Wait for a release of the given handle in way that can be interrupted by APCs.
-WaitStatus WaitForSingleObjectAndAccountForAPCs (HANDLE handle, uint32_t ms, bool interruptible);
-
-}
-}
-}
-
-#endif // IL2CPP_TARGET_WINDOWS
+version https://git-lfs.github.com/spec/v1
+oid sha256:d16a9ecdabf1efe4c41af2c0d9d301ff6ff82a78b73e72f3da2d606784d47d07
+size 506

@@ -1,25 +1,3 @@
-#pragma once
-#include "il2cpp-config.h"
-
-struct Il2CppReflectionType;
-struct Il2CppEnumInfo;
-
-namespace il2cpp
-{
-namespace icalls
-{
-namespace mscorlib
-{
-namespace System
-{
-
-class LIBIL2CPP_CODEGEN_API MonoEnumInfo
-{
-public:
-	static void get_enum_info (Il2CppReflectionType* type, Il2CppEnumInfo* info);
-};
-
-} /* namespace System */
-} /* namespace mscorlib */
-} /* namespace icalls */
-} /* namespace il2cpp */
+version https://git-lfs.github.com/spec/v1
+oid sha256:4497cf0840af0ae849be0bdde4110160c5e325bcba71499796d72ea6b8f19d7a
+size 409

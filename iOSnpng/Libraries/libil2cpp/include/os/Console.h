@@ -1,25 +1,3 @@
-#pragma once
-
-#include <string>
-
-struct FileHandle;
-struct Il2CppArray;
-
-namespace il2cpp
-{
-namespace os
-{
-
-namespace Console
-{
-
-// Isatty is in File class
-int32_t InternalKeyAvailable (int32_t ms_timeout);
-bool SetBreak (bool wantBreak);
-bool SetEcho (bool wantEcho);
-bool TtySetup (const std::string& keypadXmit, const std::string& teardown, uint8_t* control_characters, int32_t** size);
-
-}
-
-}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:43156a055719ae9d20cbc522a5f29e008e9ddbd0fa21fba22f6d8b520d055719
+size 397
