@@ -40,10 +40,10 @@ public class CicleManager : MonoBehaviour {
 			currentNumberText.text = currentNumber.ToString ();
 			currentNumberText.color = Color.white;
 		}
-		currentNumberText.fontSize = 50;
+		currentNumberText.fontSize = 80;
         yield return new  WaitForSeconds(0.2f);
 
-		currentNumberText.fontSize = 30;
+		currentNumberText.fontSize = 50;
 
 		currentNumber++;
 

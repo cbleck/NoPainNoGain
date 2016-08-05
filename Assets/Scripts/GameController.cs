@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour {
 	public Text congratulationTitleText, congratulationDescText, menuButtonText;
 	public Button menuButton;
 
-	public AudioSource musicBackground;
+	public AudioSource musicBackground, fxSound;
+	public AudioClip winMusic, greatFxClip, badFxClip;
 	public GameObject playerCharacter;
 	public Image leftCircle, rightCircle;
 	public Canvas fingerCanvas;
@@ -153,6 +154,9 @@ public class GameController : MonoBehaviour {
 		DataManager.instance.SaveData();
 
 		musicBackground.Stop ();
+		musicBackground.clip = winMusic;
+		musicBackground.PlayScheduled (0.9f);
+
 		numberText.enabled = false;
 		leftCircle.enabled = false;
 		rightCircle.enabled = false;
@@ -189,6 +193,10 @@ public class GameController : MonoBehaviour {
 
 		points++;
 
+		fxSound.Stop ();
+		fxSound.clip = greatFxClip;
+		fxSound.Play ();
+
 		if (current_tempstate == AccuracyState.AWESOME)
 			score += 100;
 		else if (current_tempstate == AccuracyState.GREAT)
@@ -205,13 +213,13 @@ public class GameController : MonoBehaviour {
 		accuracyText.text = accuracyArray[(int)current_tempstate];
 		accuracyText.enabled = true;
 		yield return new WaitForSeconds (0.1f);
+		accuracyText.fontSize = 80;
+		caloriesText.fontSize = 80;
+		scoreText.fontSize = 80;
+		yield return new WaitForSeconds (0.1f);
 		accuracyText.fontSize = 50;
 		caloriesText.fontSize = 50;
 		scoreText.fontSize = 50;
-		yield return new WaitForSeconds (0.1f);
-		accuracyText.fontSize = 30;
-		caloriesText.fontSize = 30;
-		scoreText.fontSize = 30;
 		yield return new WaitForSeconds (0.1f);
 		accuracyText.enabled = false;
 
@@ -221,12 +229,16 @@ public class GameController : MonoBehaviour {
 
 		if (!firstDismiss) {
 
+			fxSound.Stop ();
+			fxSound.clip = badFxClip;
+			fxSound.Play ();
+
 			accuracyText.text = accuracyArray [(int)AccuracyState.MISS];
 			accuracyText.enabled = true;
 			yield return new WaitForSeconds (0.1f);
-			accuracyText.fontSize = 50;
+			accuracyText.fontSize = 80;
 			yield return new WaitForSeconds (0.1f);
-			accuracyText.fontSize = 30;
+			accuracyText.fontSize = 50;
 			yield return new WaitForSeconds (0.1f);
 			accuracyText.enabled = false;
 		}
