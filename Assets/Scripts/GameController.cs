@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	private static int MAX_CICLE_LOOPS=5;
+	private static int MAX_CICLE_LOOPS=30;
 
 	public Text accuracyText, scoreText, caloriesText, numberText;
-	public Text congratulationTitleText, congratulationDescText;
+	public Text congratulationTitleText, congratulationDescText, menuButtonText;
 	public Button menuButton;
 
 	public AudioSource musicBackground;
@@ -69,10 +69,6 @@ public class GameController : MonoBehaviour {
 
 		points = 0;
 		score = 0;
-
-		DataManager.instance.score = 22;
-		DataManager.instance.points = 3;
-		DataManager.instance.SaveDataForUser(DataManager.instance.user);
 
     }
     // Update is called once per frame
@@ -151,14 +147,20 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void EnableWinningState(){
-		//musicBackground.Stop ();
+
+		DataManager.instance.score = score;
+		DataManager.instance.points = points;
+		DataManager.instance.SaveData();
+
+		musicBackground.Stop ();
 		numberText.enabled = false;
 		leftCircle.enabled = false;
 		rightCircle.enabled = false;
 		fingerCanvas.enabled = false;
 		congratulationTitleText.enabled = true;
 		congratulationDescText.enabled = true;
-		menuButton.enabled = true;
+		menuButton.GetComponent<Image>().enabled = true;
+		menuButtonText.enabled = true;
 		Camera.main.GetComponent<Animator> ().SetTrigger ("win");
 		playerCharacter.GetComponent<PlayerController> ().SendMessage ("StartWinningAnimation");
 	}
@@ -241,10 +243,12 @@ public class GameController : MonoBehaviour {
 
 
 	public void RestartScene(){
-		SceneManager.LoadScene (1);
+		//SceneManager.LoadScene (2);
+		Application.LoadLevel(2);
 	}
 
 	public void GoToMainMenu(){
-		SceneManager.LoadScene (0);
+		//SceneManager.LoadScene (1);
+		Application.LoadLevel(1);
 	}
 }
