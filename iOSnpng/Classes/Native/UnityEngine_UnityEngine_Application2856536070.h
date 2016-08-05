@@ -36,6 +36,8 @@ public:
 	LogCallback_t2984951347 * ___s_LogCallbackHandler_0;
 	// UnityEngine.Application/LogCallback UnityEngine.Application::s_LogCallbackHandlerThreaded
 	LogCallback_t2984951347 * ___s_LogCallbackHandlerThreaded_1;
+	// UnityEngine.Application/LogCallback modreq(System.Runtime.CompilerServices.IsVolatile) UnityEngine.Application::s_RegisterLogCallbackDeprecated
+	LogCallback_t2984951347 * ___s_RegisterLogCallbackDeprecated_2;
 
 public:
 	inline static int32_t get_offset_of_s_LogCallbackHandler_0() { return static_cast<int32_t>(offsetof(Application_t2856536070_StaticFields, ___s_LogCallbackHandler_0)); }
@@ -54,6 +56,15 @@ public:
 	{
 		___s_LogCallbackHandlerThreaded_1 = value;
 		Il2CppCodeGenWriteBarrier(&___s_LogCallbackHandlerThreaded_1, value);
+	}
+
+	inline static int32_t get_offset_of_s_RegisterLogCallbackDeprecated_2() { return static_cast<int32_t>(offsetof(Application_t2856536070_StaticFields, ___s_RegisterLogCallbackDeprecated_2)); }
+	inline LogCallback_t2984951347 * get_s_RegisterLogCallbackDeprecated_2() const { return ___s_RegisterLogCallbackDeprecated_2; }
+	inline LogCallback_t2984951347 ** get_address_of_s_RegisterLogCallbackDeprecated_2() { return &___s_RegisterLogCallbackDeprecated_2; }
+	inline void set_s_RegisterLogCallbackDeprecated_2(LogCallback_t2984951347 * value)
+	{
+		___s_RegisterLogCallbackDeprecated_2 = value;
+		Il2CppCodeGenWriteBarrier(&___s_RegisterLogCallbackDeprecated_2, value);
 	}
 };
 

@@ -37,9 +37,7 @@ extern "C" void DelegatePInvokeWrapper_InterstitialWasLoadedDelegate_t3068494210
 extern "C" void DelegatePInvokeWrapper_InterstitialWasViewedDelegate_t507319425 ();
 extern "C" void DelegatePInvokeWrapper_OnValidateInput_t3952708057 ();
 extern "C" void DelegatePInvokeWrapper_AudioStartAction_t1987195065 ();
-extern "C" void DelegatePInvokeWrapper_PauseBeatSynchronizer_t810409965 ();
-extern "C" void DelegatePInvokeWrapper_RestartBeatSynchronizer_t1486424646 ();
-extern const Il2CppMethodPointer g_DelegateWrappersManagedToNative[28] = 
+extern const Il2CppMethodPointer g_DelegateWrappersManagedToNative[26] = 
 {
 	DelegatePInvokeWrapper_AppDomainInitializer_t691583313,
 	DelegatePInvokeWrapper_Swapper_t4166107989,
@@ -67,6 +65,4 @@ extern const Il2CppMethodPointer g_DelegateWrappersManagedToNative[28] =
 	DelegatePInvokeWrapper_InterstitialWasViewedDelegate_t507319425,
 	DelegatePInvokeWrapper_OnValidateInput_t3952708057,
 	DelegatePInvokeWrapper_AudioStartAction_t1987195065,
-	DelegatePInvokeWrapper_PauseBeatSynchronizer_t810409965,
-	DelegatePInvokeWrapper_RestartBeatSynchronizer_t1486424646,
 };

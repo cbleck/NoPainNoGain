@@ -16,6 +16,8 @@
 struct BeatSynchronizer_t4126494744;
 // BeatSynchronizer/AudioStartAction
 struct AudioStartAction_t1987195065;
+// System.Collections.IEnumerator
+struct IEnumerator_t3464575207;
 
 #include "codegen/il2cpp-codegen.h"
 #include "AssemblyU2DCSharp_BeatSynchronizer_AudioStartActio1987195065.h"
@@ -28,3 +30,5 @@ extern "C"  void BeatSynchronizer_add_OnAudioStart_m60683631 (Il2CppObject * __t
 extern "C"  void BeatSynchronizer_remove_OnAudioStart_m3446044626 (Il2CppObject * __this /* static, unused */, AudioStartAction_t1987195065 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void BeatSynchronizer::Start()
 extern "C"  void BeatSynchronizer_Start_m1903889027 (BeatSynchronizer_t4126494744 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.IEnumerator BeatSynchronizer::CallPlayingAnimations()
+extern "C"  Il2CppObject * BeatSynchronizer_CallPlayingAnimations_m328241944 (BeatSynchronizer_t4126494744 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

@@ -67,6 +67,8 @@ struct EndOfStreamException_t3956009005;
 struct FileStream_t2141505868;
 // System.IO.StreamReader
 struct StreamReader_t2549717843;
+// System.IO.StreamWriter
+struct StreamWriter_t2705123075;
 // System.IO.FileNotFoundException
 struct FileNotFoundException_t451627778;
 // System.IAsyncResult
@@ -97,8 +99,6 @@ struct PathTooLongException_t3784898676;
 struct StreamAsyncResult_t2478422551;
 // System.IO.StreamReader/NullStreamReader
 struct NullStreamReader_t1844639917;
-// System.IO.StreamWriter
-struct StreamWriter_t2705123075;
 // System.IO.StringReader
 struct StringReader_t4061477668;
 // System.IO.SynchronizedReader
@@ -390,6 +390,12 @@ struct RankException_t3671413657;
 #include "mscorlib_System_IO_FileShare783541953.h"
 #include "mscorlib_System_IO_StreamReader2549717843.h"
 #include "mscorlib_System_IO_StreamReader2549717843MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen1375417109MethodDeclarations.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen1375417109.h"
+#include "mscorlib_System_IO_StreamWriter2705123075MethodDeclarations.h"
+#include "mscorlib_System_IO_StreamWriter2705123075.h"
+#include "mscorlib_System_IO_TextWriter2304124208MethodDeclarations.h"
+#include "mscorlib_System_IO_TextWriter2304124208.h"
 #include "mscorlib_System_IO_FileAccess1610034992MethodDeclarations.h"
 #include "mscorlib_System_IO_FileAttributes2368997539MethodDeclarations.h"
 #include "mscorlib_System_IO_FileMode3233790127MethodDeclarations.h"
@@ -441,16 +447,12 @@ struct RankException_t3671413657;
 #include "mscorlib_System_IO_StreamReader_NullStreamReader1844639917MethodDeclarations.h"
 #include "mscorlib_System_IO_StreamReader_NullStreamReader1844639917.h"
 #include "mscorlib_System_IO_TextReader2148718976.h"
-#include "mscorlib_System_IO_StreamWriter2705123075.h"
-#include "mscorlib_System_IO_StreamWriter2705123075MethodDeclarations.h"
-#include "mscorlib_System_IO_TextWriter2304124208MethodDeclarations.h"
 #include "mscorlib_System_IO_StringReader4061477668.h"
 #include "mscorlib_System_IO_StringReader4061477668MethodDeclarations.h"
 #include "mscorlib_System_IO_SynchronizedReader2019931943.h"
 #include "mscorlib_System_IO_SynchronizedReader2019931943MethodDeclarations.h"
 #include "mscorlib_System_IO_SynchronizedWriter2175337175.h"
 #include "mscorlib_System_IO_SynchronizedWriter2175337175MethodDeclarations.h"
-#include "mscorlib_System_IO_TextWriter2304124208.h"
 #include "mscorlib_System_IO_TextReader_NullTextReader1441645901MethodDeclarations.h"
 #include "mscorlib_System_IO_TextReader_NullTextReader1441645901.h"
 #include "mscorlib_System_IO_TextWriter_NullTextWriter399961933MethodDeclarations.h"
@@ -14506,6 +14508,252 @@ extern "C"  StreamReader_t2549717843 * File_OpenText_m396847893 (Il2CppObject * 
 		return L_1;
 	}
 }
+// System.String[] System.IO.File::ReadAllLines(System.String)
+extern Il2CppClass* IDisposable_t1423340799_il2cpp_TypeInfo_var;
+extern const uint32_t File_ReadAllLines_m173915158_MetadataUsageId;
+extern "C"  StringU5BU5D_t4054002952* File_ReadAllLines_m173915158 (Il2CppObject * __this /* static, unused */, String_t* ___path0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (File_ReadAllLines_m173915158_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	StreamReader_t2549717843 * V_0 = NULL;
+	StringU5BU5D_t4054002952* V_1 = NULL;
+	Exception_t3991598821 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t3991598821 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		String_t* L_0 = ___path0;
+		StreamReader_t2549717843 * L_1 = File_OpenText_m396847893(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+	}
+
+IL_0007:
+	try
+	{ // begin try (depth: 1)
+		{
+			StreamReader_t2549717843 * L_2 = V_0;
+			StringU5BU5D_t4054002952* L_3 = File_ReadAllLines_m3534810368(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+			V_1 = L_3;
+			IL2CPP_LEAVE(0x25, FINALLY_0018);
+		}
+
+IL_0013:
+		{
+			; // IL_0013: leave IL_0025
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t3991598821 *)e.ex;
+		goto FINALLY_0018;
+	}
+
+FINALLY_0018:
+	{ // begin finally (depth: 1)
+		{
+			StreamReader_t2549717843 * L_4 = V_0;
+			if (!L_4)
+			{
+				goto IL_0024;
+			}
+		}
+
+IL_001e:
+		{
+			StreamReader_t2549717843 * L_5 = V_0;
+			NullCheck(L_5);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1423340799_il2cpp_TypeInfo_var, L_5);
+		}
+
+IL_0024:
+		{
+			IL2CPP_END_FINALLY(24)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(24)
+	{
+		IL2CPP_JUMP_TBL(0x25, IL_0025)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t3991598821 *)
+	}
+
+IL_0025:
+	{
+		StringU5BU5D_t4054002952* L_6 = V_1;
+		return L_6;
+	}
+}
+// System.String[] System.IO.File::ReadAllLines(System.IO.StreamReader)
+extern Il2CppClass* List_1_t1375417109_il2cpp_TypeInfo_var;
+extern const MethodInfo* List_1__ctor_m459821414_MethodInfo_var;
+extern const MethodInfo* List_1_Add_m4975193_MethodInfo_var;
+extern const MethodInfo* List_1_ToArray_m3629032741_MethodInfo_var;
+extern const uint32_t File_ReadAllLines_m3534810368_MetadataUsageId;
+extern "C"  StringU5BU5D_t4054002952* File_ReadAllLines_m3534810368 (Il2CppObject * __this /* static, unused */, StreamReader_t2549717843 * ___reader0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (File_ReadAllLines_m3534810368_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	List_1_t1375417109 * V_0 = NULL;
+	{
+		List_1_t1375417109 * L_0 = (List_1_t1375417109 *)il2cpp_codegen_object_new(List_1_t1375417109_il2cpp_TypeInfo_var);
+		List_1__ctor_m459821414(L_0, /*hidden argument*/List_1__ctor_m459821414_MethodInfo_var);
+		V_0 = L_0;
+		goto IL_0017;
+	}
+
+IL_000b:
+	{
+		List_1_t1375417109 * L_1 = V_0;
+		StreamReader_t2549717843 * L_2 = ___reader0;
+		NullCheck(L_2);
+		String_t* L_3 = VirtFuncInvoker0< String_t* >::Invoke(10 /* System.String System.IO.StreamReader::ReadLine() */, L_2);
+		NullCheck(L_1);
+		List_1_Add_m4975193(L_1, L_3, /*hidden argument*/List_1_Add_m4975193_MethodInfo_var);
+	}
+
+IL_0017:
+	{
+		StreamReader_t2549717843 * L_4 = ___reader0;
+		NullCheck(L_4);
+		bool L_5 = StreamReader_get_EndOfStream_m864915435(L_4, /*hidden argument*/NULL);
+		if (!L_5)
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		List_1_t1375417109 * L_6 = V_0;
+		NullCheck(L_6);
+		StringU5BU5D_t4054002952* L_7 = List_1_ToArray_m3629032741(L_6, /*hidden argument*/List_1_ToArray_m3629032741_MethodInfo_var);
+		return L_7;
+	}
+}
+// System.Void System.IO.File::WriteAllLines(System.String,System.String[])
+extern Il2CppClass* StreamWriter_t2705123075_il2cpp_TypeInfo_var;
+extern Il2CppClass* IDisposable_t1423340799_il2cpp_TypeInfo_var;
+extern const uint32_t File_WriteAllLines_m2476731860_MetadataUsageId;
+extern "C"  void File_WriteAllLines_m2476731860 (Il2CppObject * __this /* static, unused */, String_t* ___path0, StringU5BU5D_t4054002952* ___contents1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (File_WriteAllLines_m2476731860_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	StreamWriter_t2705123075 * V_0 = NULL;
+	Exception_t3991598821 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t3991598821 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		String_t* L_0 = ___path0;
+		StreamWriter_t2705123075 * L_1 = (StreamWriter_t2705123075 *)il2cpp_codegen_object_new(StreamWriter_t2705123075_il2cpp_TypeInfo_var);
+		StreamWriter__ctor_m3504350636(L_1, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+	}
+
+IL_0007:
+	try
+	{ // begin try (depth: 1)
+		StreamWriter_t2705123075 * L_2 = V_0;
+		StringU5BU5D_t4054002952* L_3 = ___contents1;
+		File_WriteAllLines_m2174077638(NULL /*static, unused*/, L_2, L_3, /*hidden argument*/NULL);
+		IL2CPP_LEAVE(0x20, FINALLY_0013);
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t3991598821 *)e.ex;
+		goto FINALLY_0013;
+	}
+
+FINALLY_0013:
+	{ // begin finally (depth: 1)
+		{
+			StreamWriter_t2705123075 * L_4 = V_0;
+			if (!L_4)
+			{
+				goto IL_001f;
+			}
+		}
+
+IL_0019:
+		{
+			StreamWriter_t2705123075 * L_5 = V_0;
+			NullCheck(L_5);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t1423340799_il2cpp_TypeInfo_var, L_5);
+		}
+
+IL_001f:
+		{
+			IL2CPP_END_FINALLY(19)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(19)
+	{
+		IL2CPP_JUMP_TBL(0x20, IL_0020)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t3991598821 *)
+	}
+
+IL_0020:
+	{
+		return;
+	}
+}
+// System.Void System.IO.File::WriteAllLines(System.IO.StreamWriter,System.String[])
+extern "C"  void File_WriteAllLines_m2174077638 (Il2CppObject * __this /* static, unused */, StreamWriter_t2705123075 * ___writer0, StringU5BU5D_t4054002952* ___contents1, const MethodInfo* method)
+{
+	String_t* V_0 = NULL;
+	StringU5BU5D_t4054002952* V_1 = NULL;
+	int32_t V_2 = 0;
+	{
+		StringU5BU5D_t4054002952* L_0 = ___contents1;
+		V_1 = L_0;
+		V_2 = 0;
+		goto IL_0018;
+	}
+
+IL_0009:
+	{
+		StringU5BU5D_t4054002952* L_1 = V_1;
+		int32_t L_2 = V_2;
+		NullCheck(L_1);
+		IL2CPP_ARRAY_BOUNDS_CHECK(L_1, L_2);
+		int32_t L_3 = L_2;
+		String_t* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
+		V_0 = L_4;
+		StreamWriter_t2705123075 * L_5 = ___writer0;
+		String_t* L_6 = V_0;
+		NullCheck(L_5);
+		VirtActionInvoker1< String_t* >::Invoke(13 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_5, L_6);
+		int32_t L_7 = V_2;
+		V_2 = ((int32_t)((int32_t)L_7+(int32_t)1));
+	}
+
+IL_0018:
+	{
+		int32_t L_8 = V_2;
+		StringU5BU5D_t4054002952* L_9 = V_1;
+		NullCheck(L_9);
+		if ((((int32_t)L_8) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_9)->max_length)))))))
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		return;
+	}
+}
 // System.Void System.IO.FileNotFoundException::.ctor()
 extern Il2CppCodeGenString* _stringLiteral3868306468;
 extern const uint32_t FileNotFoundException__ctor_m1040614905_MetadataUsageId;
@@ -24698,6 +24946,22 @@ IL_00c2:
 		return;
 	}
 }
+// System.Boolean System.IO.StreamReader::get_EndOfStream()
+extern "C"  bool StreamReader_get_EndOfStream_m864915435 (StreamReader_t2549717843 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = VirtFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.IO.StreamReader::Peek() */, __this);
+		return (bool)((((int32_t)L_0) < ((int32_t)0))? 1 : 0);
+	}
+}
+// System.Void System.IO.StreamReader::Close()
+extern "C"  void StreamReader_Close_m672446428 (StreamReader_t2549717843 * __this, const MethodInfo* method)
+{
+	{
+		VirtActionInvoker1< bool >::Invoke(6 /* System.Void System.IO.StreamReader::Dispose(System.Boolean) */, __this, (bool)1);
+		return;
+	}
+}
 // System.Void System.IO.StreamReader::Dispose(System.Boolean)
 extern "C"  void StreamReader_Dispose_m2657794490 (StreamReader_t2549717843 * __this, bool ___disposing0, const MethodInfo* method)
 {
@@ -25974,7 +26238,7 @@ IL_0040:
 	{
 		CharU5BU5D_t3324145743* L_8 = V_2;
 		int32_t L_9 = V_1;
-		int32_t L_10 = VirtFuncInvoker3< int32_t, CharU5BU5D_t3324145743*, int32_t, int32_t >::Invoke(8 /* System.Int32 System.IO.StreamReader::Read(System.Char[],System.Int32,System.Int32) */, __this, L_8, 0, L_9);
+		int32_t L_10 = VirtFuncInvoker3< int32_t, CharU5BU5D_t3324145743*, int32_t, int32_t >::Invoke(9 /* System.Int32 System.IO.StreamReader::Read(System.Char[],System.Int32,System.Int32) */, __this, L_8, 0, L_9);
 		int32_t L_11 = L_10;
 		V_3 = L_11;
 		if ((((int32_t)L_11) > ((int32_t)0)))
@@ -26145,6 +26409,127 @@ IL_0050:
 		Encoding_t2012439129 * L_10 = ___encoding1;
 		int32_t L_11 = ___bufferSize2;
 		StreamWriter_Initialize_m9216430(__this, L_10, L_11, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.IO.StreamWriter::.ctor(System.String)
+extern Il2CppClass* Encoding_t2012439129_il2cpp_TypeInfo_var;
+extern const uint32_t StreamWriter__ctor_m3504350636_MetadataUsageId;
+extern "C"  void StreamWriter__ctor_m3504350636 (StreamWriter_t2705123075 * __this, String_t* ___path0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (StreamWriter__ctor_m3504350636_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		String_t* L_0 = ___path0;
+		IL2CPP_RUNTIME_CLASS_INIT(Encoding_t2012439129_il2cpp_TypeInfo_var);
+		Encoding_t2012439129 * L_1 = Encoding_get_UTF8Unmarked_m1891261276(NULL /*static, unused*/, /*hidden argument*/NULL);
+		StreamWriter__ctor_m4028849527(__this, L_0, (bool)0, L_1, ((int32_t)4096), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.IO.StreamWriter::.ctor(System.String,System.Boolean,System.Text.Encoding,System.Int32)
+extern Il2CppClass* TextWriter_t2304124208_il2cpp_TypeInfo_var;
+extern Il2CppClass* ArgumentNullException_t3573189601_il2cpp_TypeInfo_var;
+extern Il2CppClass* ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var;
+extern Il2CppClass* FileStream_t2141505868_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1711222099;
+extern Il2CppCodeGenString* _stringLiteral1906231393;
+extern const uint32_t StreamWriter__ctor_m4028849527_MetadataUsageId;
+extern "C"  void StreamWriter__ctor_m4028849527 (StreamWriter_t2705123075 * __this, String_t* ___path0, bool ___append1, Encoding_t2012439129 * ___encoding2, int32_t ___bufferSize3, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (StreamWriter__ctor_m4028849527_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(TextWriter_t2304124208_il2cpp_TypeInfo_var);
+		TextWriter__ctor_m4246102345(__this, /*hidden argument*/NULL);
+		Encoding_t2012439129 * L_0 = ___encoding2;
+		if (L_0)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		ArgumentNullException_t3573189601 * L_1 = (ArgumentNullException_t3573189601 *)il2cpp_codegen_object_new(ArgumentNullException_t3573189601_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m135444188(L_1, _stringLiteral1711222099, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0017:
+	{
+		int32_t L_2 = ___bufferSize3;
+		if ((((int32_t)L_2) > ((int32_t)0)))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t3816648464 * L_3 = (ArgumentOutOfRangeException_t3816648464 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t3816648464_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m2026296331(L_3, _stringLiteral1906231393, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
+	}
+
+IL_002a:
+	{
+		bool L_4 = ___append1;
+		if (!L_4)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		V_0 = 6;
+		goto IL_0039;
+	}
+
+IL_0037:
+	{
+		V_0 = 2;
+	}
+
+IL_0039:
+	{
+		String_t* L_5 = ___path0;
+		int32_t L_6 = V_0;
+		FileStream_t2141505868 * L_7 = (FileStream_t2141505868 *)il2cpp_codegen_object_new(FileStream_t2141505868_il2cpp_TypeInfo_var);
+		FileStream__ctor_m3657053030(L_7, L_5, L_6, 2, 1, /*hidden argument*/NULL);
+		__this->set_internalStream_3(L_7);
+		bool L_8 = ___append1;
+		if (!L_8)
+		{
+			goto IL_0069;
+		}
+	}
+	{
+		Stream_t1561764144 * L_9 = __this->get_internalStream_3();
+		Stream_t1561764144 * L_10 = __this->get_internalStream_3();
+		NullCheck(L_10);
+		int64_t L_11 = VirtFuncInvoker0< int64_t >::Invoke(8 /* System.Int64 System.IO.Stream::get_Length() */, L_10);
+		NullCheck(L_9);
+		VirtActionInvoker1< int64_t >::Invoke(10 /* System.Void System.IO.Stream::set_Position(System.Int64) */, L_9, L_11);
+		goto IL_0076;
+	}
+
+IL_0069:
+	{
+		Stream_t1561764144 * L_12 = __this->get_internalStream_3();
+		NullCheck(L_12);
+		VirtActionInvoker1< int64_t >::Invoke(17 /* System.Void System.IO.Stream::SetLength(System.Int64) */, L_12, (((int64_t)((int64_t)0))));
+	}
+
+IL_0076:
+	{
+		Encoding_t2012439129 * L_13 = ___encoding2;
+		int32_t L_14 = ___bufferSize3;
+		StreamWriter_Initialize_m9216430(__this, L_13, L_14, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -27081,6 +27466,14 @@ IL_0017:
 		return;
 	}
 }
+// System.Void System.IO.StringReader::Close()
+extern "C"  void StringReader_Close_m160518955 (StringReader_t4061477668 * __this, const MethodInfo* method)
+{
+	{
+		VirtActionInvoker1< bool >::Invoke(6 /* System.Void System.IO.StringReader::Dispose(System.Boolean) */, __this, (bool)1);
+		return;
+	}
+}
 // System.Void System.IO.StringReader::Dispose(System.Boolean)
 extern "C"  void StringReader_Dispose_m3317487369 (StringReader_t4061477668 * __this, bool ___disposing0, const MethodInfo* method)
 {
@@ -27312,7 +27705,7 @@ IL_001e:
 		}
 	}
 	{
-		String_t* L_11 = VirtFuncInvoker0< String_t* >::Invoke(10 /* System.String System.IO.StringReader::ReadToEnd() */, __this);
+		String_t* L_11 = VirtFuncInvoker0< String_t* >::Invoke(11 /* System.String System.IO.StringReader::ReadToEnd() */, __this);
 		return L_11;
 	}
 
@@ -27478,6 +27871,53 @@ extern "C"  void SynchronizedReader__ctor_m2400239097 (SynchronizedReader_t20199
 		return;
 	}
 }
+// System.Void System.IO.SynchronizedReader::Close()
+extern "C"  void SynchronizedReader_Close_m3680574280 (SynchronizedReader_t2019931943 * __this, const MethodInfo* method)
+{
+	SynchronizedReader_t2019931943 * V_0 = NULL;
+	Exception_t3991598821 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t3991598821 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		V_0 = __this;
+		SynchronizedReader_t2019931943 * L_0 = V_0;
+		Monitor_Enter_m476686225(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+	}
+
+IL_0008:
+	try
+	{ // begin try (depth: 1)
+		TextReader_t2148718976 * L_1 = __this->get_reader_1();
+		NullCheck(L_1);
+		VirtActionInvoker0::Invoke(5 /* System.Void System.IO.TextReader::Close() */, L_1);
+		IL2CPP_LEAVE(0x1F, FINALLY_0018);
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t3991598821 *)e.ex;
+		goto FINALLY_0018;
+	}
+
+FINALLY_0018:
+	{ // begin finally (depth: 1)
+		SynchronizedReader_t2019931943 * L_2 = V_0;
+		Monitor_Exit_m2088237919(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(24)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(24)
+	{
+		IL2CPP_JUMP_TBL(0x1F, IL_001f)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t3991598821 *)
+	}
+
+IL_001f:
+	{
+		return;
+	}
+}
 // System.Int32 System.IO.SynchronizedReader::Peek()
 extern "C"  int32_t SynchronizedReader_Peek_m2840653193 (SynchronizedReader_t2019931943 * __this, const MethodInfo* method)
 {
@@ -27501,7 +27941,7 @@ IL_0008:
 		{
 			TextReader_t2148718976 * L_1 = __this->get_reader_1();
 			NullCheck(L_1);
-			int32_t L_2 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 System.IO.TextReader::Peek() */, L_1);
+			int32_t L_2 = VirtFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.IO.TextReader::Peek() */, L_1);
 			V_1 = L_2;
 			IL2CPP_LEAVE(0x25, FINALLY_001e);
 		}
@@ -27558,7 +27998,7 @@ IL_0008:
 		{
 			TextReader_t2148718976 * L_1 = __this->get_reader_1();
 			NullCheck(L_1);
-			String_t* L_2 = VirtFuncInvoker0< String_t* >::Invoke(9 /* System.String System.IO.TextReader::ReadLine() */, L_1);
+			String_t* L_2 = VirtFuncInvoker0< String_t* >::Invoke(10 /* System.String System.IO.TextReader::ReadLine() */, L_1);
 			V_1 = L_2;
 			IL2CPP_LEAVE(0x25, FINALLY_001e);
 		}
@@ -27615,7 +28055,7 @@ IL_0008:
 		{
 			TextReader_t2148718976 * L_1 = __this->get_reader_1();
 			NullCheck(L_1);
-			String_t* L_2 = VirtFuncInvoker0< String_t* >::Invoke(10 /* System.String System.IO.TextReader::ReadToEnd() */, L_1);
+			String_t* L_2 = VirtFuncInvoker0< String_t* >::Invoke(11 /* System.String System.IO.TextReader::ReadToEnd() */, L_1);
 			V_1 = L_2;
 			IL2CPP_LEAVE(0x25, FINALLY_001e);
 		}
@@ -27672,7 +28112,7 @@ IL_0008:
 		{
 			TextReader_t2148718976 * L_1 = __this->get_reader_1();
 			NullCheck(L_1);
-			int32_t L_2 = VirtFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.IO.TextReader::Read() */, L_1);
+			int32_t L_2 = VirtFuncInvoker0< int32_t >::Invoke(8 /* System.Int32 System.IO.TextReader::Read() */, L_1);
 			V_1 = L_2;
 			IL2CPP_LEAVE(0x25, FINALLY_001e);
 		}
@@ -27732,7 +28172,7 @@ IL_0008:
 			int32_t L_3 = ___index1;
 			int32_t L_4 = ___count2;
 			NullCheck(L_1);
-			int32_t L_5 = VirtFuncInvoker3< int32_t, CharU5BU5D_t3324145743*, int32_t, int32_t >::Invoke(8 /* System.Int32 System.IO.TextReader::Read(System.Char[],System.Int32,System.Int32) */, L_1, L_2, L_3, L_4);
+			int32_t L_5 = VirtFuncInvoker3< int32_t, CharU5BU5D_t3324145743*, int32_t, int32_t >::Invoke(9 /* System.Int32 System.IO.TextReader::Read(System.Char[],System.Int32,System.Int32) */, L_1, L_2, L_3, L_4);
 			V_1 = L_5;
 			IL2CPP_LEAVE(0x28, FINALLY_0021);
 		}
@@ -28209,11 +28649,19 @@ extern "C"  void TextReader__cctor_m2581406676 (Il2CppObject * __this /* static,
 		return;
 	}
 }
+// System.Void System.IO.TextReader::Close()
+extern "C"  void TextReader_Close_m978398223 (TextReader_t2148718976 * __this, const MethodInfo* method)
+{
+	{
+		VirtActionInvoker1< bool >::Invoke(6 /* System.Void System.IO.TextReader::Dispose(System.Boolean) */, __this, (bool)1);
+		return;
+	}
+}
 // System.Void System.IO.TextReader::Dispose()
 extern "C"  void TextReader_Dispose_m377592054 (TextReader_t2148718976 * __this, const MethodInfo* method)
 {
 	{
-		VirtActionInvoker1< bool >::Invoke(5 /* System.Void System.IO.TextReader::Dispose(System.Boolean) */, __this, (bool)1);
+		VirtActionInvoker1< bool >::Invoke(6 /* System.Void System.IO.TextReader::Dispose(System.Boolean) */, __this, (bool)1);
 		return;
 	}
 }
@@ -28262,7 +28710,7 @@ extern "C"  int32_t TextReader_Read_m1326787678 (TextReader_t2148718976 * __this
 
 IL_0007:
 	{
-		int32_t L_0 = VirtFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.IO.TextReader::Read() */, __this);
+		int32_t L_0 = VirtFuncInvoker0< int32_t >::Invoke(8 /* System.Int32 System.IO.TextReader::Read() */, __this);
 		int32_t L_1 = L_0;
 		V_0 = L_1;
 		if ((!(((uint32_t)L_1) == ((uint32_t)(-1)))))

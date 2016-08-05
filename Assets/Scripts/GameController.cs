@@ -2,17 +2,23 @@
 using System.Collections;
 using SynchronizerData;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	public Text accuracyText;
-	public GameObject quarter_beat, off_beat, on_beat;
+	private static int MAX_CICLE_LOOPS=15;
 
-	public delegate void PauseBeatSynchronizer();
-	public delegate void RestartBeatSynchronizer();
+	public Text accuracyText, scoreText, caloriesText, numberText;
+	public Text congratulationTitleText, congratulationDescText, menuButtonText;
+	public Button menuButton;
 
-	public static event PauseBeatSynchronizer PauseBeatSync;
-	public static event RestartBeatSynchronizer RestartBeatSync;
+	public ParticleSystem particleSystem;
+
+	public AudioSource musicBackground, fxSound;
+	public AudioClip winMusic, greatFxClip, badFxClip;
+	public GameObject playerCharacter;
+	public Image leftCircle, rightCircle;
+	public Canvas fingerCanvas;
 
     private AccuracyState current_tempstate, current_hit;
 	private PlayerPosition player_position;
@@ -21,7 +27,9 @@ public class GameController : MonoBehaviour {
 	private bool blockCurrentHit;
 	private string[] accuracyArray = { "Awesome","Great", "Good", "Not Bad", "Ok", "Miss", "NA" };
 	private float treshold_sit, treshold_liedown;
-	private bool firstDismiss;
+	private bool isStartedLevelSequence ,firstDismiss, isFinished;
+
+	private int points, score, cicle;
 
 	enum AccuracyState {
         AWESOME,
@@ -52,15 +60,18 @@ public class GameController : MonoBehaviour {
 		treshold_liedown = -0.8f;
 		treshold_sit = -0.5f;
 
+		isStartedLevelSequence = false;
 		firstDismiss = true;
+		isFinished = false;
+
+		cicle = 1;
 
 		Debug.Log("USER: "+DataManager.instance.user);
 		Debug.Log("Score: "+DataManager.instance.score);
 		Debug.Log("Points: "+DataManager.instance.points);
 
-		DataManager.instance.score = 22;
-		DataManager.instance.points = 3;
-		DataManager.instance.SaveDataForUser(DataManager.instance.user);
+		points = 0;
+		score = 0;
 
     }
     // Update is called once per frame
@@ -79,6 +90,12 @@ public class GameController : MonoBehaviour {
 				blockCurrentHit = true;
 			}
 			Debug.Log ("TERMINA_B");
+			cicle++;
+
+			if (cicle >= MAX_CICLE_LOOPS) {
+				if(!isFinished)
+					EnableWinningState ();
+			}
 		}
 #if UNITY_STANDALONE
 
@@ -92,7 +109,7 @@ public class GameController : MonoBehaviour {
 #if UNITY_IOS || UNITY_ANDROID
 
         accel = Input.acceleration;
-		Debug.Log ("Accel: "+accel.y);
+		//Debug.Log ("Accel: "+accel.y);
 
 		if (Input.touchCount > 1 && !blockCurrentHit &&
 			accel.y > treshold_sit && player_position == PlayerPosition.LIEDOWN) {
@@ -105,8 +122,60 @@ public class GameController : MonoBehaviour {
 		if(accel.y < treshold_liedown){
 			player_position = PlayerPosition.LIEDOWN;
 		}
+
+		if(!isStartedLevelSequence && Input.touchCount > 1){
+			isStartedLevelSequence = true;
+			StartCoroutine("StartLevelSequence");
+		}
+
+		if(Input.touchCount > 1)
+			DisableTouchHUD();
+		else if(!isFinished)
+			EnableTouchHUD();
+			
 #endif
     }
+
+	private void EnableTouchHUD(){
+
+		fingerCanvas.enabled = true;
+		leftCircle.GetComponent<CirclesController> ().SendMessage ("StopCircleAnimation");
+		rightCircle.GetComponent<CirclesController> ().SendMessage ("StopCircleAnimation");
+	}
+
+	private void DisableTouchHUD(){
+		fingerCanvas.enabled = false;
+		leftCircle.GetComponent<CirclesController> ().SendMessage ("StartCircleAnimation");
+		rightCircle.GetComponent<CirclesController> ().SendMessage ("StartCircleAnimation");
+	}
+
+	private void EnableWinningState(){
+
+		isFinished = true;
+		DataManager.instance.score = score;
+		DataManager.instance.points = points;
+		DataManager.instance.SaveData();
+
+		musicBackground.Stop ();
+		musicBackground.clip = winMusic;
+		musicBackground.GetComponent<BeatSynchronizer> ().enabled = false;
+		accuracyText.enabled = false;
+		fxSound.enabled = false;
+		musicBackground.PlayScheduled (0.9f);
+
+		numberText.enabled = false;
+		leftCircle.enabled = false;
+		rightCircle.enabled = false;
+		fingerCanvas.enabled = false;
+		congratulationTitleText.enabled = true;
+		congratulationDescText.enabled = true;
+		menuButton.GetComponent<Image>().enabled = true;
+		menuButtonText.enabled = true;
+		Camera.main.GetComponent<Animator> ().SetTrigger ("win");
+		playerCharacter.GetComponent<PlayerController> ().SendMessage ("StartWinningAnimation");
+
+		particleSystem.Play ();
+	}
 
     IEnumerator RunCurrentAccuracy()
     {
@@ -130,30 +199,76 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator ShowAccuracyText(){
 
+		points++;
+
+		fxSound.Stop ();
+		fxSound.clip = greatFxClip;
+		fxSound.Play ();
+
+		if (current_tempstate == AccuracyState.AWESOME)
+			score += 100;
+		else if (current_tempstate == AccuracyState.GREAT)
+			score += 60;
+		else if (current_tempstate == AccuracyState.GOOD)
+			score += 40;
+		else if (current_tempstate == AccuracyState.NOTBAD)
+			score += 20;
+		else if (current_tempstate == AccuracyState.OK)
+			score += 10;
+
+		caloriesText.text = "Calorias: " + points.ToString ();
+		scoreText.text = "Score: " + score.ToString ();
 		accuracyText.text = accuracyArray[(int)current_tempstate];
 		accuracyText.enabled = true;
 		yield return new WaitForSeconds (0.1f);
-		accuracyText.fontSize = 50;
+		accuracyText.fontSize = 80;
+		caloriesText.fontSize = 50;
+		scoreText.fontSize = 50;
 		yield return new WaitForSeconds (0.1f);
-		accuracyText.fontSize = 30;
+		accuracyText.fontSize = 50;
+		caloriesText.fontSize = 30;
+		scoreText.fontSize = 30;
 		yield return new WaitForSeconds (0.1f);
 		accuracyText.enabled = false;
+
 	}
 
 	IEnumerator ShowMissText(){
 
-		if (!firstDismiss) {
+		if (!firstDismiss && !isFinished) {
+
+			fxSound.Stop ();
+			fxSound.clip = badFxClip;
+			fxSound.Play ();
 
 			accuracyText.text = accuracyArray [(int)AccuracyState.MISS];
 			accuracyText.enabled = true;
 			yield return new WaitForSeconds (0.1f);
-			accuracyText.fontSize = 50;
+			accuracyText.fontSize = 80;
 			yield return new WaitForSeconds (0.1f);
-			accuracyText.fontSize = 30;
+			accuracyText.fontSize = 50;
 			yield return new WaitForSeconds (0.1f);
 			accuracyText.enabled = false;
 		}
 		firstDismiss = false;
+	}
 
+	IEnumerator StartLevelSequence(){
+
+		yield return new WaitForSeconds (1f);
+
+		musicBackground.GetComponent<BeatSynchronizer> ().enabled = true;
+
+	}
+
+
+	public void RestartScene(){
+		//SceneManager.LoadScene (2);
+		Application.LoadLevel(2);
+	}
+
+	public void GoToMainMenu(){
+		//SceneManager.LoadScene (1);
+		Application.LoadLevel(1);
 	}
 }

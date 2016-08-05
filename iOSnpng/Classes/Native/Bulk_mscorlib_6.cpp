@@ -139,6 +139,8 @@ struct WindowsIdentity_t4160730487;
 struct SecurityContext_t444694245;
 // System.Threading.CompressedStack
 struct CompressedStack_t1790381301;
+// System.Security.SecurityCriticalAttribute
+struct SecurityCriticalAttribute_t3643889075;
 // System.Text.StringBuilder
 struct StringBuilder_t243639308;
 // System.Security.SecurityElement/SecurityAttribute
@@ -474,6 +476,9 @@ struct UTF8Decoder_t3933697034;
 #include "mscorlib_System_Threading_ExecutionContext1900239151MethodDeclarations.h"
 #include "mscorlib_System_Threading_Thread1973216770.h"
 #include "mscorlib_System_Threading_ExecutionContext1900239151.h"
+#include "mscorlib_System_Security_SecurityCriticalAttribute3643889075.h"
+#include "mscorlib_System_Security_SecurityCriticalAttribute3643889075MethodDeclarations.h"
+#include "mscorlib_System_Attribute2523058482MethodDeclarations.h"
 #include "mscorlib_System_Char2862622538.h"
 #include "mscorlib_U3CPrivateImplementationDetailsU3E_U24Arr3379220348.h"
 #include "mscorlib_System_Security_SecurityElement_SecurityA1645524282MethodDeclarations.h"
@@ -496,7 +501,6 @@ struct UTF8Decoder_t3933697034;
 #include "mscorlib_System_Text_Encoding2012439129.h"
 #include "mscorlib_System_Security_SecuritySafeCriticalAttri2604671270.h"
 #include "mscorlib_System_Security_SecuritySafeCriticalAttri2604671270MethodDeclarations.h"
-#include "mscorlib_System_Attribute2523058482MethodDeclarations.h"
 #include "mscorlib_System_Security_SuppressUnmanagedCodeSecu2984551154.h"
 #include "mscorlib_System_Security_SuppressUnmanagedCodeSecu2984551154MethodDeclarations.h"
 #include "mscorlib_System_Security_UnverifiableCodeAttribute2154663753.h"
@@ -610,8 +614,6 @@ struct UTF8Decoder_t3933697034;
 #include "mscorlib_System_Text_UTF7Encoding_UTF7Decoder1979535786.h"
 #include "mscorlib_System_Text_UTF8Encoding_UTF8Decoder3933697034MethodDeclarations.h"
 #include "mscorlib_System_Text_UTF8Encoding_UTF8Decoder3933697034.h"
-#include "mscorlib_System_Threading_EventResetMode833452304.h"
-#include "mscorlib_System_Threading_EventResetMode833452304MethodDeclarations.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -36306,6 +36308,14 @@ extern "C"  CompressedStack_t1790381301 * SecurityContext_get_CompressedStack_m6
 	{
 		CompressedStack_t1790381301 * L_0 = __this->get__stack_2();
 		return L_0;
+	}
+}
+// System.Void System.Security.SecurityCriticalAttribute::.ctor()
+extern "C"  void SecurityCriticalAttribute__ctor_m2297330502 (SecurityCriticalAttribute_t3643889075 * __this, const MethodInfo* method)
+{
+	{
+		Attribute__ctor_m2985353781(__this, /*hidden argument*/NULL);
+		return;
 	}
 }
 // System.Void System.Security.SecurityElement::.ctor(System.String)

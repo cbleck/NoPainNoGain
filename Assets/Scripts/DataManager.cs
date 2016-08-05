@@ -5,24 +5,47 @@ using System.IO;
 
 public class DataManager : MonoBehaviour {
 
-	public String fileName;
+	private String fileName = Application.persistentDataPath +"/npngprefs.txt";
 	public static DataManager instance;
 	string[] tmpString;
 	char[] delimeterCharacteres = {'|', ','};
 	public int score;
 	public int points;
+	[HideInInspector]
 	public string user;
+	public string[] recordLines;
 
 	// Use this for initialization
 	void Awake () {
 		instance = this;
-		LoadDataForUser(user);
+		GetAllRecords();
 	}
 
-	public void LoadDataForUser(string usr) {
+	public string[] GetAllRecords(){
+
+		if (File.Exists (fileName)) {
+			recordLines = new string[100];
+			StreamReader sr = new StreamReader(fileName);
+			string stringLine, tmpuser;
+			int i = 0;
+			while ((stringLine = sr.ReadLine()) != null) {
+				recordLines [i] = stringLine;
+				i++;
+			}
+			sr.Close();
+			return recordLines;
+		}
+		else {
+			recordLines = new string[1];
+			recordLines[0] = "No hay records";
+			return recordLines;
+		}
+	}
+
+	public void LoadData(string usr) {
 		
-		if (File.Exists(Application.dataPath + fileName)){
-			StreamReader sr = new StreamReader(Application.dataPath + fileName);
+		if (File.Exists(fileName)){
+			StreamReader sr = new StreamReader(fileName);
 			//StreamReader sr = new StreamReader(fileName);
 			string stringLine, tmpuser;
 
@@ -44,12 +67,12 @@ public class DataManager : MonoBehaviour {
 			points = 0;
 		}
 	}
-	public void SaveDataForUser(string usr) {
+	public void SaveData() {
 
 		int find_user_index=-1, i=0;
 
-		if (File.Exists (Application.dataPath + fileName)) {
-			StreamReader sr = new StreamReader (Application.dataPath + fileName);
+		if (File.Exists (fileName)) {
+			StreamReader sr = new StreamReader (fileName);
 			//StreamReader sr = new StreamReader(fileName);
 			string stringLine, tmpuser;
 
@@ -57,7 +80,7 @@ public class DataManager : MonoBehaviour {
 				tmpString = stringLine.Split (delimeterCharacteres);
 				tmpuser = tmpString [0];
 
-				if ( string.Equals(usr, tmpuser) )
+				if ( string.Equals(user, tmpuser) )
 					find_user_index = i;
 				i++;
 			}
@@ -65,19 +88,19 @@ public class DataManager : MonoBehaviour {
 
 			if (find_user_index != -1) {
 
-				string[] lines = System.IO.File.ReadAllLines (Application.dataPath + fileName);
-				lines [find_user_index] = usr + "|" + score + "|" + points;
-				System.IO.File.WriteAllLines (Application.dataPath + fileName, lines);
+				string[] lines = System.IO.File.ReadAllLines (fileName);
+				lines [find_user_index] = user + "|" + score + "|" + points;
+				System.IO.File.WriteAllLines (fileName, lines);
 
 			} else {
-				StreamWriter sw = new StreamWriter (Application.dataPath + fileName);
-				string tmpData = usr + "|" + score + "|" + points;
+				StreamWriter sw = new StreamWriter (fileName);
+				string tmpData = user + "|" + score + "|" + points;
 				sw.WriteLine (tmpData);
 				sw.Close ();
 			}
 		} else {
-			StreamWriter sw = new StreamWriter (Application.dataPath + fileName);
-			string tmpData = usr + "|" + score + "|" + points;
+			StreamWriter sw = new StreamWriter (fileName);
+			string tmpData = user + "|" + score + "|" + points;
 			sw.WriteLine (tmpData);
 			sw.Close ();
 		}

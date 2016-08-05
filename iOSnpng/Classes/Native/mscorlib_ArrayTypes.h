@@ -328,6 +328,7 @@ struct List_1_t1317283468;
 #include "mscorlib_System_Collections_Generic_List_1_gen1355284823.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen2522024052.h"
 #include "mscorlib_System_Collections_Generic_List_1_gen1317283468.h"
+#include "mscorlib_System_Collections_Generic_KeyValuePair_24198242798.h"
 
 #pragma once
 // System.Object[]
@@ -2696,5 +2697,19 @@ public:
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// System.Collections.Generic.KeyValuePair`2<System.Int32,System.String>[]
+struct KeyValuePair_2U5BU5D_t1950272155  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) KeyValuePair_2_t4198242798  m_Items[1];
+
+public:
+	inline KeyValuePair_2_t4198242798  GetAt(il2cpp_array_size_t index) const { return m_Items[index]; }
+	inline KeyValuePair_2_t4198242798 * GetAddressAt(il2cpp_array_size_t index) { return m_Items + index; }
+	inline void SetAt(il2cpp_array_size_t index, KeyValuePair_2_t4198242798  value)
+	{
+		m_Items[index] = value;
 	}
 };

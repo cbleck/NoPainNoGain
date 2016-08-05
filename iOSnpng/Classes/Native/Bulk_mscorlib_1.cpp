@@ -54900,7 +54900,7 @@ IL_00ea:
 			{
 				StreamReader_t2549717843 * L_42 = V_2;
 				NullCheck(L_42);
-				String_t* L_43 = VirtFuncInvoker0< String_t* >::Invoke(9 /* System.String System.IO.StreamReader::ReadLine() */, L_42);
+				String_t* L_43 = VirtFuncInvoker0< String_t* >::Invoke(10 /* System.String System.IO.StreamReader::ReadLine() */, L_42);
 				String_t* L_44 = L_43;
 				V_3 = L_44;
 				if (L_44)

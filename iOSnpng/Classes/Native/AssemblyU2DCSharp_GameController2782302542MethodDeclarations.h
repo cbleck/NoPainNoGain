@@ -14,34 +14,34 @@
 
 // GameController
 struct GameController_t2782302542;
-// GameController/PauseBeatSynchronizer
-struct PauseBeatSynchronizer_t810409965;
-// GameController/RestartBeatSynchronizer
-struct RestartBeatSynchronizer_t1486424646;
 // System.Collections.IEnumerator
 struct IEnumerator_t3464575207;
 
 #include "codegen/il2cpp-codegen.h"
-#include "AssemblyU2DCSharp_GameController_PauseBeatSynchroni810409965.h"
-#include "AssemblyU2DCSharp_GameController_RestartBeatSynchr1486424646.h"
 
 // System.Void GameController::.ctor()
 extern "C"  void GameController__ctor_m4168274701 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void GameController::add_PauseBeatSync(GameController/PauseBeatSynchronizer)
-extern "C"  void GameController_add_PauseBeatSync_m1023446919 (Il2CppObject * __this /* static, unused */, PauseBeatSynchronizer_t810409965 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void GameController::remove_PauseBeatSync(GameController/PauseBeatSynchronizer)
-extern "C"  void GameController_remove_PauseBeatSync_m2042165526 (Il2CppObject * __this /* static, unused */, PauseBeatSynchronizer_t810409965 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void GameController::add_RestartBeatSync(GameController/RestartBeatSynchronizer)
-extern "C"  void GameController_add_RestartBeatSync_m3066020007 (Il2CppObject * __this /* static, unused */, RestartBeatSynchronizer_t1486424646 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void GameController::remove_RestartBeatSync(GameController/RestartBeatSynchronizer)
-extern "C"  void GameController_remove_RestartBeatSync_m2801453750 (Il2CppObject * __this /* static, unused */, RestartBeatSynchronizer_t1486424646 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameController::.cctor()
+extern "C"  void GameController__cctor_m4180367936 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameController::Start()
 extern "C"  void GameController_Start_m3115412493 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameController::Update()
 extern "C"  void GameController_Update_m2094358944 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameController::EnableTouchHUD()
+extern "C"  void GameController_EnableTouchHUD_m3675261490 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameController::DisableTouchHUD()
+extern "C"  void GameController_DisableTouchHUD_m1137924075 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameController::EnableWinningState()
+extern "C"  void GameController_EnableWinningState_m2214279707 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.IEnumerator GameController::RunCurrentAccuracy()
 extern "C"  Il2CppObject * GameController_RunCurrentAccuracy_m1681424934 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.IEnumerator GameController::ShowAccuracyText()
 extern "C"  Il2CppObject * GameController_ShowAccuracyText_m2241338498 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.IEnumerator GameController::ShowMissText()
 extern "C"  Il2CppObject * GameController_ShowMissText_m192745413 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.IEnumerator GameController::StartLevelSequence()
+extern "C"  Il2CppObject * GameController_StartLevelSequence_m2053804482 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameController::RestartScene()
+extern "C"  void GameController_RestartScene_m1240256276 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameController::GoToMainMenu()
+extern "C"  void GameController_GoToMainMenu_m424779058 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

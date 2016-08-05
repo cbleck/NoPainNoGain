@@ -18,10 +18,10 @@ struct StreamWriter_t2705123075;
 struct Stream_t1561764144;
 // System.Text.Encoding
 struct Encoding_t2012439129;
-// System.Char[]
-struct CharU5BU5D_t3324145743;
 // System.String
 struct String_t;
+// System.Char[]
+struct CharU5BU5D_t3324145743;
 
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_IO_Stream1561764144.h"
@@ -32,6 +32,10 @@ struct String_t;
 extern "C"  void StreamWriter__ctor_m195691908 (StreamWriter_t2705123075 * __this, Stream_t1561764144 * ___stream0, Encoding_t2012439129 * ___encoding1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.IO.StreamWriter::.ctor(System.IO.Stream,System.Text.Encoding,System.Int32)
 extern "C"  void StreamWriter__ctor_m1929719251 (StreamWriter_t2705123075 * __this, Stream_t1561764144 * ___stream0, Encoding_t2012439129 * ___encoding1, int32_t ___bufferSize2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.StreamWriter::.ctor(System.String)
+extern "C"  void StreamWriter__ctor_m3504350636 (StreamWriter_t2705123075 * __this, String_t* ___path0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.StreamWriter::.ctor(System.String,System.Boolean,System.Text.Encoding,System.Int32)
+extern "C"  void StreamWriter__ctor_m4028849527 (StreamWriter_t2705123075 * __this, String_t* ___path0, bool ___append1, Encoding_t2012439129 * ___encoding2, int32_t ___bufferSize3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.IO.StreamWriter::.cctor()
 extern "C"  void StreamWriter__cctor_m1403486551 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.IO.StreamWriter::Initialize(System.Text.Encoding,System.Int32)

@@ -266,10 +266,14 @@ struct GUILayoutOption_t331591504;
 #include "UnityEngine_UnityEngine_AnimatorTransitionInfo2817229998MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Application2856536070.h"
 #include "UnityEngine_UnityEngine_Application2856536070MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_Application_LogCallback2984951347.h"
+#include "mscorlib_System_Delegate3310234105MethodDeclarations.h"
+#include "mscorlib_System_Delegate3310234105.h"
 #include "UnityEngine_UnityEngine_RuntimePlatform3050318497.h"
 #include "UnityEngine_UnityEngine_LogType4286006228.h"
 #include "UnityEngine_UnityEngine_Application_LogCallback2984951347MethodDeclarations.h"
-#include "UnityEngine_UnityEngine_Application_LogCallback2984951347.h"
+#include "UnityEngine_UnityEngine_SceneManagement_SceneManag2940962239MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_SceneManagement_LoadSceneM3067001883.h"
 #include "mscorlib_System_IntPtr4010401971.h"
 #include "mscorlib_System_AsyncCallback1369114871.h"
 #include "UnityEngine_UnityEngine_AssemblyIsEditorAssembly1696890055.h"
@@ -313,6 +317,7 @@ struct GUILayoutOption_t331591504;
 #include "UnityEngine_UnityEngine_AudioSettings_AudioConfigu1377657005.h"
 #include "UnityEngine_UnityEngine_AudioSource1740077639.h"
 #include "UnityEngine_UnityEngine_AudioSource1740077639MethodDeclarations.h"
+#include "mscorlib_System_UInt6424668076.h"
 #include "UnityEngine_UnityEngine_AudioType794660134.h"
 #include "UnityEngine_UnityEngine_AudioType794660134MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Behaviour200106419.h"
@@ -344,8 +349,6 @@ struct GUILayoutOption_t331591504;
 #include "UnityEngine_UnityEngine_Canvas2727140764.h"
 #include "UnityEngine_UnityEngine_Canvas2727140764MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_Canvas_WillRenderCanvases4247149838.h"
-#include "mscorlib_System_Delegate3310234105MethodDeclarations.h"
-#include "mscorlib_System_Delegate3310234105.h"
 #include "UnityEngine_UnityEngine_RenderMode77252893.h"
 #include "UnityEngine_UnityEngine_Material3870600107.h"
 #include "UnityEngine_UnityEngine_Canvas_WillRenderCanvases4247149838MethodDeclarations.h"
@@ -1021,6 +1024,16 @@ extern "C" void AnimationEvent_t3669457594_marshal_com_back(const AnimationEvent
 extern "C" void AnimationEvent_t3669457594_marshal_com_cleanup(AnimationEvent_t3669457594_marshaled_com& marshaled)
 {
 }
+// System.Void UnityEngine.Animator::SetBool(System.String,System.Boolean)
+extern "C"  void Animator_SetBool_m2336836203 (Animator_t2776330603 * __this, String_t* ___name0, bool ___value1, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___name0;
+		bool L_1 = ___value1;
+		Animator_SetBoolString_m275475356(__this, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Animator::SetTrigger(System.String)
 extern "C"  void Animator_SetTrigger_m514363822 (Animator_t2776330603 * __this, String_t* ___name0, const MethodInfo* method)
 {
@@ -1056,6 +1069,15 @@ extern "C"  int32_t Animator_StringToHash_m4020897098 (Il2CppObject * __this /* 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Animator_StringToHash_m4020897098_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::StringToHash(System.String)");
 	return _il2cpp_icall_func(___name0);
+}
+// System.Void UnityEngine.Animator::SetBoolString(System.String,System.Boolean)
+extern "C"  void Animator_SetBoolString_m275475356 (Animator_t2776330603 * __this, String_t* ___name0, bool ___value1, const MethodInfo* method)
+{
+	typedef void (*Animator_SetBoolString_m275475356_ftn) (Animator_t2776330603 *, String_t*, bool);
+	static Animator_SetBoolString_m275475356_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Animator_SetBoolString_m275475356_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animator::SetBoolString(System.String,System.Boolean)");
+	_il2cpp_icall_func(__this, ___name0, ___value1);
 }
 // System.Void UnityEngine.Animator::SetTriggerString(System.String)
 extern "C"  void Animator_SetTriggerString_m1378271133 (Animator_t2776330603 * __this, String_t* ___name0, const MethodInfo* method)
@@ -1597,6 +1619,88 @@ extern "C" void AnimatorTransitionInfo_t2817229998_marshal_com_back(const Animat
 extern "C" void AnimatorTransitionInfo_t2817229998_marshal_com_cleanup(AnimatorTransitionInfo_t2817229998_marshaled_com& marshaled)
 {
 }
+// System.Void UnityEngine.Application::add_logMessageReceived(UnityEngine.Application/LogCallback)
+extern Il2CppClass* Application_t2856536070_il2cpp_TypeInfo_var;
+extern Il2CppClass* LogCallback_t2984951347_il2cpp_TypeInfo_var;
+extern const uint32_t Application_add_logMessageReceived_m601763714_MetadataUsageId;
+extern "C"  void Application_add_logMessageReceived_m601763714 (Il2CppObject * __this /* static, unused */, LogCallback_t2984951347 * ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Application_add_logMessageReceived_m601763714_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		LogCallback_t2984951347 * L_0 = ((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->get_s_LogCallbackHandler_0();
+		LogCallback_t2984951347 * L_1 = ___value0;
+		Delegate_t3310234105 * L_2 = Delegate_Combine_m1842362874(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->set_s_LogCallbackHandler_0(((LogCallback_t2984951347 *)CastclassSealed(L_2, LogCallback_t2984951347_il2cpp_TypeInfo_var)));
+		Application_SetLogCallbackDefined_m603286656(NULL /*static, unused*/, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Application::remove_logMessageReceived(UnityEngine.Application/LogCallback)
+extern Il2CppClass* Application_t2856536070_il2cpp_TypeInfo_var;
+extern Il2CppClass* LogCallback_t2984951347_il2cpp_TypeInfo_var;
+extern const uint32_t Application_remove_logMessageReceived_m293388825_MetadataUsageId;
+extern "C"  void Application_remove_logMessageReceived_m293388825 (Il2CppObject * __this /* static, unused */, LogCallback_t2984951347 * ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Application_remove_logMessageReceived_m293388825_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		LogCallback_t2984951347 * L_0 = ((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->get_s_LogCallbackHandler_0();
+		LogCallback_t2984951347 * L_1 = ___value0;
+		Delegate_t3310234105 * L_2 = Delegate_Remove_m3898886541(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->set_s_LogCallbackHandler_0(((LogCallback_t2984951347 *)CastclassSealed(L_2, LogCallback_t2984951347_il2cpp_TypeInfo_var)));
+		return;
+	}
+}
+// System.Void UnityEngine.Application::add_logMessageReceivedThreaded(UnityEngine.Application/LogCallback)
+extern Il2CppClass* Application_t2856536070_il2cpp_TypeInfo_var;
+extern Il2CppClass* LogCallback_t2984951347_il2cpp_TypeInfo_var;
+extern const uint32_t Application_add_logMessageReceivedThreaded_m2240409817_MetadataUsageId;
+extern "C"  void Application_add_logMessageReceivedThreaded_m2240409817 (Il2CppObject * __this /* static, unused */, LogCallback_t2984951347 * ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Application_add_logMessageReceivedThreaded_m2240409817_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		LogCallback_t2984951347 * L_0 = ((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->get_s_LogCallbackHandlerThreaded_1();
+		LogCallback_t2984951347 * L_1 = ___value0;
+		Delegate_t3310234105 * L_2 = Delegate_Combine_m1842362874(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->set_s_LogCallbackHandlerThreaded_1(((LogCallback_t2984951347 *)CastclassSealed(L_2, LogCallback_t2984951347_il2cpp_TypeInfo_var)));
+		Application_SetLogCallbackDefined_m603286656(NULL /*static, unused*/, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Application::remove_logMessageReceivedThreaded(UnityEngine.Application/LogCallback)
+extern Il2CppClass* Application_t2856536070_il2cpp_TypeInfo_var;
+extern Il2CppClass* LogCallback_t2984951347_il2cpp_TypeInfo_var;
+extern const uint32_t Application_remove_logMessageReceivedThreaded_m1892940912_MetadataUsageId;
+extern "C"  void Application_remove_logMessageReceivedThreaded_m1892940912 (Il2CppObject * __this /* static, unused */, LogCallback_t2984951347 * ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Application_remove_logMessageReceivedThreaded_m1892940912_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		LogCallback_t2984951347 * L_0 = ((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->get_s_LogCallbackHandlerThreaded_1();
+		LogCallback_t2984951347 * L_1 = ___value0;
+		Delegate_t3310234105 * L_2 = Delegate_Remove_m3898886541(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->set_s_LogCallbackHandlerThreaded_1(((LogCallback_t2984951347 *)CastclassSealed(L_2, LogCallback_t2984951347_il2cpp_TypeInfo_var)));
+		return;
+	}
+}
 // System.Boolean UnityEngine.Application::get_isPlaying()
 extern "C"  bool Application_get_isPlaying_m987993960 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
 {
@@ -1622,6 +1726,15 @@ extern "C"  int32_t Application_get_platform_m2918632856 (Il2CppObject * __this 
 	static Application_get_platform_m2918632856_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Application_get_platform_m2918632856_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_platform()");
+	return _il2cpp_icall_func();
+}
+// System.String UnityEngine.Application::get_persistentDataPath()
+extern "C"  String_t* Application_get_persistentDataPath_m2554537447 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef String_t* (*Application_get_persistentDataPath_m2554537447_ftn) ();
+	static Application_get_persistentDataPath_m2554537447_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_get_persistentDataPath_m2554537447_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_persistentDataPath()");
 	return _il2cpp_icall_func();
 }
 // System.Void UnityEngine.Application::CallLogCallback(System.String,System.String,UnityEngine.LogType,System.Boolean)
@@ -1683,6 +1796,96 @@ IL_001b:
 
 IL_0030:
 	{
+		return;
+	}
+}
+// System.Void UnityEngine.Application::SetLogCallbackDefined(System.Boolean)
+extern "C"  void Application_SetLogCallbackDefined_m603286656 (Il2CppObject * __this /* static, unused */, bool ___defined0, const MethodInfo* method)
+{
+	typedef void (*Application_SetLogCallbackDefined_m603286656_ftn) (bool);
+	static Application_SetLogCallbackDefined_m603286656_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_SetLogCallbackDefined_m603286656_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::SetLogCallbackDefined(System.Boolean)");
+	_il2cpp_icall_func(___defined0);
+}
+// System.Void UnityEngine.Application::RegisterLogCallback(UnityEngine.Application/LogCallback)
+extern "C"  void Application_RegisterLogCallback_m1894810578 (Il2CppObject * __this /* static, unused */, LogCallback_t2984951347 * ___handler0, const MethodInfo* method)
+{
+	{
+		LogCallback_t2984951347 * L_0 = ___handler0;
+		Application_RegisterLogCallback_m1249997163(NULL /*static, unused*/, L_0, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Application::RegisterLogCallback(UnityEngine.Application/LogCallback,System.Boolean)
+extern Il2CppClass* Application_t2856536070_il2cpp_TypeInfo_var;
+extern const uint32_t Application_RegisterLogCallback_m1249997163_MetadataUsageId;
+extern "C"  void Application_RegisterLogCallback_m1249997163 (Il2CppObject * __this /* static, unused */, LogCallback_t2984951347 * ___handler0, bool ___threaded1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (Application_RegisterLogCallback_m1249997163_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		LogCallback_t2984951347 * L_0 = ((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->get_s_RegisterLogCallbackDeprecated_2();
+		il2cpp_codegen_memory_barrier();
+		if (!L_0)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		LogCallback_t2984951347 * L_1 = ((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->get_s_RegisterLogCallbackDeprecated_2();
+		il2cpp_codegen_memory_barrier();
+		Application_remove_logMessageReceived_m293388825(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		LogCallback_t2984951347 * L_2 = ((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->get_s_RegisterLogCallbackDeprecated_2();
+		il2cpp_codegen_memory_barrier();
+		Application_remove_logMessageReceivedThreaded_m1892940912(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+	}
+
+IL_0024:
+	{
+		LogCallback_t2984951347 * L_3 = ___handler0;
+		il2cpp_codegen_memory_barrier();
+		((Application_t2856536070_StaticFields*)Application_t2856536070_il2cpp_TypeInfo_var->static_fields)->set_s_RegisterLogCallbackDeprecated_2(L_3);
+		LogCallback_t2984951347 * L_4 = ___handler0;
+		if (!L_4)
+		{
+			goto IL_0049;
+		}
+	}
+	{
+		bool L_5 = ___threaded1;
+		if (!L_5)
+		{
+			goto IL_0043;
+		}
+	}
+	{
+		LogCallback_t2984951347 * L_6 = ___handler0;
+		Application_add_logMessageReceivedThreaded_m2240409817(NULL /*static, unused*/, L_6, /*hidden argument*/NULL);
+		goto IL_0049;
+	}
+
+IL_0043:
+	{
+		LogCallback_t2984951347 * L_7 = ___handler0;
+		Application_add_logMessageReceived_m601763714(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
+	}
+
+IL_0049:
+	{
+		return;
+	}
+}
+// System.Void UnityEngine.Application::LoadLevel(System.Int32)
+extern "C"  void Application_LoadLevel_m1181471414 (Il2CppObject * __this /* static, unused */, int32_t ___index0, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = ___index0;
+		SceneManager_LoadScene_m2455768283(NULL /*static, unused*/, L_0, 0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -2723,6 +2926,35 @@ extern "C"  AudioClip_t794140988 * AudioSource_get_clip_m2410835857 (AudioSource
 	_il2cpp_icall_func = (AudioSource_get_clip_m2410835857_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::get_clip()");
 	return _il2cpp_icall_func(__this);
 }
+// System.Void UnityEngine.AudioSource::set_clip(UnityEngine.AudioClip)
+extern "C"  void AudioSource_set_clip_m19502010 (AudioSource_t1740077639 * __this, AudioClip_t794140988 * ___value0, const MethodInfo* method)
+{
+	typedef void (*AudioSource_set_clip_m19502010_ftn) (AudioSource_t1740077639 *, AudioClip_t794140988 *);
+	static AudioSource_set_clip_m19502010_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AudioSource_set_clip_m19502010_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::set_clip(UnityEngine.AudioClip)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.AudioSource::Play(System.UInt64)
+extern "C"  void AudioSource_Play_m3374467819 (AudioSource_t1740077639 * __this, uint64_t ___delay0, const MethodInfo* method)
+{
+	typedef void (*AudioSource_Play_m3374467819_ftn) (AudioSource_t1740077639 *, uint64_t);
+	static AudioSource_Play_m3374467819_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AudioSource_Play_m3374467819_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::Play(System.UInt64)");
+	_il2cpp_icall_func(__this, ___delay0);
+}
+// System.Void UnityEngine.AudioSource::Play()
+extern "C"  void AudioSource_Play_m1360558992 (AudioSource_t1740077639 * __this, const MethodInfo* method)
+{
+	uint64_t V_0 = 0;
+	{
+		V_0 = (((int64_t)((int64_t)0)));
+		uint64_t L_0 = V_0;
+		AudioSource_Play_m3374467819(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.AudioSource::PlayScheduled(System.Double)
 extern "C"  void AudioSource_PlayScheduled_m2227094787 (AudioSource_t1740077639 * __this, double ___time0, const MethodInfo* method)
 {
@@ -2731,6 +2963,15 @@ extern "C"  void AudioSource_PlayScheduled_m2227094787 (AudioSource_t1740077639 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (AudioSource_PlayScheduled_m2227094787_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::PlayScheduled(System.Double)");
 	_il2cpp_icall_func(__this, ___time0);
+}
+// System.Void UnityEngine.AudioSource::Stop()
+extern "C"  void AudioSource_Stop_m1454243038 (AudioSource_t1740077639 * __this, const MethodInfo* method)
+{
+	typedef void (*AudioSource_Stop_m1454243038_ftn) (AudioSource_t1740077639 *);
+	static AudioSource_Stop_m1454243038_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AudioSource_Stop_m1454243038_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::Stop()");
+	_il2cpp_icall_func(__this);
 }
 // System.Boolean UnityEngine.AudioSource::get_isPlaying()
 extern "C"  bool AudioSource_get_isPlaying_m4213444423 (AudioSource_t1740077639 * __this, const MethodInfo* method)
