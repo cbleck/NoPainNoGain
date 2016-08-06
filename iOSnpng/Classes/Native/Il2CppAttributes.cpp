@@ -21493,23 +21493,23 @@ static void FadePropetiesAnim_t145139664_CustomAttributesCacheGenerator_fadeOver
 static void FadePropetiesAnim_t145139664_CustomAttributesCacheGenerator_startFade(CustomAttributesCache* cache)
 {
 	{
-		SerializeField_t3754825534 * tmp = (SerializeField_t3754825534 *)cache->attributes[0];
-		SerializeField__ctor_m4068807987(tmp, NULL);
-	}
-	{
-		HideInInspector_t2952493798 * tmp = (HideInInspector_t2952493798 *)cache->attributes[1];
-		HideInInspector__ctor_m1076518313(tmp, NULL);
-	}
-}
-static void FadePropetiesAnim_t145139664_CustomAttributesCacheGenerator_endFade(CustomAttributesCache* cache)
-{
-	{
 		HideInInspector_t2952493798 * tmp = (HideInInspector_t2952493798 *)cache->attributes[0];
 		HideInInspector__ctor_m1076518313(tmp, NULL);
 	}
 	{
 		SerializeField_t3754825534 * tmp = (SerializeField_t3754825534 *)cache->attributes[1];
 		SerializeField__ctor_m4068807987(tmp, NULL);
+	}
+}
+static void FadePropetiesAnim_t145139664_CustomAttributesCacheGenerator_endFade(CustomAttributesCache* cache)
+{
+	{
+		SerializeField_t3754825534 * tmp = (SerializeField_t3754825534 *)cache->attributes[0];
+		SerializeField__ctor_m4068807987(tmp, NULL);
+	}
+	{
+		HideInInspector_t2952493798 * tmp = (HideInInspector_t2952493798 *)cache->attributes[1];
+		HideInInspector__ctor_m1076518313(tmp, NULL);
 	}
 }
 static void AnimationParts_t4290477440_CustomAttributesCacheGenerator_PositionPropetiesAnim(CustomAttributesCache* cache)

@@ -1690,22 +1690,22 @@ IL_0021:
 		NullCheck(L_13);
 		VirtActionInvoker1< Color_t4194546905  >::Invoke(22 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_13, L_14);
 		CicleManager_t2875820023 * L_15 = __this->get_U3CU3Ef__this_2();
-		CicleManager_t2875820023 * L_16 = L_15;
-		NullCheck(L_16);
-		int32_t L_17 = L_16->get_currentCycle_6();
-		NullCheck(L_16);
-		L_16->set_currentCycle_6(((int32_t)((int32_t)L_17+(int32_t)1)));
-		CicleManager_t2875820023 * L_18 = __this->get_U3CU3Ef__this_2();
-		NullCheck(L_18);
-		Text_t9039225 * L_19 = L_18->get_currentCycleText_2();
-		CicleManager_t2875820023 * L_20 = __this->get_U3CU3Ef__this_2();
-		NullCheck(L_20);
-		int32_t* L_21 = L_20->get_address_of_currentCycle_6();
-		String_t* L_22 = Int32_ToString_m1286526384(L_21, /*hidden argument*/NULL);
+		NullCheck(L_15);
+		Text_t9039225 * L_16 = L_15->get_currentCycleText_2();
+		CicleManager_t2875820023 * L_17 = __this->get_U3CU3Ef__this_2();
+		NullCheck(L_17);
+		int32_t* L_18 = L_17->get_address_of_currentCycle_6();
+		String_t* L_19 = Int32_ToString_m1286526384(L_18, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_23 = String_Concat_m1825781833(NULL /*static, unused*/, _stringLiteral2434019846, L_22, _stringLiteral1432501, /*hidden argument*/NULL);
-		NullCheck(L_19);
-		VirtActionInvoker1< String_t* >::Invoke(74 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_19, L_23);
+		String_t* L_20 = String_Concat_m1825781833(NULL /*static, unused*/, _stringLiteral2434019846, L_19, _stringLiteral1432501, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		VirtActionInvoker1< String_t* >::Invoke(74 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_16, L_20);
+		CicleManager_t2875820023 * L_21 = __this->get_U3CU3Ef__this_2();
+		CicleManager_t2875820023 * L_22 = L_21;
+		NullCheck(L_22);
+		int32_t L_23 = L_22->get_currentCycle_6();
+		NullCheck(L_22);
+		L_22->set_currentCycle_6(((int32_t)((int32_t)L_23+(int32_t)1)));
 		goto IL_00fa;
 	}
 
@@ -3534,7 +3534,7 @@ extern "C"  void GameController__ctor_m4168274701 (GameController_t2782302542 * 
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_6, 6);
 		ArrayElementTypeCheck (L_6, _stringLiteral2483);
 		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral2483);
-		__this->set_accuracyArray_26(L_6);
+		__this->set_accuracyArray_27(L_6);
 		MonoBehaviour__ctor_m2022291967(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -3575,16 +3575,16 @@ extern "C"  void GameController_Start_m3115412493 (GameController_t2782302542 * 
 	}
 	{
 		BeatObserver_t2441021644 * L_0 = Component_GetComponent_TisBeatObserver_t2441021644_m1414119225(__this, /*hidden argument*/Component_GetComponent_TisBeatObserver_t2441021644_m1414119225_MethodInfo_var);
-		__this->set_beatObserver_24(L_0);
-		__this->set_current_tempstate_21(0);
-		__this->set_current_hit_22(6);
-		__this->set_blockCurrentHit_25((bool)0);
-		__this->set_treshold_liedown_28((-0.8f));
-		__this->set_treshold_sit_27((-0.5f));
-		__this->set_isStartedLevelSequence_29((bool)0);
-		__this->set_firstDismiss_30((bool)1);
-		__this->set_isFinished_31((bool)0);
-		__this->set_cicle_34(1);
+		__this->set_beatObserver_25(L_0);
+		__this->set_current_tempstate_22(0);
+		__this->set_current_hit_23(6);
+		__this->set_blockCurrentHit_26((bool)0);
+		__this->set_treshold_liedown_29((-0.8f));
+		__this->set_treshold_sit_28((-0.5f));
+		__this->set_isStartedLevelSequence_30((bool)0);
+		__this->set_firstDismiss_31((bool)1);
+		__this->set_isFinished_32((bool)0);
+		__this->set_cicle_35(1);
 		DataManager_t1021922435 * L_1 = ((DataManager_t1021922435_StaticFields*)DataManager_t1021922435_il2cpp_TypeInfo_var->static_fields)->get_instance_3();
 		NullCheck(L_1);
 		String_t* L_2 = L_1->get_user_8();
@@ -3606,8 +3606,8 @@ extern "C"  void GameController_Start_m3115412493 (GameController_t2782302542 * 
 		Il2CppObject * L_12 = Box(Int32_t1153838500_il2cpp_TypeInfo_var, &L_11);
 		String_t* L_13 = String_Concat_m389863537(NULL /*static, unused*/, _stringLiteral530783081, L_12, /*hidden argument*/NULL);
 		Debug_Log_m1731103628(NULL /*static, unused*/, L_13, /*hidden argument*/NULL);
-		__this->set_points_32(0);
-		__this->set_score_33(0);
+		__this->set_points_33(0);
+		__this->set_score_34(0);
 		return;
 	}
 }
@@ -3631,7 +3631,7 @@ extern "C"  void GameController_Update_m2094358944 (GameController_t2782302542 *
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		BeatObserver_t2441021644 * L_0 = __this->get_beatObserver_24();
+		BeatObserver_t2441021644 * L_0 = __this->get_beatObserver_25();
 		NullCheck(L_0);
 		int32_t L_1 = L_0->get_beatMask_3();
 		if ((!(((uint32_t)((int32_t)((int32_t)L_1&(int32_t)2))) == ((uint32_t)2))))
@@ -3642,162 +3642,182 @@ extern "C"  void GameController_Update_m2094358944 (GameController_t2782302542 *
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t4195163081_il2cpp_TypeInfo_var);
 		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral2731, /*hidden argument*/NULL);
-		__this->set_blockCurrentHit_25((bool)0);
+		__this->set_blockCurrentHit_26((bool)0);
 		MonoBehaviour_StartCoroutine_m2272783641(__this, _stringLiteral2363442087, /*hidden argument*/NULL);
 	}
 
 IL_0030:
 	{
-		BeatObserver_t2441021644 * L_2 = __this->get_beatObserver_24();
+		BeatObserver_t2441021644 * L_2 = __this->get_beatObserver_25();
 		NullCheck(L_2);
 		int32_t L_3 = L_2->get_beatMask_3();
 		if ((!(((uint32_t)((int32_t)((int32_t)L_3&(int32_t)1))) == ((uint32_t)1))))
 		{
-			goto IL_00a2;
+			goto IL_00c4;
 		}
 	}
 	{
-		int32_t L_4 = __this->get_current_hit_22();
+		int32_t L_4 = __this->get_current_hit_23();
 		if ((!(((uint32_t)L_4) == ((uint32_t)6))))
 		{
 			goto IL_0069;
 		}
 	}
 	{
-		__this->set_current_tempstate_21(0);
+		__this->set_current_tempstate_22(0);
 		MonoBehaviour_StartCoroutine_m2272783641(__this, _stringLiteral2399880838, /*hidden argument*/NULL);
-		__this->set_blockCurrentHit_25((bool)1);
+		__this->set_blockCurrentHit_26((bool)1);
 	}
 
 IL_0069:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t4195163081_il2cpp_TypeInfo_var);
 		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral527617939, /*hidden argument*/NULL);
-		int32_t L_5 = __this->get_cicle_34();
-		__this->set_cicle_34(((int32_t)((int32_t)L_5+(int32_t)1)));
-		int32_t L_6 = __this->get_cicle_34();
+		int32_t L_5 = __this->get_cicle_35();
+		__this->set_cicle_35(((int32_t)((int32_t)L_5+(int32_t)1)));
+		int32_t L_6 = __this->get_cicle_35();
 		IL2CPP_RUNTIME_CLASS_INIT(GameController_t2782302542_il2cpp_TypeInfo_var);
 		int32_t L_7 = ((GameController_t2782302542_StaticFields*)GameController_t2782302542_il2cpp_TypeInfo_var->static_fields)->get_MAX_CICLE_LOOPS_2();
 		if ((((int32_t)L_6) < ((int32_t)L_7)))
 		{
-			goto IL_00a2;
+			goto IL_00c4;
 		}
 	}
 	{
-		bool L_8 = __this->get_isFinished_31();
+		bool L_8 = __this->get_isFinished_32();
 		if (L_8)
 		{
-			goto IL_00a2;
+			goto IL_00b3;
+		}
+	}
+	{
+		int32_t L_9 = __this->get_points_33();
+		if ((((int32_t)L_9) <= ((int32_t)7)))
+		{
+			goto IL_00b3;
 		}
 	}
 	{
 		GameController_EnableWinningState_m2214279707(__this, /*hidden argument*/NULL);
+		goto IL_00c4;
 	}
 
-IL_00a2:
+IL_00b3:
+	{
+		bool L_10 = __this->get_isFinished_32();
+		if (L_10)
+		{
+			goto IL_00c4;
+		}
+	}
+	{
+		GameController_EnableLoosingState_m1454299760(__this, /*hidden argument*/NULL);
+	}
+
+IL_00c4:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t4200062272_il2cpp_TypeInfo_var);
-		Vector3_t4282066566  L_9 = Input_get_acceleration_m3697865796(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_accel_35(L_9);
-		int32_t L_10 = Input_get_touchCount_m1430909390(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((((int32_t)L_10) <= ((int32_t)1)))
+		Vector3_t4282066566  L_11 = Input_get_acceleration_m3697865796(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set_accel_36(L_11);
+		int32_t L_12 = Input_get_touchCount_m1430909390(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_12) <= ((int32_t)1)))
 		{
-			goto IL_010b;
+			goto IL_012d;
 		}
 	}
 	{
-		bool L_11 = __this->get_blockCurrentHit_25();
-		if (L_11)
+		bool L_13 = __this->get_blockCurrentHit_26();
+		if (L_13)
 		{
-			goto IL_010b;
+			goto IL_012d;
 		}
 	}
 	{
-		Vector3_t4282066566 * L_12 = __this->get_address_of_accel_35();
-		float L_13 = L_12->get_y_2();
-		float L_14 = __this->get_treshold_sit_27();
-		if ((!(((float)L_13) > ((float)L_14))))
+		Vector3_t4282066566 * L_14 = __this->get_address_of_accel_36();
+		float L_15 = L_14->get_y_2();
+		float L_16 = __this->get_treshold_sit_28();
+		if ((!(((float)L_15) > ((float)L_16))))
 		{
-			goto IL_010b;
+			goto IL_012d;
 		}
 	}
 	{
-		int32_t L_15 = __this->get_player_position_23();
-		if ((!(((uint32_t)L_15) == ((uint32_t)1))))
+		int32_t L_17 = __this->get_player_position_24();
+		if ((!(((uint32_t)L_17) == ((uint32_t)1))))
 		{
-			goto IL_010b;
+			goto IL_012d;
 		}
 	}
 	{
-		__this->set_player_position_23(0);
-		__this->set_blockCurrentHit_25((bool)1);
-		int32_t L_16 = __this->get_current_tempstate_21();
-		__this->set_current_hit_22(L_16);
+		__this->set_player_position_24(0);
+		__this->set_blockCurrentHit_26((bool)1);
+		int32_t L_18 = __this->get_current_tempstate_22();
+		__this->set_current_hit_23(L_18);
 		MonoBehaviour_StartCoroutine_m2272783641(__this, _stringLiteral855453059, /*hidden argument*/NULL);
 	}
 
-IL_010b:
+IL_012d:
 	{
-		Vector3_t4282066566 * L_17 = __this->get_address_of_accel_35();
-		float L_18 = L_17->get_y_2();
-		float L_19 = __this->get_treshold_liedown_28();
-		if ((!(((float)L_18) < ((float)L_19))))
+		Vector3_t4282066566 * L_19 = __this->get_address_of_accel_36();
+		float L_20 = L_19->get_y_2();
+		float L_21 = __this->get_treshold_liedown_29();
+		if ((!(((float)L_20) < ((float)L_21))))
 		{
-			goto IL_0128;
+			goto IL_014a;
 		}
 	}
 	{
-		__this->set_player_position_23(1);
+		__this->set_player_position_24(1);
 	}
 
-IL_0128:
+IL_014a:
 	{
-		bool L_20 = __this->get_isStartedLevelSequence_29();
-		if (L_20)
+		bool L_22 = __this->get_isStartedLevelSequence_30();
+		if (L_22)
 		{
-			goto IL_0151;
+			goto IL_0173;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t4200062272_il2cpp_TypeInfo_var);
-		int32_t L_21 = Input_get_touchCount_m1430909390(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((((int32_t)L_21) <= ((int32_t)1)))
+		int32_t L_23 = Input_get_touchCount_m1430909390(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_23) <= ((int32_t)1)))
 		{
-			goto IL_0151;
+			goto IL_0173;
 		}
 	}
 	{
-		__this->set_isStartedLevelSequence_29((bool)1);
+		__this->set_isStartedLevelSequence_30((bool)1);
 		MonoBehaviour_StartCoroutine_m2272783641(__this, _stringLiteral3628632643, /*hidden argument*/NULL);
 	}
 
-IL_0151:
+IL_0173:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t4200062272_il2cpp_TypeInfo_var);
-		int32_t L_22 = Input_get_touchCount_m1430909390(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((((int32_t)L_22) <= ((int32_t)1)))
+		int32_t L_24 = Input_get_touchCount_m1430909390(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_24) <= ((int32_t)1)))
 		{
-			goto IL_0167;
+			goto IL_0189;
 		}
 	}
 	{
 		GameController_DisableTouchHUD_m1137924075(__this, /*hidden argument*/NULL);
-		goto IL_0178;
+		goto IL_019a;
 	}
 
-IL_0167:
+IL_0189:
 	{
-		bool L_23 = __this->get_isFinished_31();
-		if (L_23)
+		bool L_25 = __this->get_isFinished_32();
+		if (L_25)
 		{
-			goto IL_0178;
+			goto IL_019a;
 		}
 	}
 	{
 		GameController_EnableTouchHUD_m3675261490(__this, /*hidden argument*/NULL);
 	}
 
-IL_0178:
+IL_019a:
 	{
 		return;
 	}
@@ -3815,15 +3835,15 @@ extern "C"  void GameController_EnableTouchHUD_m3675261490 (GameController_t2782
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		Canvas_t2727140764 * L_0 = __this->get_fingerCanvas_20();
+		Canvas_t2727140764 * L_0 = __this->get_fingerCanvas_21();
 		NullCheck(L_0);
 		Behaviour_set_enabled_m2046806933(L_0, (bool)1, /*hidden argument*/NULL);
-		Image_t538875265 * L_1 = __this->get_leftCircle_18();
+		Image_t538875265 * L_1 = __this->get_leftCircle_19();
 		NullCheck(L_1);
 		CirclesController_t632089983 * L_2 = Component_GetComponent_TisCirclesController_t632089983_m4161546714(L_1, /*hidden argument*/Component_GetComponent_TisCirclesController_t632089983_m4161546714_MethodInfo_var);
 		NullCheck(L_2);
 		Component_SendMessage_m2359133481(L_2, _stringLiteral2916293650, /*hidden argument*/NULL);
-		Image_t538875265 * L_3 = __this->get_rightCircle_19();
+		Image_t538875265 * L_3 = __this->get_rightCircle_20();
 		NullCheck(L_3);
 		CirclesController_t632089983 * L_4 = Component_GetComponent_TisCirclesController_t632089983_m4161546714(L_3, /*hidden argument*/Component_GetComponent_TisCirclesController_t632089983_m4161546714_MethodInfo_var);
 		NullCheck(L_4);
@@ -3844,15 +3864,15 @@ extern "C"  void GameController_DisableTouchHUD_m1137924075 (GameController_t278
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		Canvas_t2727140764 * L_0 = __this->get_fingerCanvas_20();
+		Canvas_t2727140764 * L_0 = __this->get_fingerCanvas_21();
 		NullCheck(L_0);
 		Behaviour_set_enabled_m2046806933(L_0, (bool)0, /*hidden argument*/NULL);
-		Image_t538875265 * L_1 = __this->get_leftCircle_18();
+		Image_t538875265 * L_1 = __this->get_leftCircle_19();
 		NullCheck(L_1);
 		CirclesController_t632089983 * L_2 = Component_GetComponent_TisCirclesController_t632089983_m4161546714(L_1, /*hidden argument*/Component_GetComponent_TisCirclesController_t632089983_m4161546714_MethodInfo_var);
 		NullCheck(L_2);
 		Component_SendMessage_m2359133481(L_2, _stringLiteral733183986, /*hidden argument*/NULL);
-		Image_t538875265 * L_3 = __this->get_rightCircle_19();
+		Image_t538875265 * L_3 = __this->get_rightCircle_20();
 		NullCheck(L_3);
 		CirclesController_t632089983 * L_4 = Component_GetComponent_TisCirclesController_t632089983_m4161546714(L_3, /*hidden argument*/Component_GetComponent_TisCirclesController_t632089983_m4161546714_MethodInfo_var);
 		NullCheck(L_4);
@@ -3878,13 +3898,13 @@ extern "C"  void GameController_EnableWinningState_m2214279707 (GameController_t
 		s_Il2CppMethodIntialized = true;
 	}
 	{
-		__this->set_isFinished_31((bool)1);
+		__this->set_isFinished_32((bool)1);
 		DataManager_t1021922435 * L_0 = ((DataManager_t1021922435_StaticFields*)DataManager_t1021922435_il2cpp_TypeInfo_var->static_fields)->get_instance_3();
-		int32_t L_1 = __this->get_score_33();
+		int32_t L_1 = __this->get_score_34();
 		NullCheck(L_0);
 		L_0->set_score_6(L_1);
 		DataManager_t1021922435 * L_2 = ((DataManager_t1021922435_StaticFields*)DataManager_t1021922435_il2cpp_TypeInfo_var->static_fields)->get_instance_3();
-		int32_t L_3 = __this->get_points_32();
+		int32_t L_3 = __this->get_points_33();
 		NullCheck(L_2);
 		L_2->set_points_7(L_3);
 		DataManager_t1021922435 * L_4 = ((DataManager_t1021922435_StaticFields*)DataManager_t1021922435_il2cpp_TypeInfo_var->static_fields)->get_instance_3();
@@ -3914,13 +3934,13 @@ extern "C"  void GameController_EnableWinningState_m2214279707 (GameController_t
 		Text_t9039225 * L_13 = __this->get_numberText_6();
 		NullCheck(L_13);
 		Behaviour_set_enabled_m2046806933(L_13, (bool)0, /*hidden argument*/NULL);
-		Image_t538875265 * L_14 = __this->get_leftCircle_18();
+		Image_t538875265 * L_14 = __this->get_leftCircle_19();
 		NullCheck(L_14);
 		Behaviour_set_enabled_m2046806933(L_14, (bool)0, /*hidden argument*/NULL);
-		Image_t538875265 * L_15 = __this->get_rightCircle_19();
+		Image_t538875265 * L_15 = __this->get_rightCircle_20();
 		NullCheck(L_15);
 		Behaviour_set_enabled_m2046806933(L_15, (bool)0, /*hidden argument*/NULL);
-		Canvas_t2727140764 * L_16 = __this->get_fingerCanvas_20();
+		Canvas_t2727140764 * L_16 = __this->get_fingerCanvas_21();
 		NullCheck(L_16);
 		Behaviour_set_enabled_m2046806933(L_16, (bool)0, /*hidden argument*/NULL);
 		Text_t9039225 * L_17 = __this->get_congratulationTitleText_7();
@@ -3942,7 +3962,7 @@ extern "C"  void GameController_EnableWinningState_m2214279707 (GameController_t
 		Animator_t2776330603 * L_23 = Component_GetComponent_TisAnimator_t2776330603_m4147395588(L_22, /*hidden argument*/Component_GetComponent_TisAnimator_t2776330603_m4147395588_MethodInfo_var);
 		NullCheck(L_23);
 		Animator_SetTrigger_m514363822(L_23, _stringLiteral117724, /*hidden argument*/NULL);
-		GameObject_t3674682005 * L_24 = __this->get_playerCharacter_17();
+		GameObject_t3674682005 * L_24 = __this->get_playerCharacter_18();
 		NullCheck(L_24);
 		PlayerController_t2866526589 * L_25 = GameObject_GetComponent_TisPlayerController_t2866526589_m3745895488(L_24, /*hidden argument*/GameObject_GetComponent_TisPlayerController_t2866526589_m3745895488_MethodInfo_var);
 		NullCheck(L_25);
@@ -3950,6 +3970,104 @@ extern "C"  void GameController_EnableWinningState_m2214279707 (GameController_t
 		ParticleSystem_t381473177 * L_26 = __this->get_particleSystem_11();
 		NullCheck(L_26);
 		ParticleSystem_Play_m1237476160(L_26, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void GameController::EnableLoosingState()
+extern Il2CppClass* DataManager_t1021922435_il2cpp_TypeInfo_var;
+extern const MethodInfo* Component_GetComponent_TisBeatSynchronizer_t4126494744_m2215399789_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisImage_t538875265_m3706520426_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisAnimator_t2776330603_m4147395588_MethodInfo_var;
+extern const MethodInfo* GameObject_GetComponent_TisPlayerController_t2866526589_m3745895488_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral152762083;
+extern Il2CppCodeGenString* _stringLiteral4022510360;
+extern Il2CppCodeGenString* _stringLiteral117724;
+extern Il2CppCodeGenString* _stringLiteral900577867;
+extern const uint32_t GameController_EnableLoosingState_m1454299760_MetadataUsageId;
+extern "C"  void GameController_EnableLoosingState_m1454299760 (GameController_t2782302542 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (GameController_EnableLoosingState_m1454299760_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		__this->set_isFinished_32((bool)1);
+		DataManager_t1021922435 * L_0 = ((DataManager_t1021922435_StaticFields*)DataManager_t1021922435_il2cpp_TypeInfo_var->static_fields)->get_instance_3();
+		int32_t L_1 = __this->get_score_34();
+		NullCheck(L_0);
+		L_0->set_score_6(L_1);
+		DataManager_t1021922435 * L_2 = ((DataManager_t1021922435_StaticFields*)DataManager_t1021922435_il2cpp_TypeInfo_var->static_fields)->get_instance_3();
+		int32_t L_3 = __this->get_points_33();
+		NullCheck(L_2);
+		L_2->set_points_7(L_3);
+		DataManager_t1021922435 * L_4 = ((DataManager_t1021922435_StaticFields*)DataManager_t1021922435_il2cpp_TypeInfo_var->static_fields)->get_instance_3();
+		NullCheck(L_4);
+		DataManager_SaveData_m1158890883(L_4, /*hidden argument*/NULL);
+		AudioSource_t1740077639 * L_5 = __this->get_musicBackground_12();
+		NullCheck(L_5);
+		AudioSource_Stop_m1454243038(L_5, /*hidden argument*/NULL);
+		AudioSource_t1740077639 * L_6 = __this->get_musicBackground_12();
+		AudioClip_t794140988 * L_7 = __this->get_looseMusic_15();
+		NullCheck(L_6);
+		AudioSource_set_clip_m19502010(L_6, L_7, /*hidden argument*/NULL);
+		AudioSource_t1740077639 * L_8 = __this->get_musicBackground_12();
+		NullCheck(L_8);
+		BeatSynchronizer_t4126494744 * L_9 = Component_GetComponent_TisBeatSynchronizer_t4126494744_m2215399789(L_8, /*hidden argument*/Component_GetComponent_TisBeatSynchronizer_t4126494744_m2215399789_MethodInfo_var);
+		NullCheck(L_9);
+		Behaviour_set_enabled_m2046806933(L_9, (bool)0, /*hidden argument*/NULL);
+		Text_t9039225 * L_10 = __this->get_accuracyText_3();
+		NullCheck(L_10);
+		Behaviour_set_enabled_m2046806933(L_10, (bool)0, /*hidden argument*/NULL);
+		AudioSource_t1740077639 * L_11 = __this->get_fxSound_13();
+		NullCheck(L_11);
+		Behaviour_set_enabled_m2046806933(L_11, (bool)0, /*hidden argument*/NULL);
+		AudioSource_t1740077639 * L_12 = __this->get_musicBackground_12();
+		NullCheck(L_12);
+		AudioSource_PlayScheduled_m2227094787(L_12, (0.89999997615814209), /*hidden argument*/NULL);
+		Text_t9039225 * L_13 = __this->get_numberText_6();
+		NullCheck(L_13);
+		Behaviour_set_enabled_m2046806933(L_13, (bool)0, /*hidden argument*/NULL);
+		Image_t538875265 * L_14 = __this->get_leftCircle_19();
+		NullCheck(L_14);
+		Behaviour_set_enabled_m2046806933(L_14, (bool)0, /*hidden argument*/NULL);
+		Image_t538875265 * L_15 = __this->get_rightCircle_20();
+		NullCheck(L_15);
+		Behaviour_set_enabled_m2046806933(L_15, (bool)0, /*hidden argument*/NULL);
+		Canvas_t2727140764 * L_16 = __this->get_fingerCanvas_21();
+		NullCheck(L_16);
+		Behaviour_set_enabled_m2046806933(L_16, (bool)0, /*hidden argument*/NULL);
+		Text_t9039225 * L_17 = __this->get_congratulationTitleText_7();
+		NullCheck(L_17);
+		VirtActionInvoker1< String_t* >::Invoke(74 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, _stringLiteral152762083);
+		Text_t9039225 * L_18 = __this->get_congratulationDescText_8();
+		NullCheck(L_18);
+		VirtActionInvoker1< String_t* >::Invoke(74 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_18, _stringLiteral4022510360);
+		Text_t9039225 * L_19 = __this->get_congratulationTitleText_7();
+		NullCheck(L_19);
+		Behaviour_set_enabled_m2046806933(L_19, (bool)1, /*hidden argument*/NULL);
+		Text_t9039225 * L_20 = __this->get_congratulationDescText_8();
+		NullCheck(L_20);
+		Behaviour_set_enabled_m2046806933(L_20, (bool)1, /*hidden argument*/NULL);
+		Button_t3896396478 * L_21 = __this->get_menuButton_10();
+		NullCheck(L_21);
+		Image_t538875265 * L_22 = Component_GetComponent_TisImage_t538875265_m3706520426(L_21, /*hidden argument*/Component_GetComponent_TisImage_t538875265_m3706520426_MethodInfo_var);
+		NullCheck(L_22);
+		Behaviour_set_enabled_m2046806933(L_22, (bool)1, /*hidden argument*/NULL);
+		Text_t9039225 * L_23 = __this->get_menuButtonText_9();
+		NullCheck(L_23);
+		Behaviour_set_enabled_m2046806933(L_23, (bool)1, /*hidden argument*/NULL);
+		Camera_t2727095145 * L_24 = Camera_get_main_m671815697(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_24);
+		Animator_t2776330603 * L_25 = Component_GetComponent_TisAnimator_t2776330603_m4147395588(L_24, /*hidden argument*/Component_GetComponent_TisAnimator_t2776330603_m4147395588_MethodInfo_var);
+		NullCheck(L_25);
+		Animator_SetTrigger_m514363822(L_25, _stringLiteral117724, /*hidden argument*/NULL);
+		GameObject_t3674682005 * L_26 = __this->get_playerCharacter_18();
+		NullCheck(L_26);
+		PlayerController_t2866526589 * L_27 = GameObject_GetComponent_TisPlayerController_t2866526589_m3745895488(L_26, /*hidden argument*/GameObject_GetComponent_TisPlayerController_t2866526589_m3745895488_MethodInfo_var);
+		NullCheck(L_27);
+		Component_SendMessage_m2359133481(L_27, _stringLiteral900577867, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -4142,10 +4260,10 @@ IL_0035:
 	{
 		GameController_t2782302542 * L_2 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_2);
-		L_2->set_current_hit_22(6);
+		L_2->set_current_hit_23(6);
 		GameController_t2782302542 * L_3 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_3);
-		L_3->set_current_tempstate_21(2);
+		L_3->set_current_tempstate_22(2);
 		WaitForSeconds_t1615819279 * L_4 = (WaitForSeconds_t1615819279 *)il2cpp_codegen_object_new(WaitForSeconds_t1615819279_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m3184996201(L_4, (0.2f), /*hidden argument*/NULL);
 		__this->set_U24current_1(L_4);
@@ -4157,7 +4275,7 @@ IL_0069:
 	{
 		GameController_t2782302542 * L_5 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_5);
-		L_5->set_current_tempstate_21(1);
+		L_5->set_current_tempstate_22(1);
 		WaitForSeconds_t1615819279 * L_6 = (WaitForSeconds_t1615819279 *)il2cpp_codegen_object_new(WaitForSeconds_t1615819279_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m3184996201(L_6, (0.15f), /*hidden argument*/NULL);
 		__this->set_U24current_1(L_6);
@@ -4169,7 +4287,7 @@ IL_0091:
 	{
 		GameController_t2782302542 * L_7 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_7);
-		L_7->set_current_tempstate_21(0);
+		L_7->set_current_tempstate_22(0);
 		WaitForSeconds_t1615819279 * L_8 = (WaitForSeconds_t1615819279 *)il2cpp_codegen_object_new(WaitForSeconds_t1615819279_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m3184996201(L_8, (0.15f), /*hidden argument*/NULL);
 		__this->set_U24current_1(L_8);
@@ -4181,7 +4299,7 @@ IL_00b9:
 	{
 		GameController_t2782302542 * L_9 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_9);
-		L_9->set_current_tempstate_21(1);
+		L_9->set_current_tempstate_22(1);
 		WaitForSeconds_t1615819279 * L_10 = (WaitForSeconds_t1615819279 *)il2cpp_codegen_object_new(WaitForSeconds_t1615819279_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m3184996201(L_10, (0.1f), /*hidden argument*/NULL);
 		__this->set_U24current_1(L_10);
@@ -4193,7 +4311,7 @@ IL_00e1:
 	{
 		GameController_t2782302542 * L_11 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_11);
-		L_11->set_current_tempstate_21(2);
+		L_11->set_current_tempstate_22(2);
 		WaitForSeconds_t1615819279 * L_12 = (WaitForSeconds_t1615819279 *)il2cpp_codegen_object_new(WaitForSeconds_t1615819279_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m3184996201(L_12, (0.07f), /*hidden argument*/NULL);
 		__this->set_U24current_1(L_12);
@@ -4205,7 +4323,7 @@ IL_0109:
 	{
 		GameController_t2782302542 * L_13 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_13);
-		L_13->set_current_tempstate_21(3);
+		L_13->set_current_tempstate_22(3);
 		WaitForSeconds_t1615819279 * L_14 = (WaitForSeconds_t1615819279 *)il2cpp_codegen_object_new(WaitForSeconds_t1615819279_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m3184996201(L_14, (0.07f), /*hidden argument*/NULL);
 		__this->set_U24current_1(L_14);
@@ -4217,7 +4335,7 @@ IL_0131:
 	{
 		GameController_t2782302542 * L_15 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_15);
-		L_15->set_current_tempstate_21(4);
+		L_15->set_current_tempstate_22(4);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t4195163081_il2cpp_TypeInfo_var);
 		Debug_Log_m1731103628(NULL /*static, unused*/, _stringLiteral527617938, /*hidden argument*/NULL);
 		__this->set_U24PC_0((-1));
@@ -4330,9 +4448,9 @@ IL_0029:
 		GameController_t2782302542 * L_2 = __this->get_U3CU3Ef__this_2();
 		GameController_t2782302542 * L_3 = L_2;
 		NullCheck(L_3);
-		int32_t L_4 = L_3->get_points_32();
+		int32_t L_4 = L_3->get_points_33();
 		NullCheck(L_3);
-		L_3->set_points_32(((int32_t)((int32_t)L_4+(int32_t)1)));
+		L_3->set_points_33(((int32_t)((int32_t)L_4+(int32_t)1)));
 		GameController_t2782302542 * L_5 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_5);
 		AudioSource_t1740077639 * L_6 = L_5->get_fxSound_13();
@@ -4343,7 +4461,7 @@ IL_0029:
 		AudioSource_t1740077639 * L_8 = L_7->get_fxSound_13();
 		GameController_t2782302542 * L_9 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_9);
-		AudioClip_t794140988 * L_10 = L_9->get_greatFxClip_15();
+		AudioClip_t794140988 * L_10 = L_9->get_greatFxClip_16();
 		NullCheck(L_8);
 		AudioSource_set_clip_m19502010(L_8, L_10, /*hidden argument*/NULL);
 		GameController_t2782302542 * L_11 = __this->get_U3CU3Ef__this_2();
@@ -4353,7 +4471,7 @@ IL_0029:
 		AudioSource_Play_m1360558992(L_12, /*hidden argument*/NULL);
 		GameController_t2782302542 * L_13 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_13);
-		int32_t L_14 = L_13->get_current_tempstate_21();
+		int32_t L_14 = L_13->get_current_tempstate_22();
 		if (L_14)
 		{
 			goto IL_00a0;
@@ -4363,9 +4481,9 @@ IL_0029:
 		GameController_t2782302542 * L_15 = __this->get_U3CU3Ef__this_2();
 		GameController_t2782302542 * L_16 = L_15;
 		NullCheck(L_16);
-		int32_t L_17 = L_16->get_score_33();
+		int32_t L_17 = L_16->get_score_34();
 		NullCheck(L_16);
-		L_16->set_score_33(((int32_t)((int32_t)L_17+(int32_t)((int32_t)100))));
+		L_16->set_score_34(((int32_t)((int32_t)L_17+(int32_t)((int32_t)100))));
 		goto IL_0143;
 	}
 
@@ -4373,7 +4491,7 @@ IL_00a0:
 	{
 		GameController_t2782302542 * L_18 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_18);
-		int32_t L_19 = L_18->get_current_tempstate_21();
+		int32_t L_19 = L_18->get_current_tempstate_22();
 		if ((!(((uint32_t)L_19) == ((uint32_t)1))))
 		{
 			goto IL_00ca;
@@ -4383,9 +4501,9 @@ IL_00a0:
 		GameController_t2782302542 * L_20 = __this->get_U3CU3Ef__this_2();
 		GameController_t2782302542 * L_21 = L_20;
 		NullCheck(L_21);
-		int32_t L_22 = L_21->get_score_33();
+		int32_t L_22 = L_21->get_score_34();
 		NullCheck(L_21);
-		L_21->set_score_33(((int32_t)((int32_t)L_22+(int32_t)((int32_t)60))));
+		L_21->set_score_34(((int32_t)((int32_t)L_22+(int32_t)((int32_t)60))));
 		goto IL_0143;
 	}
 
@@ -4393,7 +4511,7 @@ IL_00ca:
 	{
 		GameController_t2782302542 * L_23 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_23);
-		int32_t L_24 = L_23->get_current_tempstate_21();
+		int32_t L_24 = L_23->get_current_tempstate_22();
 		if ((!(((uint32_t)L_24) == ((uint32_t)2))))
 		{
 			goto IL_00f4;
@@ -4403,9 +4521,9 @@ IL_00ca:
 		GameController_t2782302542 * L_25 = __this->get_U3CU3Ef__this_2();
 		GameController_t2782302542 * L_26 = L_25;
 		NullCheck(L_26);
-		int32_t L_27 = L_26->get_score_33();
+		int32_t L_27 = L_26->get_score_34();
 		NullCheck(L_26);
-		L_26->set_score_33(((int32_t)((int32_t)L_27+(int32_t)((int32_t)40))));
+		L_26->set_score_34(((int32_t)((int32_t)L_27+(int32_t)((int32_t)40))));
 		goto IL_0143;
 	}
 
@@ -4413,7 +4531,7 @@ IL_00f4:
 	{
 		GameController_t2782302542 * L_28 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_28);
-		int32_t L_29 = L_28->get_current_tempstate_21();
+		int32_t L_29 = L_28->get_current_tempstate_22();
 		if ((!(((uint32_t)L_29) == ((uint32_t)3))))
 		{
 			goto IL_011e;
@@ -4423,9 +4541,9 @@ IL_00f4:
 		GameController_t2782302542 * L_30 = __this->get_U3CU3Ef__this_2();
 		GameController_t2782302542 * L_31 = L_30;
 		NullCheck(L_31);
-		int32_t L_32 = L_31->get_score_33();
+		int32_t L_32 = L_31->get_score_34();
 		NullCheck(L_31);
-		L_31->set_score_33(((int32_t)((int32_t)L_32+(int32_t)((int32_t)20))));
+		L_31->set_score_34(((int32_t)((int32_t)L_32+(int32_t)((int32_t)20))));
 		goto IL_0143;
 	}
 
@@ -4433,7 +4551,7 @@ IL_011e:
 	{
 		GameController_t2782302542 * L_33 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_33);
-		int32_t L_34 = L_33->get_current_tempstate_21();
+		int32_t L_34 = L_33->get_current_tempstate_22();
 		if ((!(((uint32_t)L_34) == ((uint32_t)4))))
 		{
 			goto IL_0143;
@@ -4443,9 +4561,9 @@ IL_011e:
 		GameController_t2782302542 * L_35 = __this->get_U3CU3Ef__this_2();
 		GameController_t2782302542 * L_36 = L_35;
 		NullCheck(L_36);
-		int32_t L_37 = L_36->get_score_33();
+		int32_t L_37 = L_36->get_score_34();
 		NullCheck(L_36);
-		L_36->set_score_33(((int32_t)((int32_t)L_37+(int32_t)((int32_t)10))));
+		L_36->set_score_34(((int32_t)((int32_t)L_37+(int32_t)((int32_t)10))));
 	}
 
 IL_0143:
@@ -4455,7 +4573,7 @@ IL_0143:
 		Text_t9039225 * L_39 = L_38->get_caloriesText_5();
 		GameController_t2782302542 * L_40 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_40);
-		int32_t* L_41 = L_40->get_address_of_points_32();
+		int32_t* L_41 = L_40->get_address_of_points_33();
 		String_t* L_42 = Int32_ToString_m1286526384(L_41, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_43 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral2826384208, L_42, /*hidden argument*/NULL);
@@ -4466,7 +4584,7 @@ IL_0143:
 		Text_t9039225 * L_45 = L_44->get_scoreText_4();
 		GameController_t2782302542 * L_46 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_46);
-		int32_t* L_47 = L_46->get_address_of_score_33();
+		int32_t* L_47 = L_46->get_address_of_score_34();
 		String_t* L_48 = Int32_ToString_m1286526384(L_47, /*hidden argument*/NULL);
 		String_t* L_49 = String_Concat_m138640077(NULL /*static, unused*/, _stringLiteral3588653336, L_48, /*hidden argument*/NULL);
 		NullCheck(L_45);
@@ -4476,10 +4594,10 @@ IL_0143:
 		Text_t9039225 * L_51 = L_50->get_accuracyText_3();
 		GameController_t2782302542 * L_52 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_52);
-		StringU5BU5D_t4054002952* L_53 = L_52->get_accuracyArray_26();
+		StringU5BU5D_t4054002952* L_53 = L_52->get_accuracyArray_27();
 		GameController_t2782302542 * L_54 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_54);
-		int32_t L_55 = L_54->get_current_tempstate_21();
+		int32_t L_55 = L_54->get_current_tempstate_22();
 		NullCheck(L_53);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_53, L_55);
 		int32_t L_56 = L_55;
@@ -4659,7 +4777,7 @@ IL_0029:
 	{
 		GameController_t2782302542 * L_2 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_2);
-		bool L_3 = L_2->get_firstDismiss_30();
+		bool L_3 = L_2->get_firstDismiss_31();
 		if (L_3)
 		{
 			goto IL_013b;
@@ -4668,7 +4786,7 @@ IL_0029:
 	{
 		GameController_t2782302542 * L_4 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_4);
-		bool L_5 = L_4->get_isFinished_31();
+		bool L_5 = L_4->get_isFinished_32();
 		if (L_5)
 		{
 			goto IL_013b;
@@ -4685,7 +4803,7 @@ IL_0029:
 		AudioSource_t1740077639 * L_9 = L_8->get_fxSound_13();
 		GameController_t2782302542 * L_10 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_10);
-		AudioClip_t794140988 * L_11 = L_10->get_badFxClip_16();
+		AudioClip_t794140988 * L_11 = L_10->get_badFxClip_17();
 		NullCheck(L_9);
 		AudioSource_set_clip_m19502010(L_9, L_11, /*hidden argument*/NULL);
 		GameController_t2782302542 * L_12 = __this->get_U3CU3Ef__this_2();
@@ -4698,7 +4816,7 @@ IL_0029:
 		Text_t9039225 * L_15 = L_14->get_accuracyText_3();
 		GameController_t2782302542 * L_16 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_16);
-		StringU5BU5D_t4054002952* L_17 = L_16->get_accuracyArray_26();
+		StringU5BU5D_t4054002952* L_17 = L_16->get_accuracyArray_27();
 		NullCheck(L_17);
 		IL2CPP_ARRAY_BOUNDS_CHECK(L_17, 5);
 		int32_t L_18 = 5;
@@ -4758,7 +4876,7 @@ IL_013b:
 	{
 		GameController_t2782302542 * L_31 = __this->get_U3CU3Ef__this_2();
 		NullCheck(L_31);
-		L_31->set_firstDismiss_30((bool)0);
+		L_31->set_firstDismiss_31((bool)0);
 		__this->set_U24PC_0((-1));
 	}
 
@@ -5451,6 +5569,25 @@ extern "C"  void PlayerController_StartWinningAnimation_m124921522 (PlayerContro
 		Animator_t2776330603 * L_0 = Component_GetComponent_TisAnimator_t2776330603_m4147395588(__this, /*hidden argument*/Component_GetComponent_TisAnimator_t2776330603_m4147395588_MethodInfo_var);
 		NullCheck(L_0);
 		Animator_SetTrigger_m514363822(L_0, _stringLiteral117724, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void PlayerController::StartLoosingAnimation()
+extern const MethodInfo* Component_GetComponent_TisAnimator_t2776330603_m4147395588_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral103157406;
+extern const uint32_t PlayerController_StartLoosingAnimation_m469996679_MetadataUsageId;
+extern "C"  void PlayerController_StartLoosingAnimation_m469996679 (PlayerController_t2866526589 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (PlayerController_StartLoosingAnimation_m469996679_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		Animator_t2776330603 * L_0 = Component_GetComponent_TisAnimator_t2776330603_m4147395588(__this, /*hidden argument*/Component_GetComponent_TisAnimator_t2776330603_m4147395588_MethodInfo_var);
+		NullCheck(L_0);
+		Animator_SetTrigger_m514363822(L_0, _stringLiteral103157406, /*hidden argument*/NULL);
 		return;
 	}
 }

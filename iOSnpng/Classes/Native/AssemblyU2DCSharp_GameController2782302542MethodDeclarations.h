@@ -33,6 +33,8 @@ extern "C"  void GameController_EnableTouchHUD_m3675261490 (GameController_t2782
 extern "C"  void GameController_DisableTouchHUD_m1137924075 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void GameController::EnableWinningState()
 extern "C"  void GameController_EnableWinningState_m2214279707 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameController::EnableLoosingState()
+extern "C"  void GameController_EnableLoosingState_m1454299760 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.IEnumerator GameController::RunCurrentAccuracy()
 extern "C"  Il2CppObject * GameController_RunCurrentAccuracy_m1681424934 (GameController_t2782302542 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Collections.IEnumerator GameController::ShowAccuracyText()

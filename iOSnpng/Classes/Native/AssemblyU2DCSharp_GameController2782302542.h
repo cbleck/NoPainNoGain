@@ -71,52 +71,54 @@ public:
 	AudioSource_t1740077639 * ___fxSound_13;
 	// UnityEngine.AudioClip GameController::winMusic
 	AudioClip_t794140988 * ___winMusic_14;
+	// UnityEngine.AudioClip GameController::looseMusic
+	AudioClip_t794140988 * ___looseMusic_15;
 	// UnityEngine.AudioClip GameController::greatFxClip
-	AudioClip_t794140988 * ___greatFxClip_15;
+	AudioClip_t794140988 * ___greatFxClip_16;
 	// UnityEngine.AudioClip GameController::badFxClip
-	AudioClip_t794140988 * ___badFxClip_16;
+	AudioClip_t794140988 * ___badFxClip_17;
 	// UnityEngine.GameObject GameController::playerCharacter
-	GameObject_t3674682005 * ___playerCharacter_17;
+	GameObject_t3674682005 * ___playerCharacter_18;
 	// UnityEngine.UI.Image GameController::leftCircle
-	Image_t538875265 * ___leftCircle_18;
+	Image_t538875265 * ___leftCircle_19;
 	// UnityEngine.UI.Image GameController::rightCircle
-	Image_t538875265 * ___rightCircle_19;
+	Image_t538875265 * ___rightCircle_20;
 	// UnityEngine.Canvas GameController::fingerCanvas
-	Canvas_t2727140764 * ___fingerCanvas_20;
+	Canvas_t2727140764 * ___fingerCanvas_21;
 	// GameController/AccuracyState GameController::current_tempstate
-	int32_t ___current_tempstate_21;
+	int32_t ___current_tempstate_22;
 	// GameController/AccuracyState GameController::current_hit
-	int32_t ___current_hit_22;
+	int32_t ___current_hit_23;
 	// GameController/PlayerPosition GameController::player_position
-	int32_t ___player_position_23;
+	int32_t ___player_position_24;
 	// BeatObserver GameController::beatObserver
-	BeatObserver_t2441021644 * ___beatObserver_24;
+	BeatObserver_t2441021644 * ___beatObserver_25;
 	// System.Boolean GameController::blockCurrentHit
-	bool ___blockCurrentHit_25;
+	bool ___blockCurrentHit_26;
 	// System.String[] GameController::accuracyArray
-	StringU5BU5D_t4054002952* ___accuracyArray_26;
+	StringU5BU5D_t4054002952* ___accuracyArray_27;
 	// System.Single GameController::treshold_sit
-	float ___treshold_sit_27;
+	float ___treshold_sit_28;
 	// System.Single GameController::treshold_liedown
-	float ___treshold_liedown_28;
+	float ___treshold_liedown_29;
 	// System.Boolean GameController::isStartedLevelSequence
-	bool ___isStartedLevelSequence_29;
+	bool ___isStartedLevelSequence_30;
 	// System.Boolean GameController::firstDismiss
-	bool ___firstDismiss_30;
+	bool ___firstDismiss_31;
 	// System.Boolean GameController::isFinished
-	bool ___isFinished_31;
+	bool ___isFinished_32;
 	// System.Int32 GameController::points
-	int32_t ___points_32;
+	int32_t ___points_33;
 	// System.Int32 GameController::score
-	int32_t ___score_33;
+	int32_t ___score_34;
 	// System.Int32 GameController::cicle
-	int32_t ___cicle_34;
+	int32_t ___cicle_35;
 	// UnityEngine.Vector3 GameController::accel
-	Vector3_t4282066566  ___accel_35;
+	Vector3_t4282066566  ___accel_36;
 	// UnityEngine.Touch GameController::finger1
-	Touch_t4210255029  ___finger1_36;
+	Touch_t4210255029  ___finger1_37;
 	// UnityEngine.Touch GameController::finger2
-	Touch_t4210255029  ___finger2_37;
+	Touch_t4210255029  ___finger2_38;
 
 public:
 	inline static int32_t get_offset_of_accuracyText_3() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___accuracyText_3)); }
@@ -227,196 +229,205 @@ public:
 		Il2CppCodeGenWriteBarrier(&___winMusic_14, value);
 	}
 
-	inline static int32_t get_offset_of_greatFxClip_15() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___greatFxClip_15)); }
-	inline AudioClip_t794140988 * get_greatFxClip_15() const { return ___greatFxClip_15; }
-	inline AudioClip_t794140988 ** get_address_of_greatFxClip_15() { return &___greatFxClip_15; }
-	inline void set_greatFxClip_15(AudioClip_t794140988 * value)
+	inline static int32_t get_offset_of_looseMusic_15() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___looseMusic_15)); }
+	inline AudioClip_t794140988 * get_looseMusic_15() const { return ___looseMusic_15; }
+	inline AudioClip_t794140988 ** get_address_of_looseMusic_15() { return &___looseMusic_15; }
+	inline void set_looseMusic_15(AudioClip_t794140988 * value)
 	{
-		___greatFxClip_15 = value;
-		Il2CppCodeGenWriteBarrier(&___greatFxClip_15, value);
+		___looseMusic_15 = value;
+		Il2CppCodeGenWriteBarrier(&___looseMusic_15, value);
 	}
 
-	inline static int32_t get_offset_of_badFxClip_16() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___badFxClip_16)); }
-	inline AudioClip_t794140988 * get_badFxClip_16() const { return ___badFxClip_16; }
-	inline AudioClip_t794140988 ** get_address_of_badFxClip_16() { return &___badFxClip_16; }
-	inline void set_badFxClip_16(AudioClip_t794140988 * value)
+	inline static int32_t get_offset_of_greatFxClip_16() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___greatFxClip_16)); }
+	inline AudioClip_t794140988 * get_greatFxClip_16() const { return ___greatFxClip_16; }
+	inline AudioClip_t794140988 ** get_address_of_greatFxClip_16() { return &___greatFxClip_16; }
+	inline void set_greatFxClip_16(AudioClip_t794140988 * value)
 	{
-		___badFxClip_16 = value;
-		Il2CppCodeGenWriteBarrier(&___badFxClip_16, value);
+		___greatFxClip_16 = value;
+		Il2CppCodeGenWriteBarrier(&___greatFxClip_16, value);
 	}
 
-	inline static int32_t get_offset_of_playerCharacter_17() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___playerCharacter_17)); }
-	inline GameObject_t3674682005 * get_playerCharacter_17() const { return ___playerCharacter_17; }
-	inline GameObject_t3674682005 ** get_address_of_playerCharacter_17() { return &___playerCharacter_17; }
-	inline void set_playerCharacter_17(GameObject_t3674682005 * value)
+	inline static int32_t get_offset_of_badFxClip_17() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___badFxClip_17)); }
+	inline AudioClip_t794140988 * get_badFxClip_17() const { return ___badFxClip_17; }
+	inline AudioClip_t794140988 ** get_address_of_badFxClip_17() { return &___badFxClip_17; }
+	inline void set_badFxClip_17(AudioClip_t794140988 * value)
 	{
-		___playerCharacter_17 = value;
-		Il2CppCodeGenWriteBarrier(&___playerCharacter_17, value);
+		___badFxClip_17 = value;
+		Il2CppCodeGenWriteBarrier(&___badFxClip_17, value);
 	}
 
-	inline static int32_t get_offset_of_leftCircle_18() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___leftCircle_18)); }
-	inline Image_t538875265 * get_leftCircle_18() const { return ___leftCircle_18; }
-	inline Image_t538875265 ** get_address_of_leftCircle_18() { return &___leftCircle_18; }
-	inline void set_leftCircle_18(Image_t538875265 * value)
+	inline static int32_t get_offset_of_playerCharacter_18() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___playerCharacter_18)); }
+	inline GameObject_t3674682005 * get_playerCharacter_18() const { return ___playerCharacter_18; }
+	inline GameObject_t3674682005 ** get_address_of_playerCharacter_18() { return &___playerCharacter_18; }
+	inline void set_playerCharacter_18(GameObject_t3674682005 * value)
 	{
-		___leftCircle_18 = value;
-		Il2CppCodeGenWriteBarrier(&___leftCircle_18, value);
+		___playerCharacter_18 = value;
+		Il2CppCodeGenWriteBarrier(&___playerCharacter_18, value);
 	}
 
-	inline static int32_t get_offset_of_rightCircle_19() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___rightCircle_19)); }
-	inline Image_t538875265 * get_rightCircle_19() const { return ___rightCircle_19; }
-	inline Image_t538875265 ** get_address_of_rightCircle_19() { return &___rightCircle_19; }
-	inline void set_rightCircle_19(Image_t538875265 * value)
+	inline static int32_t get_offset_of_leftCircle_19() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___leftCircle_19)); }
+	inline Image_t538875265 * get_leftCircle_19() const { return ___leftCircle_19; }
+	inline Image_t538875265 ** get_address_of_leftCircle_19() { return &___leftCircle_19; }
+	inline void set_leftCircle_19(Image_t538875265 * value)
 	{
-		___rightCircle_19 = value;
-		Il2CppCodeGenWriteBarrier(&___rightCircle_19, value);
+		___leftCircle_19 = value;
+		Il2CppCodeGenWriteBarrier(&___leftCircle_19, value);
 	}
 
-	inline static int32_t get_offset_of_fingerCanvas_20() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___fingerCanvas_20)); }
-	inline Canvas_t2727140764 * get_fingerCanvas_20() const { return ___fingerCanvas_20; }
-	inline Canvas_t2727140764 ** get_address_of_fingerCanvas_20() { return &___fingerCanvas_20; }
-	inline void set_fingerCanvas_20(Canvas_t2727140764 * value)
+	inline static int32_t get_offset_of_rightCircle_20() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___rightCircle_20)); }
+	inline Image_t538875265 * get_rightCircle_20() const { return ___rightCircle_20; }
+	inline Image_t538875265 ** get_address_of_rightCircle_20() { return &___rightCircle_20; }
+	inline void set_rightCircle_20(Image_t538875265 * value)
 	{
-		___fingerCanvas_20 = value;
-		Il2CppCodeGenWriteBarrier(&___fingerCanvas_20, value);
+		___rightCircle_20 = value;
+		Il2CppCodeGenWriteBarrier(&___rightCircle_20, value);
 	}
 
-	inline static int32_t get_offset_of_current_tempstate_21() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___current_tempstate_21)); }
-	inline int32_t get_current_tempstate_21() const { return ___current_tempstate_21; }
-	inline int32_t* get_address_of_current_tempstate_21() { return &___current_tempstate_21; }
-	inline void set_current_tempstate_21(int32_t value)
+	inline static int32_t get_offset_of_fingerCanvas_21() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___fingerCanvas_21)); }
+	inline Canvas_t2727140764 * get_fingerCanvas_21() const { return ___fingerCanvas_21; }
+	inline Canvas_t2727140764 ** get_address_of_fingerCanvas_21() { return &___fingerCanvas_21; }
+	inline void set_fingerCanvas_21(Canvas_t2727140764 * value)
 	{
-		___current_tempstate_21 = value;
+		___fingerCanvas_21 = value;
+		Il2CppCodeGenWriteBarrier(&___fingerCanvas_21, value);
 	}
 
-	inline static int32_t get_offset_of_current_hit_22() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___current_hit_22)); }
-	inline int32_t get_current_hit_22() const { return ___current_hit_22; }
-	inline int32_t* get_address_of_current_hit_22() { return &___current_hit_22; }
-	inline void set_current_hit_22(int32_t value)
+	inline static int32_t get_offset_of_current_tempstate_22() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___current_tempstate_22)); }
+	inline int32_t get_current_tempstate_22() const { return ___current_tempstate_22; }
+	inline int32_t* get_address_of_current_tempstate_22() { return &___current_tempstate_22; }
+	inline void set_current_tempstate_22(int32_t value)
 	{
-		___current_hit_22 = value;
+		___current_tempstate_22 = value;
 	}
 
-	inline static int32_t get_offset_of_player_position_23() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___player_position_23)); }
-	inline int32_t get_player_position_23() const { return ___player_position_23; }
-	inline int32_t* get_address_of_player_position_23() { return &___player_position_23; }
-	inline void set_player_position_23(int32_t value)
+	inline static int32_t get_offset_of_current_hit_23() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___current_hit_23)); }
+	inline int32_t get_current_hit_23() const { return ___current_hit_23; }
+	inline int32_t* get_address_of_current_hit_23() { return &___current_hit_23; }
+	inline void set_current_hit_23(int32_t value)
 	{
-		___player_position_23 = value;
+		___current_hit_23 = value;
 	}
 
-	inline static int32_t get_offset_of_beatObserver_24() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___beatObserver_24)); }
-	inline BeatObserver_t2441021644 * get_beatObserver_24() const { return ___beatObserver_24; }
-	inline BeatObserver_t2441021644 ** get_address_of_beatObserver_24() { return &___beatObserver_24; }
-	inline void set_beatObserver_24(BeatObserver_t2441021644 * value)
+	inline static int32_t get_offset_of_player_position_24() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___player_position_24)); }
+	inline int32_t get_player_position_24() const { return ___player_position_24; }
+	inline int32_t* get_address_of_player_position_24() { return &___player_position_24; }
+	inline void set_player_position_24(int32_t value)
 	{
-		___beatObserver_24 = value;
-		Il2CppCodeGenWriteBarrier(&___beatObserver_24, value);
+		___player_position_24 = value;
 	}
 
-	inline static int32_t get_offset_of_blockCurrentHit_25() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___blockCurrentHit_25)); }
-	inline bool get_blockCurrentHit_25() const { return ___blockCurrentHit_25; }
-	inline bool* get_address_of_blockCurrentHit_25() { return &___blockCurrentHit_25; }
-	inline void set_blockCurrentHit_25(bool value)
+	inline static int32_t get_offset_of_beatObserver_25() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___beatObserver_25)); }
+	inline BeatObserver_t2441021644 * get_beatObserver_25() const { return ___beatObserver_25; }
+	inline BeatObserver_t2441021644 ** get_address_of_beatObserver_25() { return &___beatObserver_25; }
+	inline void set_beatObserver_25(BeatObserver_t2441021644 * value)
 	{
-		___blockCurrentHit_25 = value;
+		___beatObserver_25 = value;
+		Il2CppCodeGenWriteBarrier(&___beatObserver_25, value);
 	}
 
-	inline static int32_t get_offset_of_accuracyArray_26() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___accuracyArray_26)); }
-	inline StringU5BU5D_t4054002952* get_accuracyArray_26() const { return ___accuracyArray_26; }
-	inline StringU5BU5D_t4054002952** get_address_of_accuracyArray_26() { return &___accuracyArray_26; }
-	inline void set_accuracyArray_26(StringU5BU5D_t4054002952* value)
+	inline static int32_t get_offset_of_blockCurrentHit_26() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___blockCurrentHit_26)); }
+	inline bool get_blockCurrentHit_26() const { return ___blockCurrentHit_26; }
+	inline bool* get_address_of_blockCurrentHit_26() { return &___blockCurrentHit_26; }
+	inline void set_blockCurrentHit_26(bool value)
 	{
-		___accuracyArray_26 = value;
-		Il2CppCodeGenWriteBarrier(&___accuracyArray_26, value);
+		___blockCurrentHit_26 = value;
 	}
 
-	inline static int32_t get_offset_of_treshold_sit_27() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___treshold_sit_27)); }
-	inline float get_treshold_sit_27() const { return ___treshold_sit_27; }
-	inline float* get_address_of_treshold_sit_27() { return &___treshold_sit_27; }
-	inline void set_treshold_sit_27(float value)
+	inline static int32_t get_offset_of_accuracyArray_27() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___accuracyArray_27)); }
+	inline StringU5BU5D_t4054002952* get_accuracyArray_27() const { return ___accuracyArray_27; }
+	inline StringU5BU5D_t4054002952** get_address_of_accuracyArray_27() { return &___accuracyArray_27; }
+	inline void set_accuracyArray_27(StringU5BU5D_t4054002952* value)
 	{
-		___treshold_sit_27 = value;
+		___accuracyArray_27 = value;
+		Il2CppCodeGenWriteBarrier(&___accuracyArray_27, value);
 	}
 
-	inline static int32_t get_offset_of_treshold_liedown_28() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___treshold_liedown_28)); }
-	inline float get_treshold_liedown_28() const { return ___treshold_liedown_28; }
-	inline float* get_address_of_treshold_liedown_28() { return &___treshold_liedown_28; }
-	inline void set_treshold_liedown_28(float value)
+	inline static int32_t get_offset_of_treshold_sit_28() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___treshold_sit_28)); }
+	inline float get_treshold_sit_28() const { return ___treshold_sit_28; }
+	inline float* get_address_of_treshold_sit_28() { return &___treshold_sit_28; }
+	inline void set_treshold_sit_28(float value)
 	{
-		___treshold_liedown_28 = value;
+		___treshold_sit_28 = value;
 	}
 
-	inline static int32_t get_offset_of_isStartedLevelSequence_29() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___isStartedLevelSequence_29)); }
-	inline bool get_isStartedLevelSequence_29() const { return ___isStartedLevelSequence_29; }
-	inline bool* get_address_of_isStartedLevelSequence_29() { return &___isStartedLevelSequence_29; }
-	inline void set_isStartedLevelSequence_29(bool value)
+	inline static int32_t get_offset_of_treshold_liedown_29() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___treshold_liedown_29)); }
+	inline float get_treshold_liedown_29() const { return ___treshold_liedown_29; }
+	inline float* get_address_of_treshold_liedown_29() { return &___treshold_liedown_29; }
+	inline void set_treshold_liedown_29(float value)
 	{
-		___isStartedLevelSequence_29 = value;
+		___treshold_liedown_29 = value;
 	}
 
-	inline static int32_t get_offset_of_firstDismiss_30() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___firstDismiss_30)); }
-	inline bool get_firstDismiss_30() const { return ___firstDismiss_30; }
-	inline bool* get_address_of_firstDismiss_30() { return &___firstDismiss_30; }
-	inline void set_firstDismiss_30(bool value)
+	inline static int32_t get_offset_of_isStartedLevelSequence_30() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___isStartedLevelSequence_30)); }
+	inline bool get_isStartedLevelSequence_30() const { return ___isStartedLevelSequence_30; }
+	inline bool* get_address_of_isStartedLevelSequence_30() { return &___isStartedLevelSequence_30; }
+	inline void set_isStartedLevelSequence_30(bool value)
 	{
-		___firstDismiss_30 = value;
+		___isStartedLevelSequence_30 = value;
 	}
 
-	inline static int32_t get_offset_of_isFinished_31() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___isFinished_31)); }
-	inline bool get_isFinished_31() const { return ___isFinished_31; }
-	inline bool* get_address_of_isFinished_31() { return &___isFinished_31; }
-	inline void set_isFinished_31(bool value)
+	inline static int32_t get_offset_of_firstDismiss_31() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___firstDismiss_31)); }
+	inline bool get_firstDismiss_31() const { return ___firstDismiss_31; }
+	inline bool* get_address_of_firstDismiss_31() { return &___firstDismiss_31; }
+	inline void set_firstDismiss_31(bool value)
 	{
-		___isFinished_31 = value;
+		___firstDismiss_31 = value;
 	}
 
-	inline static int32_t get_offset_of_points_32() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___points_32)); }
-	inline int32_t get_points_32() const { return ___points_32; }
-	inline int32_t* get_address_of_points_32() { return &___points_32; }
-	inline void set_points_32(int32_t value)
+	inline static int32_t get_offset_of_isFinished_32() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___isFinished_32)); }
+	inline bool get_isFinished_32() const { return ___isFinished_32; }
+	inline bool* get_address_of_isFinished_32() { return &___isFinished_32; }
+	inline void set_isFinished_32(bool value)
 	{
-		___points_32 = value;
+		___isFinished_32 = value;
 	}
 
-	inline static int32_t get_offset_of_score_33() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___score_33)); }
-	inline int32_t get_score_33() const { return ___score_33; }
-	inline int32_t* get_address_of_score_33() { return &___score_33; }
-	inline void set_score_33(int32_t value)
+	inline static int32_t get_offset_of_points_33() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___points_33)); }
+	inline int32_t get_points_33() const { return ___points_33; }
+	inline int32_t* get_address_of_points_33() { return &___points_33; }
+	inline void set_points_33(int32_t value)
 	{
-		___score_33 = value;
+		___points_33 = value;
 	}
 
-	inline static int32_t get_offset_of_cicle_34() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___cicle_34)); }
-	inline int32_t get_cicle_34() const { return ___cicle_34; }
-	inline int32_t* get_address_of_cicle_34() { return &___cicle_34; }
-	inline void set_cicle_34(int32_t value)
+	inline static int32_t get_offset_of_score_34() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___score_34)); }
+	inline int32_t get_score_34() const { return ___score_34; }
+	inline int32_t* get_address_of_score_34() { return &___score_34; }
+	inline void set_score_34(int32_t value)
 	{
-		___cicle_34 = value;
+		___score_34 = value;
 	}
 
-	inline static int32_t get_offset_of_accel_35() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___accel_35)); }
-	inline Vector3_t4282066566  get_accel_35() const { return ___accel_35; }
-	inline Vector3_t4282066566 * get_address_of_accel_35() { return &___accel_35; }
-	inline void set_accel_35(Vector3_t4282066566  value)
+	inline static int32_t get_offset_of_cicle_35() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___cicle_35)); }
+	inline int32_t get_cicle_35() const { return ___cicle_35; }
+	inline int32_t* get_address_of_cicle_35() { return &___cicle_35; }
+	inline void set_cicle_35(int32_t value)
 	{
-		___accel_35 = value;
+		___cicle_35 = value;
 	}
 
-	inline static int32_t get_offset_of_finger1_36() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___finger1_36)); }
-	inline Touch_t4210255029  get_finger1_36() const { return ___finger1_36; }
-	inline Touch_t4210255029 * get_address_of_finger1_36() { return &___finger1_36; }
-	inline void set_finger1_36(Touch_t4210255029  value)
+	inline static int32_t get_offset_of_accel_36() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___accel_36)); }
+	inline Vector3_t4282066566  get_accel_36() const { return ___accel_36; }
+	inline Vector3_t4282066566 * get_address_of_accel_36() { return &___accel_36; }
+	inline void set_accel_36(Vector3_t4282066566  value)
 	{
-		___finger1_36 = value;
+		___accel_36 = value;
 	}
 
-	inline static int32_t get_offset_of_finger2_37() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___finger2_37)); }
-	inline Touch_t4210255029  get_finger2_37() const { return ___finger2_37; }
-	inline Touch_t4210255029 * get_address_of_finger2_37() { return &___finger2_37; }
-	inline void set_finger2_37(Touch_t4210255029  value)
+	inline static int32_t get_offset_of_finger1_37() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___finger1_37)); }
+	inline Touch_t4210255029  get_finger1_37() const { return ___finger1_37; }
+	inline Touch_t4210255029 * get_address_of_finger1_37() { return &___finger1_37; }
+	inline void set_finger1_37(Touch_t4210255029  value)
 	{
-		___finger2_37 = value;
+		___finger1_37 = value;
+	}
+
+	inline static int32_t get_offset_of_finger2_38() { return static_cast<int32_t>(offsetof(GameController_t2782302542, ___finger2_38)); }
+	inline Touch_t4210255029  get_finger2_38() const { return ___finger2_38; }
+	inline Touch_t4210255029 * get_address_of_finger2_38() { return &___finger2_38; }
+	inline void set_finger2_38(Touch_t4210255029  value)
+	{
+		___finger2_38 = value;
 	}
 };
 

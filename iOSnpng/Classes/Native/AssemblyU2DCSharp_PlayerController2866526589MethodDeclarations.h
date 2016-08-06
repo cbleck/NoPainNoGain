@@ -25,3 +25,5 @@ extern "C"  void PlayerController_StartExercisePlayerAnimation_m4017585263 (Play
 extern "C"  void PlayerController_StopExercisePlayerAnimation_m7741605 (PlayerController_t2866526589 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void PlayerController::StartWinningAnimation()
 extern "C"  void PlayerController_StartWinningAnimation_m124921522 (PlayerController_t2866526589 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PlayerController::StartLoosingAnimation()
+extern "C"  void PlayerController_StartLoosingAnimation_m469996679 (PlayerController_t2866526589 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

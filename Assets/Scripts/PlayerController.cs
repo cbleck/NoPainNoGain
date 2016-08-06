@@ -16,4 +16,8 @@ public class PlayerController : MonoBehaviour {
 		GetComponent<Animator>().SetTrigger("win");
 	}
 
+	public void StartLoosingAnimation(){
+		GetComponent<Animator>().SetTrigger("loose");
+	}
+
 }

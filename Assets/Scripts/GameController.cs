@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour {
 	public ParticleSystem particleSystem;
 
 	public AudioSource musicBackground, fxSound;
-	public AudioClip winMusic, greatFxClip, badFxClip;
+	public AudioClip winMusic, looseMusic, greatFxClip, badFxClip;
 	public GameObject playerCharacter;
 	public Image leftCircle, rightCircle;
 	public Canvas fingerCanvas;
@@ -93,8 +93,10 @@ public class GameController : MonoBehaviour {
 			cicle++;
 
 			if (cicle >= MAX_CICLE_LOOPS) {
-				if(!isFinished)
+				if (!isFinished && points > 7)
 					EnableWinningState ();
+				else if (!isFinished)
+					EnableLoosingState ();
 			}
 		}
 #if UNITY_STANDALONE
@@ -104,6 +106,9 @@ public class GameController : MonoBehaviour {
 			current_hit = current_tempstate;
 			StartCoroutine("ShowAccuracyText");
         }
+
+		isStartedLevelSequence = true;
+		StartCoroutine("StartLevelSequence");
 
 #endif
 #if UNITY_IOS || UNITY_ANDROID
@@ -175,6 +180,35 @@ public class GameController : MonoBehaviour {
 		playerCharacter.GetComponent<PlayerController> ().SendMessage ("StartWinningAnimation");
 
 		particleSystem.Play ();
+	}
+
+	private void EnableLoosingState(){
+
+		isFinished = true;
+		DataManager.instance.score = score;
+		DataManager.instance.points = points;
+		DataManager.instance.SaveData();
+
+		musicBackground.Stop ();
+		musicBackground.clip = looseMusic;
+		musicBackground.GetComponent<BeatSynchronizer> ().enabled = false;
+		accuracyText.enabled = false;
+		fxSound.enabled = false;
+		musicBackground.PlayScheduled (0.9f);
+
+		numberText.enabled = false;
+		leftCircle.enabled = false;
+		rightCircle.enabled = false;
+		fingerCanvas.enabled = false;
+		congratulationTitleText.text = "¡Dale con más ganas!";
+		congratulationDescText.text = "No pudiste completar el nivel, intenta de nuevo";
+		congratulationTitleText.enabled = true;
+		congratulationDescText.enabled = true;
+		menuButton.GetComponent<Image>().enabled = true;
+		menuButtonText.enabled = true;
+		Camera.main.GetComponent<Animator> ().SetTrigger ("win");
+		playerCharacter.GetComponent<PlayerController> ().SendMessage ("StartLoosingAnimation");
+
 	}
 
     IEnumerator RunCurrentAccuracy()

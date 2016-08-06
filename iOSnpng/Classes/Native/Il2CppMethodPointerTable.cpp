@@ -10842,6 +10842,7 @@ extern "C" void GameController_Update_m2094358944 ();
 extern "C" void GameController_EnableTouchHUD_m3675261490 ();
 extern "C" void GameController_DisableTouchHUD_m1137924075 ();
 extern "C" void GameController_EnableWinningState_m2214279707 ();
+extern "C" void GameController_EnableLoosingState_m1454299760 ();
 extern "C" void GameController_RunCurrentAccuracy_m1681424934 ();
 extern "C" void GameController_ShowAccuracyText_m2241338498 ();
 extern "C" void GameController_ShowMissText_m192745413 ();
@@ -10892,6 +10893,7 @@ extern "C" void PlayerController__ctor_m2658519486 ();
 extern "C" void PlayerController_StartExercisePlayerAnimation_m4017585263 ();
 extern "C" void PlayerController_StopExercisePlayerAnimation_m7741605 ();
 extern "C" void PlayerController_StartWinningAnimation_m124921522 ();
+extern "C" void PlayerController_StartLoosingAnimation_m469996679 ();
 extern "C" void Pool__ctor_m2057142751 ();
 extern "C" void Pool_CreatePool_m1264299394 ();
 extern "C" void Pool_GetObject_m1066736605 ();
@@ -11162,7 +11164,7 @@ extern "C" void TransactionHitBuilder_GetCurrencyCode_m1428989670 ();
 extern "C" void TransactionHitBuilder_SetCurrencyCode_m974407942 ();
 extern "C" void TransactionHitBuilder_GetThis_m4162602352 ();
 extern "C" void TransactionHitBuilder_Validate_m457112988 ();
-extern const Il2CppMethodPointer g_MethodPointers[11151] = 
+extern const Il2CppMethodPointer g_MethodPointers[11153] = 
 {
 	Locale_GetText_m2389348044,
 	Locale_GetText_m2218462520,
@@ -21995,6 +21997,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11151] =
 	GameController_EnableTouchHUD_m3675261490,
 	GameController_DisableTouchHUD_m1137924075,
 	GameController_EnableWinningState_m2214279707,
+	GameController_EnableLoosingState_m1454299760,
 	GameController_RunCurrentAccuracy_m1681424934,
 	GameController_ShowAccuracyText_m2241338498,
 	GameController_ShowMissText_m192745413,
@@ -22045,6 +22048,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11151] =
 	PlayerController_StartExercisePlayerAnimation_m4017585263,
 	PlayerController_StopExercisePlayerAnimation_m7741605,
 	PlayerController_StartWinningAnimation_m124921522,
+	PlayerController_StartLoosingAnimation_m469996679,
 	Pool__ctor_m2057142751,
 	Pool_CreatePool_m1264299394,
 	Pool_GetObject_m1066736605,
